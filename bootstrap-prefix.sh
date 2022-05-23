@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Copyright 2006-2021 Gentoo Authors; Distributed under the GPL v2
+# Copyright 2006-2022 Gentoo Authors; Distributed under the GPL v2
 
 trap 'exit 1' TERM KILL INT QUIT ABRT
 
@@ -172,7 +172,7 @@ configure_toolchain() {
 	  # build
 	  eval $( (gcc -E - | grep compiler_stage1) <<-EOP
 		#if defined(__GNUC__) && (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ > 7))
-		  compiler_stage1+=" =sys-devel/gcc-9.4.0"
+		  compiler_stage1+=" sys-devel/gcc"
 		#elif defined(__GNUC__) && __GNUC__ >= 4
 		  compiler_stage1+=" <sys-devel/gcc-4.8"
 		#else
@@ -220,11 +220,11 @@ configure_toolchain() {
 			if [[ ${isgcc} == true ]] ; then
 				# current compiler (gcc-11) requires C++11, which is
 				# available since 4.8, so need to bootstrap with <11
-				compiler_stage1+=" =sys-devel/gcc-9.4.0"
-				compiler="${compiler%sys-devel/gcc} <sys-devel/gcc-9.4.0"
+				compiler_stage1+=" <sys-devel/gcc-11"
+				compiler="${compiler%sys-devel/gcc} <sys-devel/gcc-11"
 			else
 				# assume LLVM/Clang has C++11 support
-				compiler_stage1+=" =sys-devel/gcc-9.4.0"
+				compiler_stage1+=" sys-devel/gcc"
 			fi
 			;;
 		*-darwin*)
@@ -422,6 +422,9 @@ bootstrap_setup() {
 		i*86-pc-linux-gnu)
 			profile=${profile_linux/ARCH/x86}
 			;;
+		riscv64-pc-linux-gnu)
+			profile=${profile_linux/ARCH/riscv}	
+			;;	
 		x86_64-pc-linux-gnu)
 			profile=${profile_linux/ARCH/amd64}
 			profile=${profile/17.0/17.1/no-multilib}
@@ -434,6 +437,9 @@ bootstrap_setup() {
 			;;
 		powerpc64le-unknown-linux-gnu)
 			profile=${profile_linux/ARCH/ppc64le}
+			;;
+		riscv-pc-unknown-linux-gnu)
+			profile=${profile_linux/ARCH/riscv}	
 			;;
 		aarch64-unknown-linux-gnu)
 			profile=${profile_linux/ARCH/arm64}
@@ -502,7 +508,7 @@ bootstrap_setup() {
 	# bug #788613 avoid gcc-11 during stage 2/3 prior sync/emerge -e
 	is-rap && cat >> "${ROOT}"/etc/portage/make.profile/package.mask <<-EOF
 	# during bootstrap mask, bug #788613
-	sys-devel/gcc-9
+	>=sys-devel/gcc-11
 	EOF
 
 	# bug #824482 avoid glibc-2.34
@@ -550,7 +556,7 @@ bootstrap_setup() {
 
 	[[ ${CHOST} == arm64-*-darwin* ]] &&
 	cat >> "${ROOT}"/etc/portage/package.accept_keywords <<-EOF
-	=sys-devel/gcc-9.4.0 **
+	=sys-devel/gcc-11_pre20200206 **
 	EOF
 
 	# Strange enough, -cxx causes wrong libtool config on Cygwin,
@@ -913,13 +919,15 @@ bootstrap_gnu() {
 		# doesn't match
 		sed -i -e '/_GL_WARN_ON_USE (gets/d' lib/stdio.in.h lib/stdio.h
 
-		# macOS 10.13 have an issue with %n, which crashes m4
-		efetch "http://rsync.prefix.bitzolder.nl/sys-devel/m4/files/m4-1.4.18-darwin17-printf-n.patch" || return 1
-		patch -p1 < "${DISTDIR}"/m4-1.4.18-darwin17-printf-n.patch || return 1
+		if [[ ${PV} == "1.4.18" ]] ; then
+			# macOS 10.13 have an issue with %n, which crashes m4
+			efetch "http://rsync.prefix.bitzolder.nl/sys-devel/m4/files/m4-1.4.18-darwin17-printf-n.patch" || return 1
+			patch -p1 < "${DISTDIR}"/m4-1.4.18-darwin17-printf-n.patch || return 1
 
-		# Bug 715880
-		efetch http://dev.gentoo.org/~heroxbd/m4-1.4.18-glibc228.patch || return 1
-		patch -p1 < "${DISTDIR}"/m4-1.4.18-glibc228.patch || return 1
+			# Bug 715880
+			efetch http://dev.gentoo.org/~heroxbd/m4-1.4.18-glibc228.patch || return 1
+			patch -p1 < "${DISTDIR}"/m4-1.4.18-glibc228.patch || return 1
+		fi
 	fi
 
 	fix_config_sub
@@ -1362,7 +1370,7 @@ bootstrap_coreutils() {
 	# 8.16 is the last version released as tar.gz
 	# 8.18 is necessary for macOS High Sierra (darwin17) and converted
 	#      to tar.gz for this case
-	bootstrap_gnu coreutils 8.30 || \
+	bootstrap_gnu coreutils 8.32 || bootstrap_gnu coreutils 8.30 || \
 	bootstrap_gnu coreutils 8.16 || bootstrap_gnu coreutils 8.17
 }
 
@@ -1413,7 +1421,7 @@ bootstrap_bison() {
 }
 
 bootstrap_m4() {
-	bootstrap_gnu m4 1.4.18 # version is patched, so beware
+	bootstrap_gnu m4 1.4.19 || bootstrap_gnu m4 1.4.18 # version is patched, so beware
 }
 
 bootstrap_gzip() {
@@ -2107,7 +2115,7 @@ bootstrap_stage3() {
 			sys-devel/binutils-config
 			sys-libs/zlib
 			${linker}
-		)
+		).
 
 		pre_emerge_pkgs --nodeps "${pkgs[@]}" || return 1
 	fi
@@ -2251,7 +2259,7 @@ set_helper_vars() {
 	DISTFILES_G_O="http://distfiles.prefix.bitzolder.nl"
 	DISTFILES_PFX="http://distfiles.prefix.bitzolder.nl/prefix"
 	GENTOO_MIRRORS=${GENTOO_MIRRORS:="http://distfiles.gentoo.org"}
-	SNAPSHOT_HOST=$(rapx ${DISTFILES_G_O} http://rsync.prefix.bitzolder.nl)
+	SNAPSHOT_HOST=$(rapx ${DISTFILES_G_O} https://github.com/wiredhikari/gentoo)
 	SNAPSHOT_URL=${SNAPSHOT_URL:-"${SNAPSHOT_HOST}/snapshots"}
 	GCC_APPLE_URL="http://www.opensource.apple.com/darwinsource/tarballs/other"
 

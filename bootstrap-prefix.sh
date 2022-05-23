@@ -558,6 +558,10 @@ bootstrap_setup() {
 	cat >> "${ROOT}"/etc/portage/package.accept_keywords <<-EOF
 	=sys-devel/gcc-11_pre20200206 **
 	EOF
+	[[ ${CHOST} == riscv64-pc-linux-gnu ]] &&
+	cat >> "${ROOT}"/etc/portage/package.accept_keywords <<-EOF
+	=sys-devel/gcc-11_pre20200206 **
+	EOF
 
 	# Strange enough, -cxx causes wrong libtool config on Cygwin,
 	# but we require a C++ compiler there anyway - so just use it.

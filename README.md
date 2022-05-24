@@ -1,4 +1,4 @@
-# Process of Setting up Prefix on RISC-V
+# Process of Setting up Gentoo Prefix on RISC-V
 
 * [issues encountered](./docs/issues.md)
 * [further steps](./docs/todo.md)

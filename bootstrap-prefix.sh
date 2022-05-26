@@ -2258,7 +2258,7 @@ set_helper_vars() {
 	DISTFILES_PFX="http://distfiles.prefix.bitzolder.nl/prefix"
 	GENTOO_MIRRORS=${GENTOO_MIRRORS:="http://distfiles.gentoo.org"}
 	SNAPSHOT_HOST=$(rapx ${DISTFILES_G_O} http://rsync.prefix.bitzolder.nl)
-	SNAPSHOT_URL=${SNAPSHOT_URL:-"https://github.com/wiredhikari/portage/releases/download/portage-latest/"}
+	SNAPSHOT_URL=${SNAPSHOT_URL:-"https://github.com/wiredhikari/portage/releases/download/portage-latest"}
 	GCC_APPLE_URL="http://www.opensource.apple.com/darwinsource/tarballs/other"
 
 	export MAKE CONFIG_SHELL

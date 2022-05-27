@@ -376,11 +376,11 @@ bootstrap_setup() {
 		fi
 		[[ -f ${ROOT}/etc/resolv.conf ]] || ln -s {,"${ROOT}"}/etc/resolv.conf
 		[[ -f ${ROOT}/etc/hosts ]] || cp {,"${ROOT}"}/etc/hosts
-		local profile_linux=default/linux/ARCH/
+		local profile_linux=default/linux/ARCH/17.0/prefix/$(profile-kernel)
 	else
 		local profile_linux=prefix/linux/ARCH
 	fi
-		num=20.0
+
 	case ${CHOST} in
 		powerpc-apple-darwin9)
 			rev=${CHOST##*darwin}
@@ -437,12 +437,7 @@ bootstrap_setup() {
 			;;
 		riscv64-pc-linux-gnu)
 			profile=${profile_linux/ARCH/riscv}	
-			profile=${profile/${num}/rv64gc}
-			;;
-		riscv-pc-unknown-linux-gnu)
-			profile=${profile_linux/ARCH/riscv}	
-			profile=${profile/20.0/rv64gc}
-			;;
+			;;		
 		aarch64-unknown-linux-gnu)
 			profile=${profile_linux/ARCH/arm64}
 			;;
@@ -690,7 +685,7 @@ bootstrap_portage() {
 	STABLE_PV="3.0.30.1"
 	[[ ${TESTING_PV} == latest ]] && TESTING_PV="3.0.30.1"
 	PV="${TESTING_PV:-${STABLE_PV}}"
-	A=prefix-portage-${PV}.tar.bz2
+	A=prefix-portage-${PV}.tar.gz
 	einfo "Bootstrapping ${A%.tar.*}"
 
 	efetch ${DISTFILES_URL}/${A} || return 1
@@ -701,7 +696,7 @@ bootstrap_portage() {
 	rm -rf "${S}" >& /dev/null
 	mkdir -p "${S}" >& /dev/null
 	cd "${S}"
-	bzip2 -dc "${DISTDIR}/${A}" | tar -xf -
+	gzip -dc "${DISTDIR}/${A}" | tar -xf -
 	[[ ${PIPESTATUS[*]} == '0 0' ]] || return 1
 	S="${S}/prefix-portage-${PV}"
 	cd "${S}"
@@ -2263,7 +2258,7 @@ set_helper_vars() {
 	DISTFILES_PFX="http://distfiles.prefix.bitzolder.nl/prefix"
 	GENTOO_MIRRORS=${GENTOO_MIRRORS:="http://distfiles.gentoo.org"}
 	SNAPSHOT_HOST=$(rapx ${DISTFILES_G_O} http://rsync.prefix.bitzolder.nl)
-	SNAPSHOT_URL=${SNAPSHOT_URL:-"https://github.com/wiredhikari/portage/archive/refs/tags"}
+	SNAPSHOT_URL=${SNAPSHOT_URL:-"https://github.com/wiredhikari/portage/releases/download/portage-latest"}
 	GCC_APPLE_URL="http://www.opensource.apple.com/darwinsource/tarballs/other"
 
 	export MAKE CONFIG_SHELL

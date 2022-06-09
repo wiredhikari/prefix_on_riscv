@@ -5,5 +5,5 @@
 * Stage 2
   *   
 * Stage 3
-  * fixing pam
+  * fixing pam - sys-libs/pam was installing files outside prefix, giving the right path in ebuild fixed it 
   * 

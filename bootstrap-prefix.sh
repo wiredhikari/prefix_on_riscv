@@ -376,10 +376,11 @@ bootstrap_setup() {
 		fi
 		[[ -f ${ROOT}/etc/resolv.conf ]] || ln -s {,"${ROOT}"}/etc/resolv.conf
 		[[ -f ${ROOT}/etc/hosts ]] || cp {,"${ROOT}"}/etc/hosts
-		local profile_linux=default/linux/ARCH/
+		local profile_linux=default/linux/ARCH/17.0/prefix/$(profile-kernel)
 	else
 		local profile_linux=prefix/linux/ARCH
 	fi
+
 	case ${CHOST} in
 		powerpc-apple-darwin9)
 			rev=${CHOST##*darwin}
@@ -421,6 +422,10 @@ bootstrap_setup() {
 		i*86-pc-linux-gnu)
 			profile=${profile_linux/ARCH/x86}
 			;;
+		riscv64-pc-linux-gnu)
+			profile=${profile_linux/ARCH/riscv}	
+			profile=${profile/20.0/rv64gc}
+			;;
 		x86_64-pc-linux-gnu)
 			profile=${profile_linux/ARCH/amd64}
 			profile=${profile/17.0/17.1/no-multilib}
@@ -433,10 +438,6 @@ bootstrap_setup() {
 			;;
 		powerpc64le-unknown-linux-gnu)
 			profile=${profile_linux/ARCH/ppc64le}
-			;;
-		riscv64-pc-linux-gnu)
-			profile=${profile_linux/ARCH/riscv}	
-			profile=${profile/${num}/rv64gc}
 			;;
 		riscv-pc-unknown-linux-gnu)
 			profile=${profile_linux/ARCH/riscv}	
@@ -609,7 +610,7 @@ do_tree() {
 		fi
 		einfo "Unpacking, this may take a while"
 		estatus "stage1: unpacking Portage tree"
-		gzip -dc ${DISTDIR}/$2 | tar -xf - -C ${PORTDIR} --strip-components=1
+		bzip2 -dc ${DISTDIR}/$2 | tar -xf - -C ${PORTDIR} --strip-components=1
 		[[ ${PIPESTATUS[*]} == '0 0' ]] || return 1
 		touch ${PORTDIR}/.unpacked
 	fi
@@ -620,10 +621,9 @@ bootstrap_tree() {
 	is-rap && LATEST_TREE_YES=1
 	local PV="20220116"
 	if [[ -n ${LATEST_TREE_YES} ]]; then
-		do_tree "${SNAPSHOT_URL}" portage-latest.tar.gz
+		do_tree "${SNAPSHOT_URL}" portage-latest.tar.bz2
 	else
-		do_tree https://github.com/wiredhikari/portage/archive/refs/tags/portage-latest.tar.gz
-	
+		do_tree http://dev.gentoo.org/~grobian/distfiles prefix-overlay-${PV}.tar.bz2
 	fi
 	local ret=$?
 	if [[ -n ${TREE_FROM_SRC} ]]; then
@@ -2262,7 +2262,7 @@ set_helper_vars() {
 	DISTFILES_PFX="http://distfiles.prefix.bitzolder.nl/prefix"
 	GENTOO_MIRRORS=${GENTOO_MIRRORS:="http://distfiles.gentoo.org"}
 	SNAPSHOT_HOST=$(rapx ${DISTFILES_G_O} http://rsync.prefix.bitzolder.nl)
-	SNAPSHOT_URL=${SNAPSHOT_URL:-"https://github.com/wiredhikari/portage/archive/refs/tags"}
+	SNAPSHOT_URL=${SNAPSHOT_URL:-"${SNAPSHOT_HOST}/snapshots"}
 	GCC_APPLE_URL="http://www.opensource.apple.com/darwinsource/tarballs/other"
 
 	export MAKE CONFIG_SHELL

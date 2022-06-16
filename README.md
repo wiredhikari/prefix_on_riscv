@@ -4,3 +4,4 @@
 * [issues encountered](./docs/issues.md)
 * [further steps](./docs/todo.md)
 * [understanding bootstrap_prefix.sh script](./docs/notes.md)
+* [GSoC blogs](./docs/gsoc.md)

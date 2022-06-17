@@ -2,23 +2,33 @@
 
 ## Overview
 
+## Workflow
+
 ### Setting up Machines for development
 
-### Interaction with mentors and community
-
-### Workflow
-
-## Week-1
+## Current Progress:
 
 ### Setting up a profile for RISC-V
 
 ### Issues faced during Stage-1
 
-### Setting
-2
-3
+### Issues faced during Stage-2
+
+### Issues faced during Stage-3
+
+## Future Work:
+
+
 ## References
-### Link to my forks
-### Relevent wiki links
-###
-### PR's
+
+### Repositories I am working on:
+* https://github.com/wiredhikari/prefix_on_riscv
+* https://github.com/wiredhikari/prefix
+* https://github.com/wiredhikari/portage
+
+### Pull Requests:
+*  profiles: initial commits for riscv profile for prefix https://github.com/gentoo/gentoo/pull/25667
+*  app-misc/pax-utils: Add prefix support https://github.com/gentoo/gentoo/pull/25855
+*  sys-libs/pam: Add prefix support https://github.com/gentoo/gentoo/pull/25850
+*  bootstrap-prefix.sh: adding riscv profile #6  https://github.com/gentoo/prefix/pull/6
+

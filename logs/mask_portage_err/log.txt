@@ -1,0 +1,506 @@
+username@KH-GSoC-RISC-V ~ $ ~/prefix_main/scripts/bootstrap-prefix.sh
+
+
+                                             .
+       .vir.                                d$b
+    .d$$$$$$b.    .cd$$b.     .d$$b.   d$$$$$$$$$$$b  .d$$b.      .d$$b.
+    $$$$( )$$$b d$$$()$$$.   d$$$$$$$b Q$$$$$$$P$$$P.$$$$$$$b.  .$$$$$$$b.
+    Q$$$$$$$$$$B$$$$$$$$P"  d$$$PQ$$$$b.   $$$$.   .$$$P' `$$$ .$$$P' `$$$
+      "$$$$$$$P Q$$$$$$$b  d$$$P   Q$$$$b  $$$$b   $$$$b..d$$$ $$$$b..d$$$
+     d$$$$$$P"   "$$$$$$$$ Q$$$     Q$$$$  $$$$$   `Q$$$$$$$P  `Q$$$$$$$P
+    $$$$$$$P       `"""""   ""        ""   Q$$$P     "Q$$$P"     "Q$$$P"
+    `Q$$P"                                  """
+
+             Welcome to the Gentoo Prefix interactive installer!
+
+
+    I will attempt to install Gentoo Prefix on your system.  To do so, I'll
+    ask  you some questions first.    After that,  you'll have to  practise
+    patience as your computer and I try to figure out a way to get a lot of
+    software  packages  compiled.    If everything  goes according to plan,
+    you'll end up with what we call  "a Prefix install",  but by that time,
+    I'll tell you more.
+
+
+Do you want me to start off now? [Yn]
+
+It seems to me you are 'username' (1001), that looks cool to me.
+
+I'm going to check for some variables in your environment now:
+  it appears ASFLAGS is not set :)
+  it appears CFLAGS is not set :)
+  it appears CPPFLAGS is not set :)
+  it appears CXXFLAGS is not set :)
+  it appears DYLD_LIBRARY_PATH is not set :)
+  it appears GREP_OPTIONS is not set :)
+  it appears LDFLAGS is not set :)
+  it appears LD_LIBRARY_PATH is not set :)
+  it appears LIBPATH is not set :)
+  it appears PERL_MM_OPT is not set :)
+  it appears PERL5LIB is not set :)
+  it appears PKG_CONFIG_PATH is not set :)
+  it appears PYTHONPATH is not set :)
+  it appears ROOT is not set :)
+  it appears CPATH is not set :)
+  it appears LIBRARY_PATH is not set :)
+
+I'm excited!  Seems we can finally do something productive now.
+
+Ok, I'm going to do a little bit of guesswork here.  Thing is, your
+machine appears to be identified by CHOST=riscv64-pc-linux-gnu.
+
+Great!  You appear to have a compiler in your PATH
+
+
+I did my utmost best, and found that you have 8 cpu cores.  If
+this looks wrong to you, you can happily ignore me.  Based on the number
+of cores you have, I came up with the idea of parallelising compilation
+work where possible with 5 parallel make threads.  If you have no
+clue what this means, you should go with my excellent default I've
+chosen below, really!
+How many parallel make jobs do you want? [5] 7
+
+So you think you can stress your system a bit more than my extremely
+well thought out formula suggested you?  Hmmpf, I'll take it you know
+what you're doing then.
+(are you?)
+================================================================================================
+======== Traceback for invalid call to portage.package.ebuild.config.config.__getitem__ ========
+  File "/usr/lib/python-exec/python3.9/portageq", line 1474, in <module>
+    sys.exit(main(sys.argv))
+  File "/usr/lib/python-exec/python3.9/portageq", line 1453, in main
+    retval = function(args)
+  File "/usr/lib/python-exec/python3.9/portageq", line 819, in envvar
+    value = portage.settings.get(arg)
+  File "/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 22, in __getattribute__
+    result = object.__getattribute__(self, "_get_target")()
+  File "/usr/lib/python3.9/site-packages/portage/__init__.py", line 812, in _get_target
+    return _get_legacy_global(name)
+  File "/usr/lib/python3.9/site-packages/portage/_legacy_globals.py", line 41, in _get_legacy_global
+    portage.db = portage.create_trees(**kwargs)
+  File "/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+================================================================================================
+
+Each and every Prefix has a home.  That is, a place where everything is
+supposed to be in.  That place must be fully writable by you (duh), but
+should also be able to hold some fair amount of data and preferably be
+reasonably fast.  In terms of space, I advise something around 2GiB
+(it's less if you're lucky).  I suggest a reasonably fast place because
+we're going to compile a lot, and that generates a fair bit of IO.  If
+some networked filesystem like NFS is the only option for you, then
+you're just going to have to wait a fair bit longer.
+This place which is your Prefix' home, is often referred to by a
+variable called EPREFIX.
+
+What do you want EPREFIX to be? [/home/username/gentoo]
+
+OK!  I'm going to give it a try, this is what I have collected sofar:
+  EPREFIX=/home/username/gentoo
+  CHOST=riscv64-pc-linux-gnu
+  PATH=/home/username/gentoo/usr/bin:/home/username/gentoo/bin:/home/username/gentoo/tmp/usr/bin:/home/username/gentoo/tmp/bin:/home/username/gentoo/tmp/usr/local/bin:/usr/bin:/bin
+  MAKEOPTS=-j7
+
+I'm now going to make an awful lot of noise going through a sequence of
+stages to make your box as groovy as I am myself, setting up your
+Prefix.  In short, I'm going to run stage1, stage2, stage3, followed by
+emerge -e system.  If any of these stages fail, both you and me are in
+deep trouble.  So let's hope that doesn't happen.
+
+Type here what you want to wish me [luck]
+
+================================================================================================
+======== Traceback for invalid call to portage.package.ebuild.config.config.__getitem__ ========
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1474, in <module>
+    sys.exit(main(sys.argv))
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1453, in main
+    retval = function(args)
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 819, in envvar
+    value = portage.settings.get(arg)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 22, in __getattribute__
+    result = object.__getattribute__(self, "_get_target")()
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 812, in _get_target
+    return _get_legacy_global(name)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/_legacy_globals.py", line 41, in _get_legacy_global
+    portage.db = portage.create_trees(**kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+================================================================================================
+Traceback (most recent call last):
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1474, in <module>
+    sys.exit(main(sys.argv))
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1453, in main
+    retval = function(args)
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 819, in envvar
+    value = portage.settings.get(arg)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 22, in __getattribute__
+    result = object.__getattribute__(self, "_get_target")()
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 812, in _get_target
+    return _get_legacy_global(name)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/_legacy_globals.py", line 41, in _get_legacy_global
+    portage.db = portage.create_trees(**kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+* Bootstrapping Gentoo prefixed portage installation using
+* host:   riscv64-pc-linux-gnu
+* prefix: /home/username/gentoo
+* ready to bootstrap stage3_log
+* Triggering Linux RAP bootstrap
+================================================================================================
+======== Traceback for invalid call to portage.package.ebuild.config.config.__getitem__ ========
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1474, in <module>
+    sys.exit(main(sys.argv))
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1453, in main
+    retval = function(args)
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 819, in envvar
+    value = portage.settings.get(arg)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 22, in __getattribute__
+    result = object.__getattribute__(self, "_get_target")()
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 812, in _get_target
+    return _get_legacy_global(name)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/_legacy_globals.py", line 41, in _get_legacy_global
+    portage.db = portage.create_trees(**kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+================================================================================================
+Traceback (most recent call last):
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1474, in <module>
+    sys.exit(main(sys.argv))
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1453, in main
+    retval = function(args)
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 819, in envvar
+    value = portage.settings.get(arg)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 22, in __getattribute__
+    result = object.__getattribute__(self, "_get_target")()
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 812, in _get_target
+    return _get_legacy_global(name)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/_legacy_globals.py", line 41, in _get_legacy_global
+    portage.db = portage.create_trees(**kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+================================================================================================
+======== Traceback for invalid call to portage.package.ebuild.config.config.__getitem__ ========
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1474, in <module>
+    sys.exit(main(sys.argv))
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1453, in main
+    retval = function(args)
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 819, in envvar
+    value = portage.settings.get(arg)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 22, in __getattribute__
+    result = object.__getattribute__(self, "_get_target")()
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 812, in _get_target
+    return _get_legacy_global(name)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/_legacy_globals.py", line 41, in _get_legacy_global
+    portage.db = portage.create_trees(**kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+================================================================================================
+================================================================================================
+======== Traceback for invalid call to portage.package.ebuild.config.config.__getitem__ ========
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1474, in <module>
+    sys.exit(main(sys.argv))
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1453, in main
+    retval = function(args)
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 819, in envvar
+    value = portage.settings.get(arg)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 22, in __getattribute__
+    result = object.__getattribute__(self, "_get_target")()
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 812, in _get_target
+    return _get_legacy_global(name)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/_legacy_globals.py", line 41, in _get_legacy_global
+    portage.db = portage.create_trees(**kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+================================================================================================
+Traceback (most recent call last):
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1474, in <module>
+    sys.exit(main(sys.argv))
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1453, in main
+    retval = function(args)
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 819, in envvar
+    value = portage.settings.get(arg)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 22, in __getattribute__
+    result = object.__getattribute__(self, "_get_target")()
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 812, in _get_target
+    return _get_legacy_global(name)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/_legacy_globals.py", line 41, in _get_legacy_global
+    portage.db = portage.create_trees(**kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+================================================================================================
+======== Traceback for invalid call to portage.package.ebuild.config.config.__getitem__ ========
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1474, in <module>
+    sys.exit(main(sys.argv))
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1453, in main
+    retval = function(args)
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 819, in envvar
+    value = portage.settings.get(arg)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 22, in __getattribute__
+    result = object.__getattribute__(self, "_get_target")()
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 812, in _get_target
+    return _get_legacy_global(name)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/_legacy_globals.py", line 41, in _get_legacy_global
+    portage.db = portage.create_trees(**kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+================================================================================================
+================================================================================================
+======== Traceback for invalid call to portage.package.ebuild.config.config.__getitem__ ========
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1474, in <module>
+    sys.exit(main(sys.argv))
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1453, in main
+    retval = function(args)
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 819, in envvar
+    value = portage.settings.get(arg)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 22, in __getattribute__
+    result = object.__getattribute__(self, "_get_target")()
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 812, in _get_target
+    return _get_legacy_global(name)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/_legacy_globals.py", line 41, in _get_legacy_global
+    portage.db = portage.create_trees(**kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+================================================================================================
+Traceback (most recent call last):
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1474, in <module>
+    sys.exit(main(sys.argv))
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1453, in main
+    retval = function(args)
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 819, in envvar
+    value = portage.settings.get(arg)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 22, in __getattribute__
+    result = object.__getattribute__(self, "_get_target")()
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 812, in _get_target
+    return _get_legacy_global(name)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/_legacy_globals.py", line 41, in _get_legacy_global
+    portage.db = portage.create_trees(**kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+================================================================================================
+======== Traceback for invalid call to portage.package.ebuild.config.config.__getitem__ ========
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1474, in <module>
+    sys.exit(main(sys.argv))
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1453, in main
+    retval = function(args)
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 819, in envvar
+    value = portage.settings.get(arg)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 22, in __getattribute__
+    result = object.__getattribute__(self, "_get_target")()
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 812, in _get_target
+    return _get_legacy_global(name)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/_legacy_globals.py", line 41, in _get_legacy_global
+    portage.db = portage.create_trees(**kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+================================================================================================
+================================================================================================
+======== Traceback for invalid call to portage.package.ebuild.config.config.__getitem__ ========
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1474, in <module>
+    sys.exit(main(sys.argv))
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1453, in main
+    retval = function(args)
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 819, in envvar
+    value = portage.settings.get(arg)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 22, in __getattribute__
+    result = object.__getattribute__(self, "_get_target")()
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 812, in _get_target
+    return _get_legacy_global(name)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/_legacy_globals.py", line 41, in _get_legacy_global
+    portage.db = portage.create_trees(**kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+================================================================================================
+Traceback (most recent call last):
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1474, in <module>
+    sys.exit(main(sys.argv))
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1453, in main
+    retval = function(args)
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 819, in envvar
+    value = portage.settings.get(arg)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 22, in __getattribute__
+    result = object.__getattribute__(self, "_get_target")()
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 812, in _get_target
+    return _get_legacy_global(name)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/_legacy_globals.py", line 41, in _get_legacy_global
+    portage.db = portage.create_trees(**kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+================================================================================================
+======== Traceback for invalid call to portage.package.ebuild.config.config.__getitem__ ========
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1474, in <module>
+    sys.exit(main(sys.argv))
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1453, in main
+    retval = function(args)
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 819, in envvar
+    value = portage.settings.get(arg)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 22, in __getattribute__
+    result = object.__getattribute__(self, "_get_target")()
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 812, in _get_target
+    return _get_legacy_global(name)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/_legacy_globals.py", line 41, in _get_legacy_global
+    portage.db = portage.create_trees(**kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+================================================================================================
+================================================================================================
+======== Traceback for invalid call to portage.package.ebuild.config.config.__getitem__ ========
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/emerge", line 51, in <module>
+    retval = emerge_main()
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/_emerge/main.py", line 1287, in emerge_main
+    emerge_config = load_emerge_config(action=myaction, args=myfiles, opts=myopts)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 31, in __call__
+    return result(*args, **kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/_emerge/actions.py", line 2876, in load_emerge_config
+    emerge_config.trees = portage.create_trees(trees=emerge_config.trees, **kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+================================================================================================
+Traceback (most recent call last):
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/emerge", line 51, in <module>
+    retval = emerge_main()
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/_emerge/main.py", line 1287, in emerge_main
+    emerge_config = load_emerge_config(action=myaction, args=myfiles, opts=myopts)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 31, in __call__
+    return result(*args, **kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/_emerge/actions.py", line 2876, in load_emerge_config
+    emerge_config.trees = portage.create_trees(trees=emerge_config.trees, **kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+================================================================================================
+======== Traceback for invalid call to portage.package.ebuild.config.config.__getitem__ ========
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1474, in <module>
+    sys.exit(main(sys.argv))
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1453, in main
+    retval = function(args)
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 819, in envvar
+    value = portage.settings.get(arg)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 22, in __getattribute__
+    result = object.__getattribute__(self, "_get_target")()
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 812, in _get_target
+    return _get_legacy_global(name)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/_legacy_globals.py", line 41, in _get_legacy_global
+    portage.db = portage.create_trees(**kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+================================================================================================
+Traceback (most recent call last):
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1474, in <module>
+    sys.exit(main(sys.argv))
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 1453, in main
+    retval = function(args)
+  File "/home/username/gentoo/usr/lib/python-exec/python3.9/portageq", line 819, in envvar
+    value = portage.settings.get(arg)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/proxy/objectproxy.py", line 22, in __getattribute__
+    result = object.__getattribute__(self, "_get_target")()
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 812, in _get_target
+    return _get_legacy_global(name)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/_legacy_globals.py", line 41, in _get_legacy_global
+    portage.db = portage.create_trees(**kwargs)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/__init__.py", line 710, in create_trees
+    "bintree", binarytree, pkgdir=mysettings["PKGDIR"], settings=mysettings
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3065, in __getitem__
+    return self._getitem(key)
+  File "/home/username/gentoo/usr/lib/python3.9/site-packages/portage/package/ebuild/config.py", line 3143, in _getitem
+    raise KeyError(mykey)
+KeyError: 'PKGDIR'
+/home/username/gentoo/usr/bin/emerge-webrsync: line 57: /isolated-functions.sh: No such file or directory
+
+Hmmmm, I was already afraid of this to happen.  Running
+  /home/username/gentoo/bin/bash /home/username/prefix_main/scripts/bootstrap-prefix.sh "/home/username/gentoo" stage3
+somewhere failed :(  Details might be found in the build log:
+  (no build logs found?!?)
+I have no clue, really.  Please find friendly folks in #gentoo-prefix on
+irc.gentoo.org, gentoo-alt@lists.gentoo.org mailing list, or file a bug
+at bugs.gentoo.org under Gentoo/Alt, Prefix Support.  This is most
+inconvenient, and it crushed my ego.  Sorry, I give up.
+Should you want to give it a try, there is /home/username/gentoo/stage3.log

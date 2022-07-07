@@ -16,6 +16,16 @@ sudo mv /usr/share/portage/ /usr/share/portage1
 sudo mv /etc/portage/ /etc/portage1
 
 ```
+
+
+* freedom-u-sdk
+```
+sudo mount -o bind /dev/pts ./dev/pts
+sudo mount -t sysfs sys ./sys
+sudo mount -t proc proc ./proc
+sudo mount -o bind /dev ./dev
+```
+
 ### Pull Requests:
 (#todo-ellaborate)
 * #25855 https://github.com/gentoo/gentoo/pull/25855

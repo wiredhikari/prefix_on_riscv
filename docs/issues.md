@@ -24,6 +24,7 @@ sudo mount -o bind /dev/pts ./dev/pts
 sudo mount -t sysfs sys ./sys
 sudo mount -t proc proc ./proc
 sudo mount -o bind /dev ./dev
+sudo mount tmpfs -t tmpfs ./run
 ```
 
 ### Pull Requests:

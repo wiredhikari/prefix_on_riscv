@@ -26,6 +26,11 @@ sudo mount -t proc proc ./proc
 sudo mount -o bind /dev ./dev
 sudo mount tmpfs -t tmpfs ./run
 ```
+* inside chroot(needed for python)
+```
+sudo mount --types tmpfs --options nosuid,nodev,noexec shm /dev/shm
+sudo chmod 1777 /dev/shm /run/shm
+```
 
 ### Pull Requests:
 (#todo-ellaborate)

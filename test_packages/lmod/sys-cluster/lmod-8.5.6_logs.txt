@@ -1,5 +1,3 @@
-KH-GSoC-RISC-V:~/gentoo$ FEATURES="test" emerge -av lmod
-
  * IMPORTANT: 90 news items need reading for repository 'gentoo'.
  * Use eselect news read to view new items.
 

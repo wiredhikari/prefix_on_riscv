@@ -1,0 +1,2334 @@
+KH-GSoC-RISC-V:~/gentoo$ FEATURES="test" emerge -av lmod
+
+ * IMPORTANT: 90 news items need reading for repository 'gentoo'.
+ * Use eselect news read to view new items.
+
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies... done!
+[ebuild   R    ] sys-cluster/lmod-8.5.6::gentoo  USE="auto-swap cache test* -duplicate-paths*" LUA_SINGLE_TARGET="lua5-1* -lua5-3*" 0 KiB
+
+Total: 1 package (1 reinstall), Size of downloads: 0 KiB
+
+Would you like to merge these packages? [Yes/No]
+
+>>> Verifying ebuild manifests
+
+>>> Running pre-merge checks for sys-cluster/lmod-8.5.6
+ * You can control the siteName and syshost settings by
+ * using the variables LMOD_SITENAME and LMOD_SYSHOST, during
+ * build time, which are both set to 'Gentoo' by default.
+ * There are a lot of options for this package, especially
+ * for run time behaviour. Remember to use the EXTRA_ECONF variable.
+ * To see full list of options visit:
+ * 	 https://lmod.readthedocs.io/en/latest/090_configuring_lmod.html
+
+>>> Emerging (1 of 1) sys-cluster/lmod-8.5.6::gentoo
+ * lmod-8.5.6.tar.gz BLAKE2B SHA512 size ;-) ...                                                             [ ok ]
+ * Using lua5.1 to build
+>>> Unpacking source...
+>>> Unpacking lmod-8.5.6.tar.gz to /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work
+>>> Source unpacked in /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work
+>>> Preparing source in /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6 ...
+ * Applying lmod-8.4.19-no-libsandbox.patch ...                                                              [ ok ]
+ * Adjusting to prefix /home/username/gentoo
+ *   csh_swap.tdesc ...                                                                                      [ ok ]
+ * Running eautoreconf in '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6' ...
+ * Running 'autoconf --force' ...                                                                            [ ok ]
+ * Running elibtoolize in: Lmod-8.5.6/
+>>> Source prepared.
+>>> Configuring source in /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6 ...
+ * econf: updating Lmod-8.5.6/config.guess with /home/username/gentoo/usr/share/gnuconfig/config.guess
+ * econf: updating Lmod-8.5.6/config.sub with /home/username/gentoo/usr/share/gnuconfig/config.sub
+./configure --prefix=/home/username/gentoo/usr --build=riscv64-unknown-linux-gnu --host=riscv64-unknown-linux-gnu --mandir=/home/username/gentoo/usr/share/man --infodir=/home/username/gentoo/usr/share/info --datadir=/home/username/gentoo/usr/share --sysconfdir=/home/username/gentoo/etc --localstatedir=/home/username/gentoo/var/lib --docdir=/home/username/gentoo/usr/share/doc/lmod-8.5.6 --htmldir=/home/username/gentoo/usr/share/doc/lmod-8.5.6/html --libdir=/home/username/gentoo/usr/share/Lmod/lib64 --with-tcl --with-fastTCLInterp --with-colorize --with-supportKsh --without-useBuiltinPkgs --with-siteControlPrefix --with-siteName=Gentoo --with-syshost=Gentoo --with-lua_include=/usr/include/lua5.1 --with-lua=/home/username/gentoo/usr/bin/lua5.1 --with-luac=/home/username/gentoo/usr/bin/luac5.1 --with-module-root-path=/home/username/gentoo/etc/modulefiles --with-spiderCacheDir=/home/username/gentoo/etc/lmod_cache/spider_cache --with-updateSystemFn=/home/username/gentoo/etc/lmod_cache/system.txt --prefix=/home/username/gentoo/usr/share/Lmod --with-caseIndependentSorting --without-hiddenItalic --with-exportedModuleCmd --with-useDotFiles --without-redirect --with-extendedDefault --with-cachedLoads --without-duplicatePaths --with-autoSwap
+checking for riscv64-unknown-linux-gnu-gcc... riscv64-unknown-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables...
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether riscv64-unknown-linux-gnu-gcc accepts -g... yes
+checking for riscv64-unknown-linux-gnu-gcc option to enable C11 features... none needed
+DUPLICATE_PATHS=no
+LMOD_ALLOW_ROOT_USE=yes
+SITE_MSG_FILE=<empty>
+LMOD_OVERRIDE_LANG=<empty>
+CASE_INDEPENDENT_SORTING=yes
+COLORIZE=yes
+HIDDEN_ITALIC=no
+EXACT_MATCH=no
+AUTO_SWAP=yes
+EXPORT_MODULE=yes
+REDIRECT=no
+MODULEPATH_ROOT=/home/username/gentoo/etc/modulefiles
+ANCIENT=86400
+SHORT_TIME=2
+USE_DOT_FILES=yes
+SPIDER_CACHE_DIRS=/home/username/gentoo/etc/lmod_cache/spider_cache
+SPIDER_CACHE_DESCRIPT_FN=
+UPDATE_SYSTEM_FN=/home/username/gentoo/etc/lmod_cache/system.txt
+PREPEND_BLOCK=normal
+SITE_NAME=Gentoo
+SYSHOST=Gentoo
+ALLOW_TCL_MFILES==yes
+DISABLE_NAME_AUTOSWAP=no
+MPATH_AVAIL=no
+SETTARG=no
+IGNORE_DIRS=.svn,.git,.hg,.bzr
+PIN_VERSIONS=no
+TMOD_PATH_RULE=no
+TMOD_FIND_FIRST=no
+LUA_INCLUDE=/usr/include/lua5.1
+CACHED_LOADS=yes
+EXTENDED_DEFAULT=yes
+SUPPORT_KSH=yes
+MODULEPATH_INIT=@PKG@/init/.modulespath
+SITE_CONTROLLED_PREFIX=yes
+USE_BUILT_IN_PKGS=no
+SILENCE_SHELL_DEBUGGING=no
+FAST_TCL_INTERP=yes
+AVAIL_EXTENSIONS=yes
+PATH_TO_LUA=/home/username/gentoo/usr/bin/lua5.1
+PATH_TO_LUAC=/home/username/gentoo/usr/bin/luac5.1
+LUA_SUFFIX=no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for tcl.h... yes
+checking for library containing Tcl_CreateInterp... -ltcl
+checking for ps... /home/username/gentoo/bin/ps
+checking for gexpr... no
+checking for expr... /home/username/gentoo/usr/bin/expr
+checking for gbasename... no
+checking for basename... /home/username/gentoo/usr/bin/basename
+checking for git... /home/username/gentoo/usr/bin/git
+checking for less... /home/username/gentoo/usr/bin/less
+checking for sha1sum... /home/username/gentoo/usr/bin/sha1sum
+checking for tclsh... /home/username/gentoo/usr/bin/tclsh
+checking for gtr... no
+checking for tr... /home/username/gentoo/usr/bin/tr
+checking for gls... no
+checking for ls... /home/username/gentoo/bin/ls
+checking for valid Lua version... 5.1
+checking for lua modules: posix... yes
+checking for lua modules: lfs... yes
+checking for lua modules: term... yes
+checking for pkg-config... /home/username/gentoo/usr/bin/pkg-config
+checking for zsh... no
+configure: creating ./config.status
+config.status: creating makefile
+
+----------------------------------- SUMMARY ----------------------------------
+
+Package version............................................. : Lmod-8.5.6
+Package version (git) ...................................... :
+
+LUA_INCLUDE................................................. : /home/username/gentoo/usr/include/lua5.1
+Lua executable.............................................. : /home/username/gentoo/usr/bin/lua5.1
+Luac executable............................................. : /home/username/gentoo/usr/bin/luac5.1
+User Controlled Prefix...................................... : yes
+Prefix...................................................... : /home/username/gentoo/usr/share/Lmod
+Actual Install dir.......................................... : /home/username/gentoo/usr/share/Lmod
+
+MODULEPATH_ROOT............................................. : /home/username/gentoo/etc/modulefiles
+Wait (s) before rebuilding cache............................ : 86400
+Allow Duplicate Paths....................................... : no
+Do not save Cache if build time < .......................... : 2
+SPIDER_CACHE_DIRS........................................... : /home/username/gentoo/etc/lmod_cache/spider_cache
+Prepending multiple dirs (NORMAL / REVERSED)................ : normal
+Colorized output supported.................................. : yes
+File that is touched when system is updated................. : /home/username/gentoo/etc/lmod_cache/system.txt
+Allow duplicate entry in PATHs.............................. : no
+Allow tcl modulefiles....................................... : yes
+ZSH Tab Completion Functions Site Directory................. :
+Use Dot files in ~/.lmod.d.................................. : yes
+Full Settarg support........................................ : no
+Have lua-term............................................... : yes
+Have luafilesystem.......................................... : yes
+Support Auto Swap when using families....................... : yes
+Export the module shell function in Bash.................... : yes
+Disable same name autoswapping.............................. : no
+Use Spider Cache on Loads................................... : yes
+Pager used inside Lmod...................................... : /home/username/gentoo/usr/bin/less
+System LD_PRELOAD........................................... :
+System LD_LIBRARY_PATH...................................... :
+Hashsum program used........................................ : /home/username/gentoo/usr/bin/sha1sum
+Site Name................................................... : Gentoo
+SYSHOST..................................................... : Gentoo
+Site Message file........................................... : <empty>
+Override $LANG Language for error etc....................... : <empty>
+Which LuaFileSystem is being used........................... : system
+Use italic instead of faint for hidden modules.............. : no
+If path entry is already there then don't prepend........... : no
+Use Tmod Find First rule instead of Find Best for defaults.. : no
+MODULEPATH Initial file..................................... : @PKG@/init/.modulespath
+Use built-in lua packages instead of system provided pkgs... : no
+Silence shell debugging output for bash/zsh................. : no
+Allow root to use Lmod...................................... : yes
+Support KSH................................................. : yes
+Use the fast TCL interpreter................................ : yes
+Display Extensions w/ module avail.......................... : yes
+Allow for extended default.(ml intel/17 #-> intel/17.0.4)... : yes
+
+------------------------------------------------------------------------------
+
+******************************************************************************
+
+Lmod overwrites the env var BASH_ENV to make the module command available in
+bash scripts. If your site does not set BASH_ENV then you can ignore the
+comments below.
+
+If your site already uses BASH_ENV to point to a site specific script, please
+consider sourcing Lmod's init/bash from your site's file.
+
+BASH_ENV is defined both in:
+   /home/username/gentoo/usr/share/Lmod/init/profile
+   /home/username/gentoo/usr/share/Lmod/init/cshrc
+
+******************************************************************************
+
+
+******************************************************************************
+
+Lmod is exporting the module command for Bash users. Some sites may have some
+problems. First:
+
+   0.  Make sure that all your machines have shellshock bash patch.
+
+If that does not fix things then you have two choices:
+
+   1.  You configure Lmod not to export the module command.
+   2.  You can filter out the exported functions in the users environment
+       during job submission
+
+If there is a way to do step 2, please try to do so. Otherwise do step 1.
+The advantage of exporting the module command is that it is defined in
+/bin/sh scripts. Because Lmod defines BASH_ENV to point to init/bash,
+it will be defined for /bin/bash scripts.  The trouble is that users
+have to remember to put #!/bin/bash at the first line of their shell
+script to make that work. We used to see tickets where users would
+submit jobs as /bin/sh scripts and wonder why the module command did
+not work.
+
+******************************************************************************
+
+
+**********************************************************************
+
+Warning: you have chosen to control the prefix.  This means that
+         you must update any Lmod scripts in /etc/profile.d
+
+**********************************************************************
+
+Configure complete, Now do:
+
+    $ make install       # -> A complete install
+or
+    $ make pre-install   # -> Install everything but the symbolic link
+
+>>> Source configured.
+>>> Compiling source in /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6 ...
+make -j8
+done
+>>> Source compiled.
+>>> Test phase: sys-cluster/lmod-8.5.6
+TM Version: 1.7
+
+Starting Tests:
+
+     Started : 03:05:54 tst: 1/123 P/F: 0:0, rt/hidden/hidden/t1	
+      passed : 03:05:57 tst: 1/123 P/F: 1:0, rt/hidden/hidden/t1	
+
+     Started : 03:05:57 tst: 2/123 P/F: 1:0, rt/delim/delim/t1	
+      passed : 03:06:03 tst: 2/123 P/F: 2:0, rt/delim/delim/t1	
+
+     Started : 03:06:03 tst: 3/123 P/F: 2:0, rt/rstats/rstats/t1	
+      passed : 03:06:06 tst: 3/123 P/F: 3:0, rt/rstats/rstats/t1	
+
+     Started : 03:06:06 tst: 4/123 P/F: 3:0, rt/bioContainers/bioContainers/t1	
+      passed : 03:06:11 tst: 4/123 P/F: 4:0, rt/bioContainers/bioContainers/t1	
+
+     Started : 03:06:11 tst: 5/123 P/F: 4:0, rt/between/between/t1	
+      passed : 03:06:27 tst: 5/123 P/F: 5:0, rt/between/between/t1	
+
+     Started : 03:06:27 tst: 6/123 P/F: 5:0, rt/tamu/tamu/t1	
+      passed : 03:06:32 tst: 6/123 P/F: 6:0, rt/tamu/tamu/t1	
+
+     Started : 03:06:32 tst: 7/123 P/F: 6:0, rt/inherit/inherit/t1	
+      passed : 03:06:40 tst: 7/123 P/F: 7:0, rt/inherit/inherit/t1	
+
+     Started : 03:06:40 tst: 8/123 P/F: 7:0, rt/oldStdEnv/oldStdEnv/t1	
+      passed : 03:06:44 tst: 8/123 P/F: 8:0, rt/oldStdEnv/oldStdEnv/t1	
+
+     Started : 03:06:44 tst: 9/123 P/F: 8:0, rt/eb_avail/eb_avail/t1	
+      passed : 03:06:48 tst: 9/123 P/F: 9:0, rt/eb_avail/eb_avail/t1	
+
+     Started : 03:06:48 tst: 10/123 P/F: 9:0, rt/keyword/keyword/t1	
+      passed : 03:06:52 tst: 10/123 P/F: 10:0, rt/keyword/keyword/t1	
+
+     Started : 03:06:52 tst: 11/123 P/F: 10:0, rt/priority/priority/t1	
+      passed : 03:06:58 tst: 11/123 P/F: 11:0, rt/priority/priority/t1	
+
+     Started : 03:06:58 tst: 12/123 P/F: 11:0, rt/broken_modulerc/broken_modulerc/t1	
+      passed : 03:07:02 tst: 12/123 P/F: 12:0, rt/broken_modulerc/broken_modulerc/t1	
+
+     Started : 03:07:02 tst: 13/123 P/F: 12:0, rt/defaults/defaults/t1	
+      passed : 03:07:07 tst: 13/123 P/F: 13:0, rt/defaults/defaults/t1	
+
+     Started : 03:07:07 tst: 14/123 P/F: 13:0, rt/helios/helios/t1	
+      passed : 03:07:14 tst: 14/123 P/F: 14:0, rt/helios/helios/t1	
+
+     Started : 03:07:14 tst: 15/123 P/F: 14:0, rt/fish/fish/t1	
+      passed : 03:07:16 tst: 15/123 P/F: 15:0, rt/fish/fish/t1	
+
+     Started : 03:07:16 tst: 16/123 P/F: 15:0, rt/cmake/cmake/t1	
+      passed : 03:07:21 tst: 16/123 P/F: 16:0, rt/cmake/cmake/t1	
+
+     Started : 03:07:21 tst: 17/123 P/F: 16:0, rt/hash_try_load/hash_try_load/t1	
+      passed : 03:07:30 tst: 17/123 P/F: 17:0, rt/hash_try_load/hash_try_load/t1	
+
+     Started : 03:07:30 tst: 18/123 P/F: 17:0, rt/multiL/multiL/t1	
+      passed : 03:07:38 tst: 18/123 P/F: 18:0, rt/multiL/multiL/t1	
+
+     Started : 03:07:38 tst: 19/123 P/F: 18:0, rt/csh_swap/csh_swap/t1	
+      passed : 03:07:47 tst: 19/123 P/F: 19:0, rt/csh_swap/csh_swap/t1	
+
+     Started : 03:07:47 tst: 20/123 P/F: 19:0, rt/slash/slash/t1	
+      passed : 03:07:51 tst: 20/123 P/F: 20:0, rt/slash/slash/t1	
+
+     Started : 03:07:51 tst: 21/123 P/F: 20:0, rt/display/display/t1	
+      passed : 03:07:54 tst: 21/123 P/F: 21:0, rt/display/display/t1	
+
+     Started : 03:07:54 tst: 22/123 P/F: 21:0, rt/build_cache/build_cache/t1	
+      passed : 03:07:58 tst: 22/123 P/F: 22:0, rt/build_cache/build_cache/t1	
+
+     Started : 03:07:58 tst: 23/123 P/F: 22:0, rt/load_any/load_any/t1	
+      passed : 03:08:02 tst: 23/123 P/F: 23:0, rt/load_any/load_any/t1	
+
+     Started : 03:08:02 tst: 24/123 P/F: 23:0, rt/sticky/sticky/t1	
+      passed : 03:08:26 tst: 24/123 P/F: 24:0, rt/sticky/sticky/t1	
+
+     Started : 03:08:26 tst: 25/123 P/F: 24:0, rt/conflict/conflict/t1	
+      passed : 03:08:32 tst: 25/123 P/F: 25:0, rt/conflict/conflict/t1	
+
+     Started : 03:08:32 tst: 26/123 P/F: 25:0, rt/itac/itac/t1	
+      passed : 03:08:37 tst: 26/123 P/F: 26:0, rt/itac/itac/t1	
+
+     Started : 03:08:37 tst: 27/123 P/F: 26:0, rt/vasp/vasp/t1	
+      passed : 03:08:41 tst: 27/123 P/F: 27:0, rt/vasp/vasp/t1	
+
+     Started : 03:08:41 tst: 28/123 P/F: 27:0, rt/family/family/t1	
+      passed : 03:08:47 tst: 28/123 P/F: 28:0, rt/family/family/t1	
+
+     Started : 03:08:47 tst: 29/123 P/F: 28:0, rt/lars/lars/t1	
+      passed : 03:08:57 tst: 29/123 P/F: 29:0, rt/lars/lars/t1	
+
+     Started : 03:08:57 tst: 30/123 P/F: 29:0, rt/nil/nil/t1	
+      passed : 03:09:00 tst: 30/123 P/F: 30:0, rt/nil/nil/t1	
+
+     Started : 03:09:00 tst: 31/123 P/F: 30:0, rt/swap/swap/t1	
+      passed : 03:09:23 tst: 31/123 P/F: 31:0, rt/swap/swap/t1	
+
+     Started : 03:09:23 tst: 32/123 P/F: 31:0, rt/cas_avail/cas_avail/t1	
+      passed : 03:09:27 tst: 32/123 P/F: 32:0, rt/cas_avail/cas_avail/t1	
+
+     Started : 03:09:27 tst: 33/123 P/F: 32:0, rt/purge/purge/t1	
+      passed : 03:09:34 tst: 33/123 P/F: 33:0, rt/purge/purge/t1	
+
+     Started : 03:09:34 tst: 34/123 P/F: 33:0, rt/eb/eb/t1	
+      passed : 03:09:51 tst: 34/123 P/F: 34:0, rt/eb/eb/t1	
+
+     Started : 03:09:51 tst: 35/123 P/F: 34:0, rt/deprecation/deprecation/t1	
+      passed : 03:09:55 tst: 35/123 P/F: 35:0, rt/deprecation/deprecation/t1	
+
+     Started : 03:09:55 tst: 36/123 P/F: 35:0, rt/mgrload_func/mgrload_func/t1	
+      passed : 03:10:00 tst: 36/123 P/F: 36:0, rt/mgrload_func/mgrload_func/t1	
+
+     Started : 03:10:00 tst: 37/123 P/F: 36:0, rt/hierarchy/hierarchy/t1	
+      passed : 03:10:10 tst: 37/123 P/F: 37:0, rt/hierarchy/hierarchy/t1	
+
+     Started : 03:10:10 tst: 38/123 P/F: 37:0, rt/dups/dups/t1	
+      passed : 03:10:16 tst: 38/123 P/F: 38:0, rt/dups/dups/t1	
+
+     Started : 03:10:16 tst: 39/123 P/F: 38:0, rt/unregisterLoads/unregisterLoads/t1	
+      passed : 03:10:19 tst: 39/123 P/F: 39:0, rt/unregisterLoads/unregisterLoads/t1	
+
+     Started : 03:10:19 tst: 40/123 P/F: 39:0, rt/reset/reset/t1	
+      passed : 03:10:28 tst: 40/123 P/F: 40:0, rt/reset/reset/t1	
+
+     Started : 03:10:28 tst: 41/123 P/F: 40:0, rt/use_w_sticky/use_w_sticky/t1	
+      passed : 03:10:32 tst: 41/123 P/F: 41:0, rt/use_w_sticky/use_w_sticky/t1	
+
+     Started : 03:10:32 tst: 42/123 P/F: 41:0, rt/r_shell/r_shell/t1	
+      passed : 03:10:35 tst: 42/123 P/F: 42:0, rt/r_shell/r_shell/t1	
+
+     Started : 03:10:35 tst: 43/123 P/F: 42:0, rt/depends_on/depends_on/t1	
+      passed : 03:10:50 tst: 43/123 P/F: 43:0, rt/depends_on/depends_on/t1	
+
+     Started : 03:10:50 tst: 44/123 P/F: 43:0, rt/i18n/i18n/t1	
+      passed : 03:10:55 tst: 44/123 P/F: 44:0, rt/i18n/i18n/t1	
+
+     Started : 03:10:55 tst: 45/123 P/F: 44:0, rt/spades/spades/t1	
+      passed : 03:10:59 tst: 45/123 P/F: 45:0, rt/spades/spades/t1	
+
+     Started : 03:10:59 tst: 46/123 P/F: 45:0, rt/lnk_same_dir/lnk_same_dir/t1	
+      passed : 03:11:06 tst: 46/123 P/F: 46:0, rt/lnk_same_dir/lnk_same_dir/t1	
+
+     Started : 03:11:06 tst: 47/123 P/F: 46:0, rt/dyn/dyn/t1	
+      passed : 03:11:10 tst: 47/123 P/F: 47:0, rt/dyn/dyn/t1	
+
+     Started : 03:11:10 tst: 48/123 P/F: 47:0, rt/prophook/prophook/t1	
+      passed : 03:11:13 tst: 48/123 P/F: 48:0, rt/prophook/prophook/t1	
+
+     Started : 03:11:13 tst: 49/123 P/F: 48:0, rt/ugent_startup/ugent_startup/t1	
+      passed : 03:11:17 tst: 49/123 P/F: 49:0, rt/ugent_startup/ugent_startup/t1	
+
+     Started : 03:11:17 tst: 50/123 P/F: 49:0, rt/mpath/mpath/t1	
+      passed : 03:11:24 tst: 50/123 P/F: 50:0, rt/mpath/mpath/t1	
+
+     Started : 03:11:24 tst: 51/123 P/F: 50:0, rt/pyHier/pyHier/t1	
+      passed : 03:11:29 tst: 51/123 P/F: 51:0, rt/pyHier/pyHier/t1	
+
+     Started : 03:11:29 tst: 52/123 P/F: 51:0, rt/userInGroups/userInGroups/t1	
+      passed : 03:11:32 tst: 52/123 P/F: 52:0, rt/userInGroups/userInGroups/t1	
+
+     Started : 03:11:32 tst: 53/123 P/F: 52:0, rt/symlink/symlink/t1	
+      passed : 03:11:37 tst: 53/123 P/F: 53:0, rt/symlink/symlink/t1	
+
+     Started : 03:11:37 tst: 54/123 P/F: 53:0, rt/lastName/lastName/t1	
+      passed : 03:11:40 tst: 54/123 P/F: 54:0, rt/lastName/lastName/t1	
+
+     Started : 03:11:40 tst: 55/123 P/F: 54:0, rt/empty/empty/t1	
+      passed : 03:11:44 tst: 55/123 P/F: 55:0, rt/empty/empty/t1	
+
+     Started : 03:11:44 tst: 56/123 P/F: 55:0, rt/isloaded/isloaded/t1	
+      passed : 03:11:50 tst: 56/123 P/F: 56:0, rt/isloaded/isloaded/t1	
+
+     Started : 03:11:50 tst: 57/123 P/F: 56:0, rt/saverestore/saverestore/t1	
+      passed : 03:12:47 tst: 57/123 P/F: 57:0, rt/saverestore/saverestore/t1	
+
+     Started : 03:12:47 tst: 58/123 P/F: 57:0, rt/user_inherit/user_inherit/t1	
+      passed : 03:12:52 tst: 58/123 P/F: 58:0, rt/user_inherit/user_inherit/t1	
+
+     Started : 03:12:52 tst: 59/123 P/F: 58:0, rt/tmod_spider/tmod_spider/t1	
+      passed : 03:12:56 tst: 59/123 P/F: 59:0, rt/tmod_spider/tmod_spider/t1	
+
+     Started : 03:12:56 tst: 60/123 P/F: 59:0, rt/multiparents/multiparents/t1	
+      passed : 03:12:59 tst: 60/123 P/F: 60:0, rt/multiparents/multiparents/t1	
+
+     Started : 03:12:59 tst: 61/123 P/F: 60:0, rt/versionTest/versionTest/t1	
+      passed : 03:13:04 tst: 61/123 P/F: 61:0, rt/versionTest/versionTest/t1	
+
+     Started : 03:13:04 tst: 62/123 P/F: 61:0, rt/p4est/p4est/t1	
+      passed : 03:13:08 tst: 62/123 P/F: 62:0, rt/p4est/p4est/t1	
+
+     Started : 03:13:08 tst: 63/123 P/F: 62:0, rt/disappear/disappear/t1	
+      passed : 03:13:12 tst: 63/123 P/F: 63:0, rt/disappear/disappear/t1	
+
+     Started : 03:13:12 tst: 64/123 P/F: 63:0, rt/pkg/pkg/t1	
+      passed : 03:13:18 tst: 64/123 P/F: 64:0, rt/pkg/pkg/t1	
+
+     Started : 03:13:18 tst: 65/123 P/F: 64:0, rt/load/load/t1	
+      passed : 03:14:28 tst: 65/123 P/F: 65:0, rt/load/load/t1	
+
+     Started : 03:14:28 tst: 66/123 P/F: 65:0, rt/shellType/shellType/t1	
+      passed : 03:14:32 tst: 66/123 P/F: 66:0, rt/shellType/shellType/t1	
+
+     Started : 03:14:32 tst: 67/123 P/F: 66:0, rt/ml/ml/t1	
+      passed : 03:14:35 tst: 67/123 P/F: 67:0, rt/ml/ml/t1	
+
+     Started : 03:14:35 tst: 68/123 P/F: 67:0, rt/varType/varType/t1	
+      passed : 03:14:38 tst: 68/123 P/F: 68:0, rt/varType/varType/t1	
+
+     Started : 03:14:38 tst: 69/123 P/F: 68:0, rt/cached_loads/cached_loads/t1	
+      passed : 03:14:44 tst: 69/123 P/F: 69:0, rt/cached_loads/cached_loads/t1	
+
+     Started : 03:14:45 tst: 70/123 P/F: 69:0, rt/dbT/dbT/t1	
+      passed : 03:14:49 tst: 70/123 P/F: 70:0, rt/dbT/dbT/t1	
+
+     Started : 03:14:49 tst: 71/123 P/F: 70:0, rt/errHandler/errHander/t1	
+      passed : 03:14:52 tst: 71/123 P/F: 71:0, rt/errHandler/errHander/t1	
+
+     Started : 03:14:52 tst: 72/123 P/F: 71:0, rt/delcatty/delcatty/t1	
+      passed : 03:14:57 tst: 72/123 P/F: 72:0, rt/delcatty/delcatty/t1	
+
+     Started : 03:14:57 tst: 73/123 P/F: 72:0, rt/manpath/manpath/t1	
+      passed : 03:15:01 tst: 73/123 P/F: 73:0, rt/manpath/manpath/t1	
+
+     Started : 03:15:01 tst: 74/123 P/F: 73:0, rt/checkSyntax/checkSyntax/t1	
+      passed : 03:15:04 tst: 74/123 P/F: 74:0, rt/checkSyntax/checkSyntax/t1	
+
+     Started : 03:15:04 tst: 75/123 P/F: 74:0, rt/python/python/t1	
+      passed : 03:15:08 tst: 75/123 P/F: 75:0, rt/python/python/t1	
+
+     Started : 03:15:08 tst: 76/123 P/F: 75:0, rt/rmap/rmap/t1	
+      passed : 03:15:12 tst: 76/123 P/F: 76:0, rt/rmap/rmap/t1	
+
+     Started : 03:15:12 tst: 77/123 P/F: 76:0, rt/funny_files/funny_files/t1	
+      passed : 03:15:15 tst: 77/123 P/F: 77:0, rt/funny_files/funny_files/t1	
+
+     Started : 03:15:15 tst: 78/123 P/F: 77:0, rt/perl/perl/t1	
+      passed : 03:15:19 tst: 78/123 P/F: 78:0, rt/perl/perl/t1	
+
+     Started : 03:15:19 tst: 79/123 P/F: 78:0, rt/cnflt_except/cnflt_except/t1	
+      passed : 03:15:24 tst: 79/123 P/F: 79:0, rt/cnflt_except/cnflt_except/t1	
+
+     Started : 03:15:24 tst: 80/123 P/F: 79:0, rt/refresh/refresh/t1	
+      passed : 03:15:27 tst: 80/123 P/F: 80:0, rt/refresh/refresh/t1	
+
+     Started : 03:15:27 tst: 81/123 P/F: 80:0, rt/prereq/prereq/t1	
+      passed : 03:15:37 tst: 81/123 P/F: 81:0, rt/prereq/prereq/t1	
+
+     Started : 03:15:37 tst: 82/123 P/F: 81:0, rt/tacc/tacc/t1	
+      passed : 03:15:55 tst: 82/123 P/F: 82:0, rt/tacc/tacc/t1	
+
+     Started : 03:15:55 tst: 83/123 P/F: 82:0, rt/hook/hook/t1	
+      passed : 03:15:58 tst: 83/123 P/F: 83:0, rt/hook/hook/t1	
+
+     Started : 03:15:58 tst: 84/123 P/F: 83:0, rt/avail/avail/t1	
+      passed : 03:16:20 tst: 84/123 P/F: 84:0, rt/avail/avail/t1	
+
+     Started : 03:16:20 tst: 85/123 P/F: 84:0, rt/use_append/use_append/t1	
+      passed : 03:16:24 tst: 85/123 P/F: 85:0, rt/use_append/use_append/t1	
+
+     Started : 03:16:24 tst: 86/123 P/F: 85:0, rt/extended_default/extended_default/t1	
+      passed : 03:16:31 tst: 86/123 P/F: 86:0, rt/extended_default/extended_default/t1	
+
+     Started : 03:16:31 tst: 87/123 P/F: 86:0, rt/mixed/mixed/t1	
+      passed : 03:16:37 tst: 87/123 P/F: 87:0, rt/mixed/mixed/t1	
+
+     Started : 03:16:37 tst: 88/123 P/F: 87:0, rt/columnT/columnT/t1	
+      passed : 03:18:00 tst: 88/123 P/F: 88:0, rt/columnT/columnT/t1	
+
+     Started : 03:18:00 tst: 89/123 P/F: 88:0, rt/changeMPATH/changeMPATH/t1	
+      passed : 03:18:16 tst: 89/123 P/F: 89:0, rt/changeMPATH/changeMPATH/t1	
+
+     Started : 03:18:16 tst: 90/123 P/F: 89:0, rt/nvv/nvv/t1	
+      passed : 03:18:25 tst: 90/123 P/F: 90:0, rt/nvv/nvv/t1	
+
+     Started : 03:18:25 tst: 91/123 P/F: 90:0, rt/ps1/ps1/t1	
+      passed : 03:18:28 tst: 91/123 P/F: 91:0, rt/ps1/ps1/t1	
+
+     Started : 03:18:28 tst: 92/123 P/F: 91:0, rt/find_first/find_first/t1	
+      passed : 03:18:32 tst: 92/123 P/F: 92:0, rt/find_first/find_first/t1	
+
+     Started : 03:18:32 tst: 93/123 P/F: 92:0, rt/sh_to_modulefile/sh_to_modulefile/t1	
+      passed : 03:18:36 tst: 93/123 P/F: 93:0, rt/sh_to_modulefile/sh_to_modulefile/t1	
+
+     Started : 03:18:36 tst: 94/123 P/F: 93:0, rt/modulerc/modulerc/t1	
+      passed : 03:19:13 tst: 94/123 P/F: 94:0, rt/modulerc/modulerc/t1	
+
+     Started : 03:19:13 tst: 95/123 P/F: 94:0, rt/cache/cache/t1	
+      passed : 03:19:19 tst: 95/123 P/F: 95:0, rt/cache/cache/t1	
+
+     Started : 03:19:19 tst: 96/123 P/F: 95:0, rt/nvv_prereq/nvv_prereg/t1	
+      passed : 03:19:24 tst: 96/123 P/F: 96:0, rt/nvv_prereq/nvv_prereg/t1	
+
+     Started : 03:19:24 tst: 97/123 P/F: 96:0, rt/softwarePage/softwarePage/t1	
+      passed : 03:19:30 tst: 97/123 P/F: 97:0, rt/softwarePage/softwarePage/t1	
+
+     Started : 03:19:30 tst: 98/123 P/F: 97:0, rt/gccCore/gccCore/t1	
+      passed : 03:19:34 tst: 98/123 P/F: 98:0, rt/gccCore/gccCore/t1	
+
+     Started : 03:19:34 tst: 99/123 P/F: 98:0, rt/personal_mf/personal_mf/t1	
+      passed : 03:19:38 tst: 99/123 P/F: 99:0, rt/personal_mf/personal_mf/t1	
+
+     Started : 03:19:38 tst: 100/123 P/F: 99:0, rt/oscar/oscar/t1	
+      passed : 03:19:42 tst: 100/123 P/F: 100:0, rt/oscar/oscar/t1	
+
+     Started : 03:19:42 tst: 101/123 P/F: 100:0, rt/properties/properties/t1	
+      passed : 03:19:47 tst: 101/123 P/F: 101:0, rt/properties/properties/t1	
+
+     Started : 03:19:47 tst: 102/123 P/F: 101:0, rt/pushenv/pushenv/t1	
+      passed : 03:19:57 tst: 102/123 P/F: 102:0, rt/pushenv/pushenv/t1	
+
+     Started : 03:19:57 tst: 103/123 P/F: 102:0, rt/uitSitePkg/uitSitePkg/t1	
+      passed : 03:20:03 tst: 103/123 P/F: 103:0, rt/uitSitePkg/uitSitePkg/t1	
+
+     Started : 03:20:03 tst: 104/123 P/F: 103:0, rt/inaccessible/inaccessible/t1	
+      passed : 03:20:08 tst: 104/123 P/F: 104:0, rt/inaccessible/inaccessible/t1	
+
+     Started : 03:20:08 tst: 105/123 P/F: 104:0, rt/genesis/genesis/t1	
+      passed : 03:20:11 tst: 105/123 P/F: 105:0, rt/genesis/genesis/t1	
+
+     Started : 03:20:11 tst: 106/123 P/F: 105:0, rt/sd_tacc/sd_tacc/t1	
+      passed : 03:20:25 tst: 106/123 P/F: 106:0, rt/sd_tacc/sd_tacc/t1	
+
+     Started : 03:20:25 tst: 107/123 P/F: 106:0, rt/spider_dot/spider_dot/t1	
+      passed : 03:20:31 tst: 107/123 P/F: 107:0, rt/spider_dot/spider_dot/t1	
+
+     Started : 03:20:31 tst: 108/123 P/F: 107:0, rt/spider/spider/t1	
+      passed : 03:21:25 tst: 108/123 P/F: 108:0, rt/spider/spider/t1	
+
+     Started : 03:21:25 tst: 109/123 P/F: 108:0, rt/set_alias/set_alias/t1	
+      passed : 03:21:30 tst: 109/123 P/F: 109:0, rt/set_alias/set_alias/t1	
+
+     Started : 03:21:30 tst: 110/123 P/F: 109:0, rt/always/always/t1	
+      passed : 03:21:34 tst: 110/123 P/F: 110:0, rt/always/always/t1	
+
+     Started : 03:21:34 tst: 111/123 P/F: 110:0, rt/meta/meta/t1	
+      passed : 03:21:44 tst: 111/123 P/F: 111:0, rt/meta/meta/t1	
+
+     Started : 03:21:44 tst: 112/123 P/F: 111:0, rt/ref_count/ref_count/t1	
+      passed : 03:21:47 tst: 112/123 P/F: 112:0, rt/ref_count/ref_count/t1	
+
+     Started : 03:21:47 tst: 113/123 P/F: 112:0, rt/noTCL/noTCL/t1	
+      passed : 03:21:52 tst: 113/123 P/F: 113:0, rt/noTCL/noTCL/t1	
+
+     Started : 03:21:52 tst: 114/123 P/F: 113:0, rt/petsc/petsc/t1	
+      passed : 03:21:59 tst: 114/123 P/F: 114:0, rt/petsc/petsc/t1	
+
+     Started : 03:21:59 tst: 115/123 P/F: 114:0, rt/unload/unload/t1	
+      passed : 03:22:04 tst: 115/123 P/F: 115:0, rt/unload/unload/t1	
+
+     Started : 03:22:04 tst: 116/123 P/F: 115:0, rt/show/show/t1	
+      passed : 03:22:11 tst: 116/123 P/F: 116:0, rt/show/show/t1	
+
+     Started : 03:22:11 tst: 117/123 P/F: 116:0, rt/arch_swap/arch_swap/t1	
+      passed : 03:22:15 tst: 117/123 P/F: 117:0, rt/arch_swap/arch_swap/t1	
+
+     Started : 03:22:15 tst: 118/123 P/F: 117:0, rt/dot/dot/t1	
+      passed : 03:22:23 tst: 118/123 P/F: 118:0, rt/dot/dot/t1	
+
+     Started : 03:22:23 tst: 119/123 P/F: 118:0, rt/use_cmdline/use_cmdline/t1	
+      passed : 03:22:26 tst: 119/123 P/F: 119:0, rt/use_cmdline/use_cmdline/t1	
+
+     Started : 03:22:26 tst: 120/123 P/F: 119:0, rt/use_unuse/use_unuse/t1	
+      passed : 03:22:31 tst: 120/123 P/F: 120:0, rt/use_unuse/use_unuse/t1	
+
+     Started : 03:22:31 tst: 121/123 P/F: 120:0, rt/tabcompl/tabcompl/t1	
+      passed : 03:23:07 tst: 121/123 P/F: 121:0, rt/tabcompl/tabcompl/t1	
+
+     Started : 03:23:07 tst: 122/123 P/F: 121:0, rt/slepc/slepc/t1	
+      passed : 03:23:10 tst: 122/123 P/F: 122:0, rt/slepc/slepc/t1	
+
+     Started : 03:23:10 tst: 123/123 P/F: 122:0, rt/junk/junk/t1	
+      passed : 03:23:15 tst: 123/123 P/F: 123:0, rt/junk/junk/t1	
+
+
+Finished Tests
+
+*******************************************************************************************************************
+*** Test Results                                                                                                ***
+*******************************************************************************************************************
+
+Date:             Sat Jul 23 03:05:53 2022
+TARGET:
+Tag:              2022_07_23
+TM Version:       1.7
+Hermes Version:   2.9
+Lua Version:      Lua 5.1
+Total Test Time:  00:17:18.67
+
+*******************************************************************************************************************
+*** Test Summary                                                                                                ***
+*******************************************************************************************************************
+
+Total:   123
+passed:  123
+
+*******  *  ****  *********                                ***************
+Results  R  Time  Test Name                                version/message
+*******  *  ****  *********                                ***************
+passed   R  3.91  rt/always/always/t1
+passed   R  4.23  rt/arch_swap/arch_swap/t1
+passed   R  21.7  rt/avail/avail/t1
+passed   R  15.9  rt/between/between/t1
+passed   R  4.37  rt/bioContainers/bioContainers/t1
+passed   R  3.69  rt/broken_modulerc/broken_modulerc/t1
+passed   R  4.03  rt/build_cache/build_cache/t1
+passed   R  6.07  rt/cache/cache/t1
+passed   R  6.26  rt/cached_loads/cached_loads/t1
+passed   R  4.9   rt/cas_avail/cas_avail/t1
+passed   R  15.4  rt/changeMPATH/changeMPATH/t1
+passed   R  3.02  rt/checkSyntax/checkSyntax/t1
+passed   R  4.53  rt/cmake/cmake/t1
+passed   R  4.69  rt/cnflt_except/cnflt_except/t1
+passed   R  83.4  rt/columnT/columnT/t1
+passed   R  5.47  rt/conflict/conflict/t1
+passed   R  9.57  rt/csh_swap/csh_swap/t1
+passed   R  4.21  rt/dbT/dbT/t1
+passed   R  5.33  rt/defaults/defaults/t1
+passed   R  4.96  rt/delcatty/delcatty/t1
+passed   R  5.77  rt/delim/delim/t1
+passed   R  15    rt/depends_on/depends_on/t1
+passed   R  4.09  rt/deprecation/deprecation/t1
+passed   R  3.71  rt/disappear/disappear/t1
+passed   R  3.33  rt/display/display/t1
+passed   R  7.31  rt/dot/dot/t1
+passed   R  6.1   rt/dups/dups/t1
+passed   R  3.65  rt/dyn/dyn/t1
+passed   R  17.2  rt/eb/eb/t1
+passed   R  4.07  rt/eb_avail/eb_avail/t1
+passed   R  3.26  rt/empty/empty/t1
+passed   R  3.02  rt/errHandler/errHander/t1
+passed   R  7.11  rt/extended_default/extended_default/t1
+passed   R  5.42  rt/family/family/t1
+passed   R  4.46  rt/find_first/find_first/t1
+passed   R  2.85  rt/fish/fish/t1
+passed   R  3.02  rt/funny_files/funny_files/t1
+passed   R  4.03  rt/gccCore/gccCore/t1
+passed   R  3.14  rt/genesis/genesis/t1
+passed   R  8.75  rt/hash_try_load/hash_try_load/t1
+passed   R  6.34  rt/helios/helios/t1
+passed   R  3.37  rt/hidden/hidden/t1
+passed   R  9.59  rt/hierarchy/hierarchy/t1
+passed   R  3.27  rt/hook/hook/t1
+passed   R  5.22  rt/i18n/i18n/t1
+passed   R  5.2   rt/inaccessible/inaccessible/t1
+passed   R  7.6   rt/inherit/inherit/t1
+passed   R  5.99  rt/isloaded/isloaded/t1
+passed   R  5.41  rt/itac/itac/t1
+passed   R  5.15  rt/junk/junk/t1
+passed   R  4.25  rt/keyword/keyword/t1
+passed   R  10.1  rt/lars/lars/t1
+passed   R  3.63  rt/lastName/lastName/t1
+passed   R  6.43  rt/lnk_same_dir/lnk_same_dir/t1
+passed   R  70.6  rt/load/load/t1
+passed   R  4.12  rt/load_any/load_any/t1
+passed   R  4.15  rt/manpath/manpath/t1
+passed   R  9.8   rt/meta/meta/t1
+passed   R  4.72  rt/mgrload_func/mgrload_func/t1
+passed   R  6.08  rt/mixed/mixed/t1
+passed   R  3.07  rt/ml/ml/t1
+passed   R  37.2  rt/modulerc/modulerc/t1
+passed   R  7.53  rt/mpath/mpath/t1
+passed   R  8.09  rt/multiL/multiL/t1
+passed   R  3.08  rt/multiparents/multiparents/t1
+passed   R  2.84  rt/nil/nil/t1
+passed   R  5.74  rt/noTCL/noTCL/t1
+passed   R  9.07  rt/nvv/nvv/t1
+passed   R  5.32  rt/nvv_prereq/nvv_prereg/t1
+passed   R  4.23  rt/oldStdEnv/oldStdEnv/t1
+passed   R  4.07  rt/oscar/oscar/t1
+passed   R  4.52  rt/p4est/p4est/t1
+passed   R  3.54  rt/perl/perl/t1
+passed   R  3.95  rt/personal_mf/personal_mf/t1
+passed   R  6.35  rt/petsc/petsc/t1
+passed   R  5.66  rt/pkg/pkg/t1
+passed   R  9.58  rt/prereq/prereq/t1
+passed   R  5.71  rt/priority/priority/t1
+passed   R  4.82  rt/properties/properties/t1
+passed   R  3.39  rt/prophook/prophook/t1
+passed   R  3.1   rt/ps1/ps1/t1
+passed   R  6.3   rt/purge/purge/t1
+passed   R  10.2  rt/pushenv/pushenv/t1
+passed   R  4.45  rt/pyHier/pyHier/t1
+passed   R  3.95  rt/python/python/t1
+passed   R  3.39  rt/r_shell/r_shell/t1
+passed   R  3.1   rt/ref_count/ref_count/t1
+passed   R  3.24  rt/refresh/refresh/t1
+passed   R  8.43  rt/reset/reset/t1
+passed   R  4.39  rt/rmap/rmap/t1
+passed   R  3.45  rt/rstats/rstats/t1
+passed   R  56.9  rt/saverestore/saverestore/t1
+passed   R  13.6  rt/sd_tacc/sd_tacc/t1
+passed   R  4.41  rt/set_alias/set_alias/t1
+passed   R  3.22  rt/sh_to_modulefile/sh_to_modulefile/t1
+passed   R  3.86  rt/shellType/shellType/t1
+passed   R  6.9   rt/show/show/t1
+passed   R  3.13  rt/slash/slash/t1
+passed   R  3.04  rt/slepc/slepc/t1
+passed   R  5.37  rt/softwarePage/softwarePage/t1
+passed   R  4.05  rt/spades/spades/t1
+passed   R  54.5  rt/spider/spider/t1
+passed   R  6.21  rt/spider_dot/spider_dot/t1
+passed   R  24    rt/sticky/sticky/t1
+passed   R  22.7  rt/swap/swap/t1
+passed   R  4.42  rt/symlink/symlink/t1
+passed   R  35.7  rt/tabcompl/tabcompl/t1
+passed   R  18.2  rt/tacc/tacc/t1
+passed   R  5.52  rt/tamu/tamu/t1
+passed   R  3.53  rt/tmod_spider/tmod_spider/t1
+passed   R  3.64  rt/ugent_startup/ugent_startup/t1
+passed   R  5.68  rt/uitSitePkg/uitSitePkg/t1
+passed   R  5.32  rt/unload/unload/t1
+passed   R  3.83  rt/unregisterLoads/unregisterLoads/t1
+passed   R  3.77  rt/use_append/use_append/t1
+passed   R  3.57  rt/use_cmdline/use_cmdline/t1
+passed   R  4.6   rt/use_unuse/use_unuse/t1
+passed   R  3.74  rt/use_w_sticky/use_w_sticky/t1
+passed   R  3.59  rt/userInGroups/userInGroups/t1
+passed   R  5.7   rt/user_inherit/user_inherit/t1
+passed   R  3.07  rt/varType/varType/t1
+passed   R  4.33  rt/vasp/vasp/t1
+passed   R  4.54  rt/versionTest/versionTest/t1
+
+
+>>> Completed testing sys-cluster/lmod-8.5.6
+
+>>> Install sys-cluster/lmod-8.5.6 into /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image
+make -j8 DESTDIR=/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image install
+mkdir -p /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/libexec
+mkdir -p /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/tools
+mkdir -p /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/settarg
+mkdir -p /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/shells
+mkdir -p /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init
+mkdir -p /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/lib
+mkdir -p /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/modulefiles/Core
+mkdir -p /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/share/man/cat1
+mkdir -p /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/messageDir
+mkdir -p /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/tools/i18n
+mkdir -p /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/fish_tab_completion
+mkdir -p /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/ksh_funcs
+if [ -d ./pkgs/tcl2lua ]; then                             \
+           /home/username/gentoo/usr/bin/make -C ./pkgs/tcl2lua  LUA_INC=-I/home/username/gentoo/usr/include/lua5.1       \
+        TCL_INCLUDE=-I/usr/include/tcl8.6 TCL_LIBS=            \
+                LIB=/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/lib LIBS=-ltcl  CC=riscv64-unknown-linux-gnu-gcc                  \
+                SHARE=/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/libexec                                 \
+                install;                                                   \
+        fi
+/home/username/gentoo/usr/bin/make FILELIST="init/lmodrc.lua" DIRLOC=/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init    __installMe
+/home/username/gentoo/usr/bin/make FILELIST="init/bash.in init/cmake.in init/csh.in init/ksh.in init/tcsh.in init/zsh.in init/sh.in init/perl.in init/R.in init/env_modules_python.py.in init/lmod_bash_completions init/fish.in init/lisp.in init/env_modules_ruby.rb.in" DIRLOC=/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init    __installMe
+/home/username/gentoo/usr/bin/make FILELIST="init/profile.in init/profile.fish.in init/cshrc.in" DIRLOC=/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init    __installMe
+make[1]: Entering directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+make[1]: Entering directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6/pkgs/tcl2lua'
+make[1]: Entering directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+riscv64-unknown-linux-gnu-gcc -O2 -pipe -march=rv64gc -mabi=lp64d -O2 -pipe -DLUA_COMPAT_MODULE -fPIC -I/home/username/gentoo/usr/include/lua5.1 -I/usr/include/tcl8.6   -c -o tcl2lua.o tcl2lua.c
+ln -s tcl2lua.so.1.0.1 tcl2lua.so.1
+ln -s tcl2lua.so.1 tcl2lua.so
+make[1]: Entering directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+/home/username/gentoo/usr/bin/make FILELIST="src/CTimer.lua src/Cache.lua src/Configuration.lua src/DirTree.lua src/Exec.lua src/FrameStk.lua src/Hook.lua src/HookArray.lua src/LocationT.lua src/MC_Access.lua src/MC_CheckSyntax.lua src/MC_ComputeHash.lua src/MC_DependencyCk.lua src/MC_Load.lua src/MC_MgrLoad.lua src/MC_Refresh.lua src/MC_Show.lua src/MC_Spider.lua src/MC_Unload.lua src/MN_Between.lua src/MN_Exact.lua src/MN_Latest.lua src/MN_Match.lua src/MName.lua src/MRC.lua src/MT.lua src/Master.lua src/MasterControl.lua src/ModuleA.lua src/Options.lua src/Pkg.lua src/PkgBase.lua src/PkgTACC.lua src/ReadLmodRC.lua src/RefCount.lua src/SitePackage.lua src/Spider.lua src/StandardPackage.lua src/Timer.lua src/Var.lua src/Version.lua src/cmdfuncs.lua src/collectionFileA.lua src/colorize.lua src/loadModuleFile.lua src/modfuncs.lua src/mrc_funcs.lua src/mrc_load.lua src/mrc_sandbox.lua src/myGlobals.lua src/pager.lua src/parseVersion.lua src/sandbox.lua src/utils.lua src/RC2lua.tcl src/tcl2lua.tcl" DIRLOC=/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/libexec __installMe
+/home/username/gentoo/usr/bin/make FILELIST="tools/Banner.lua tools/BeautifulTbl.lua tools/ColumnTable.lua tools/Cosmic.lua tools/Dbg.lua tools/MF_Base.lua tools/MF_Lua.lua tools/MF_TCL.lua tools/Optiks.lua tools/Optiks_Option.lua tools/TermWidth.lua tools/base64.lua tools/capture.lua tools/declare.lua tools/deepcopy.lua tools/fileOps.lua tools/haveTermSupport.lua tools/inherits.lua tools/json.lua tools/lmod_system_execute.lua tools/pairsByKeys.lua tools/replaceStr.lua tools/serializeTbl.lua tools/strict.lua tools/string_utils.lua" DIRLOC=/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/tools __installMe
+/home/username/gentoo/usr/bin/make FILELIST="shells/Bare.lua shells/BaseShell.lua shells/Bash.lua shells/CMake.lua shells/Csh.lua shells/Fish.lua shells/Lisp.lua shells/Perl.lua shells/Python.lua shells/R.lua shells/Ruby.lua" DIRLOC=/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/shells __installMe
+make[1]: Entering directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+/home/username/gentoo/usr/bin/make FILELIST="settarg/Bare.lua settarg/BaseShell.lua settarg/Bash.lua settarg/BuildTarget.lua settarg/CmdLineOptions.lua settarg/Csh.lua settarg/ModifyPath.lua settarg/Output.lua settarg/ProcessModuleTable.lua settarg/STT.lua settarg/TargValue.lua settarg/Version.lua settarg/getUname.lua settarg/settarg_cmd.in.lua settarg/settarg_rc.lua settarg/utils.lua settarg/targ.in" DIRLOC=/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/settarg __installMe
+make[1]: Entering directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+make[1]: Entering directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+make[1]: Entering directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+for i in init/lmodrc.lua; do                                                 \
+   bareN=${i##*/};                                                       \
+   fn=${bareN%%.in*};                                                    \
+   ext=${bareN#*.};                                                      \
+   : echo "DIRLOC/fn: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn";                                    \
+   sed  -e 's|@PREFIX@|/home/username/gentoo/usr/share/Lmod|g'                                       \
+        -e 's|@path_to_lua@|/home/username/gentoo/usr/bin/lua5.1|g'                             \
+        -e 's|@hashsum@|/home/username/gentoo/usr/bin/sha1sum|g'                             \
+        -e 's|@pager@|/home/username/gentoo/usr/bin/less|g'                                 \
+        -e 's|@case_independent_sorting@|yes|g'   \
+        -e 's|@lmod_settarg_full_support@|no|g' \
+        -e 's|@use_dot_files@|yes|g'                         \
+        -e 's|@lang@|<empty>|g'                             \
+        -e 's|@site_msg_file@|<empty>|g'                         \
+        -e 's|@git@|(8.5.6)|g'                                     \
+        -e 's|--@ignore_dirs@--|[\".svn\"] = true, [\".git\"] = true, [\".hg\"] = true, [\".bzr\"] = true, |g'                         \
+        -e 's|@sys_lua_path@|/home/username/gentoo/usr/share/lua/5.1/?.lua;/home/username/gentoo/usr/share/lua/5.1/?/init.lua;/home/username/gentoo/usr/lib64/lua/5.1/?.lua;/home/username/gentoo/usr/lib64/lua/5.1/?/init.lua;/usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua|g'                           \
+        -e 's|@hidden_italic@|no|g'                    \
+        -e 's|@modulepath_init@|@PKG@/init/.modulespath|g'                     \
+        -e 's|@sys_lua_cpath@|/home/username/gentoo/usr/lib64/lua/5.1/?.so;/usr/lib64/lua/5.1/?.so;/home/username/gentoo/usr/lib64/lua/5.1/loadall.so|g'                         \
+        -e 's|@path_to_luac@|/home/username/gentoo/usr/bin/luac5.1|g'                           \
+        -e 's|@have_lua_term@|yes|g'                         \
+        -e 's|@silence_shell_debugging@|no|g'     \
+        -e 's|@fast_tcl_interp@|yes|g'                     \
+        -e 's|@settarg_cmd@|settarg_cmd|g'                             \
+        -e "s|@my_shell@|$fn|g"                                          \
+        -e 's|@tclsh@|/home/username/gentoo/usr/bin/tclsh|g'                                 \
+        -e 's|@ls@|/home/username/gentoo/bin/ls|g'                                       \
+        -e 's|@disable_name_autoswap@|no|g'         \
+        -e 's|@tmod_path_rule@|no|g'                       \
+        -e 's|@tmod_find_first@|no|g'                     \
+        -e 's|@redirect@|no|g'                                   \
+        -e 's|@basename@|/home/username/gentoo/usr/bin/basename|g'                                   \
+        -e 's|@support_ksh@|yes|g'                             \
+        -e 's|@cached_loads@|yes|g'                           \
+        -e 's|@avail_extensions@|@AVAIL_EXTENSION@|g'               \
+        -e 's|@ps@|/home/username/gentoo/bin/ps|g'                                               \
+        -e 's|@site_name@|Gentoo|g'                                 \
+        -e 's|@site_controlled_prefix@|yes|g'       \
+        -e 's|@syshost@|Gentoo|g'                                     \
+        -e 's|@expr@|/home/username/gentoo/usr/bin/expr|g'                                           \
+        -e 's|@extended_default@|yes|g'                   \
+        -e 's|@libexec@|/home/username/gentoo/usr/share/Lmod/libexec|g'                                     \
+        -e 's|@legacy_ordering@|@LEGACY_ORDERING@|g'                     \
+        -e 's|@pin_versions@|no|g'                           \
+        -e 's|@auto_swap@|yes|g'                                 \
+        -e 's|@sys_ld_lib_path@||g'                     \
+        -e 's|@sys_ld_preload@||g'                       \
+        -e 's|@export_module@|yes|g'                         \
+        -e 's|@lmod_version@|8.5.6|g'                                \
+        -e 's|@exact_match@|no|g'                             \
+        -e 's|@ancient@|86400|g'                                     \
+        -e 's|@prepend_block@|normal|g'                         \
+        -e 's|@colorize@|yes|g'                                   \
+        -e 's|@duplicate_paths@|no|g'                     \
+        -e 's|@allow_tcl_mfiles@|yes|g'                   \
+        -e 's|@mpath_avail@|no|g'                             \
+        -e 's|@short_time@|2|g'                               \
+        -e 's|@cacheDirs@|/home/username/gentoo/etc/lmod_cache/spider_cache|g'                         \
+        -e 's|@updateSystemFn@|/home/username/gentoo/etc/lmod_cache/system.txt|g'                     \
+        -e 's|@modulepath_root@|/home/username/gentoo/etc/modulefiles|g'                     \
+        -e 's|@lmod_root@|/home/username/gentoo/usr/share/Lmod/..|g'                                 \
+        -e 's|@lmod_allow_root_use@|yes|g'             \
+        -e 's|@PKGV@|/home/username/gentoo/usr/share/Lmod|g'                                           \
+        -e 's|@PKG@|/home/username/gentoo/usr/share/Lmod|g'         < $i > /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn;             \
+    [ "$ext" = "in.lua" -o "$ext" = "tcl" -o "$ext" = "in"             \
+       -o "$ext" = "sh.in" ] &&                                          \
+       chmod +x /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn;                                           \
+    if [ "$ext" = "version.lua" ]; then                                  \
+       mname=${bareN%%.*};                                               \
+       : echo "DIRLOC: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$mname";                                \
+       mv /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$mname.lua;                           \
+    fi;                                                                   \
+done
+for i in init/bash.in init/cmake.in init/csh.in init/ksh.in init/tcsh.in init/zsh.in init/sh.in init/perl.in init/R.in init/env_modules_python.py.in init/lmod_bash_completions init/fish.in init/lisp.in init/env_modules_ruby.rb.in; do                                                 \
+   bareN=${i##*/};                                                       \
+   fn=${bareN%%.in*};                                                    \
+   ext=${bareN#*.};                                                      \
+   : echo "DIRLOC/fn: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn";                                    \
+   sed  -e 's|@PREFIX@|/home/username/gentoo/usr/share/Lmod|g'                                       \
+        -e 's|@path_to_lua@|/home/username/gentoo/usr/bin/lua5.1|g'                             \
+        -e 's|@hashsum@|/home/username/gentoo/usr/bin/sha1sum|g'                             \
+        -e 's|@pager@|/home/username/gentoo/usr/bin/less|g'                                 \
+        -e 's|@case_independent_sorting@|yes|g'   \
+        -e 's|@lmod_settarg_full_support@|no|g' \
+        -e 's|@use_dot_files@|yes|g'                         \
+        -e 's|@lang@|<empty>|g'                             \
+        -e 's|@site_msg_file@|<empty>|g'                         \
+        -e 's|@git@|(8.5.6)|g'                                     \
+        -e 's|--@ignore_dirs@--|[\".svn\"] = true, [\".git\"] = true, [\".hg\"] = true, [\".bzr\"] = true, |g'                         \
+        -e 's|@sys_lua_path@|/home/username/gentoo/usr/share/lua/5.1/?.lua;/home/username/gentoo/usr/share/lua/5.1/?/init.lua;/home/username/gentoo/usr/lib64/lua/5.1/?.lua;/home/username/gentoo/usr/lib64/lua/5.1/?/init.lua;/usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua|g'                           \
+        -e 's|@hidden_italic@|no|g'                    \
+        -e 's|@modulepath_init@|@PKG@/init/.modulespath|g'                     \
+        -e 's|@sys_lua_cpath@|/home/username/gentoo/usr/lib64/lua/5.1/?.so;/usr/lib64/lua/5.1/?.so;/home/username/gentoo/usr/lib64/lua/5.1/loadall.so|g'                         \
+        -e 's|@path_to_luac@|/home/username/gentoo/usr/bin/luac5.1|g'                           \
+        -e 's|@have_lua_term@|yes|g'                         \
+        -e 's|@silence_shell_debugging@|no|g'     \
+        -e 's|@fast_tcl_interp@|yes|g'                     \
+        -e 's|@settarg_cmd@|settarg_cmd|g'                             \
+        -e "s|@my_shell@|$fn|g"                                          \
+        -e 's|@tclsh@|/home/username/gentoo/usr/bin/tclsh|g'                                 \
+        -e 's|@ls@|/home/username/gentoo/bin/ls|g'                                       \
+        -e 's|@disable_name_autoswap@|no|g'         \
+        -e 's|@tmod_path_rule@|no|g'                       \
+        -e 's|@tmod_find_first@|no|g'                     \
+        -e 's|@redirect@|no|g'                                   \
+        -e 's|@basename@|/home/username/gentoo/usr/bin/basename|g'                                   \
+        -e 's|@support_ksh@|yes|g'                             \
+        -e 's|@cached_loads@|yes|g'                           \
+        -e 's|@avail_extensions@|@AVAIL_EXTENSION@|g'               \
+        -e 's|@ps@|/home/username/gentoo/bin/ps|g'                                               \
+        -e 's|@site_name@|Gentoo|g'                                 \
+        -e 's|@site_controlled_prefix@|yes|g'       \
+        -e 's|@syshost@|Gentoo|g'                                     \
+        -e 's|@expr@|/home/username/gentoo/usr/bin/expr|g'                                           \
+        -e 's|@extended_default@|yes|g'                   \
+        -e 's|@libexec@|/home/username/gentoo/usr/share/Lmod/libexec|g'                                     \
+        -e 's|@legacy_ordering@|@LEGACY_ORDERING@|g'                     \
+        -e 's|@pin_versions@|no|g'                           \
+        -e 's|@auto_swap@|yes|g'                                 \
+        -e 's|@sys_ld_lib_path@||g'                     \
+        -e 's|@sys_ld_preload@||g'                       \
+        -e 's|@export_module@|yes|g'                         \
+        -e 's|@lmod_version@|8.5.6|g'                                \
+        -e 's|@exact_match@|no|g'                             \
+        -e 's|@ancient@|86400|g'                                     \
+        -e 's|@prepend_block@|normal|g'                         \
+        -e 's|@colorize@|yes|g'                                   \
+        -e 's|@duplicate_paths@|no|g'                     \
+        -e 's|@allow_tcl_mfiles@|yes|g'                   \
+        -e 's|@mpath_avail@|no|g'                             \
+        -e 's|@short_time@|2|g'                               \
+        -e 's|@cacheDirs@|/home/username/gentoo/etc/lmod_cache/spider_cache|g'                         \
+        -e 's|@updateSystemFn@|/home/username/gentoo/etc/lmod_cache/system.txt|g'                     \
+        -e 's|@modulepath_root@|/home/username/gentoo/etc/modulefiles|g'                     \
+        -e 's|@lmod_root@|/home/username/gentoo/usr/share/Lmod/..|g'                                 \
+        -e 's|@lmod_allow_root_use@|yes|g'             \
+        -e 's|@PKGV@|/home/username/gentoo/usr/share/Lmod|g'                                           \
+        -e 's|@PKG@|/home/username/gentoo/usr/share/Lmod|g'         < $i > /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn;             \
+    [ "$ext" = "in.lua" -o "$ext" = "tcl" -o "$ext" = "in"             \
+       -o "$ext" = "sh.in" ] &&                                          \
+       chmod +x /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn;                                           \
+    if [ "$ext" = "version.lua" ]; then                                  \
+       mname=${bareN%%.*};                                               \
+       : echo "DIRLOC: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$mname";                                \
+       mv /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$mname.lua;                           \
+    fi;                                                                   \
+done
+for i in init/profile.in init/profile.fish.in init/cshrc.in; do                                                 \
+   bareN=${i##*/};                                                       \
+   fn=${bareN%%.in*};                                                    \
+   ext=${bareN#*.};                                                      \
+   : echo "DIRLOC/fn: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn";                                    \
+   sed  -e 's|@PREFIX@|/home/username/gentoo/usr/share/Lmod|g'                                       \
+        -e 's|@path_to_lua@|/home/username/gentoo/usr/bin/lua5.1|g'                             \
+        -e 's|@hashsum@|/home/username/gentoo/usr/bin/sha1sum|g'                             \
+        -e 's|@pager@|/home/username/gentoo/usr/bin/less|g'                                 \
+        -e 's|@case_independent_sorting@|yes|g'   \
+        -e 's|@lmod_settarg_full_support@|no|g' \
+        -e 's|@use_dot_files@|yes|g'                         \
+        -e 's|@lang@|<empty>|g'                             \
+        -e 's|@site_msg_file@|<empty>|g'                         \
+        -e 's|@git@|(8.5.6)|g'                                     \
+        -e 's|--@ignore_dirs@--|[\".svn\"] = true, [\".git\"] = true, [\".hg\"] = true, [\".bzr\"] = true, |g'                         \
+        -e 's|@sys_lua_path@|/home/username/gentoo/usr/share/lua/5.1/?.lua;/home/username/gentoo/usr/share/lua/5.1/?/init.lua;/home/username/gentoo/usr/lib64/lua/5.1/?.lua;/home/username/gentoo/usr/lib64/lua/5.1/?/init.lua;/usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua|g'                           \
+        -e 's|@hidden_italic@|no|g'                    \
+        -e 's|@modulepath_init@|@PKG@/init/.modulespath|g'                     \
+        -e 's|@sys_lua_cpath@|/home/username/gentoo/usr/lib64/lua/5.1/?.so;/usr/lib64/lua/5.1/?.so;/home/username/gentoo/usr/lib64/lua/5.1/loadall.so|g'                         \
+        -e 's|@path_to_luac@|/home/username/gentoo/usr/bin/luac5.1|g'                           \
+        -e 's|@have_lua_term@|yes|g'                         \
+        -e 's|@silence_shell_debugging@|no|g'     \
+        -e 's|@fast_tcl_interp@|yes|g'                     \
+        -e 's|@settarg_cmd@|settarg_cmd|g'                             \
+        -e "s|@my_shell@|$fn|g"                                          \
+        -e 's|@tclsh@|/home/username/gentoo/usr/bin/tclsh|g'                                 \
+        -e 's|@ls@|/home/username/gentoo/bin/ls|g'                                       \
+        -e 's|@disable_name_autoswap@|no|g'         \
+        -e 's|@tmod_path_rule@|no|g'                       \
+        -e 's|@tmod_find_first@|no|g'                     \
+        -e 's|@redirect@|no|g'                                   \
+        -e 's|@basename@|/home/username/gentoo/usr/bin/basename|g'                                   \
+        -e 's|@support_ksh@|yes|g'                             \
+        -e 's|@cached_loads@|yes|g'                           \
+        -e 's|@avail_extensions@|@AVAIL_EXTENSION@|g'               \
+        -e 's|@ps@|/home/username/gentoo/bin/ps|g'                                               \
+        -e 's|@site_name@|Gentoo|g'                                 \
+        -e 's|@site_controlled_prefix@|yes|g'       \
+        -e 's|@syshost@|Gentoo|g'                                     \
+        -e 's|@expr@|/home/username/gentoo/usr/bin/expr|g'                                           \
+        -e 's|@extended_default@|yes|g'                   \
+        -e 's|@libexec@|/home/username/gentoo/usr/share/Lmod/libexec|g'                                     \
+        -e 's|@legacy_ordering@|@LEGACY_ORDERING@|g'                     \
+        -e 's|@pin_versions@|no|g'                           \
+        -e 's|@auto_swap@|yes|g'                                 \
+        -e 's|@sys_ld_lib_path@||g'                     \
+        -e 's|@sys_ld_preload@||g'                       \
+        -e 's|@export_module@|yes|g'                         \
+        -e 's|@lmod_version@|8.5.6|g'                                \
+        -e 's|@exact_match@|no|g'                             \
+        -e 's|@ancient@|86400|g'                                     \
+        -e 's|@prepend_block@|normal|g'                         \
+        -e 's|@colorize@|yes|g'                                   \
+        -e 's|@duplicate_paths@|no|g'                     \
+        -e 's|@allow_tcl_mfiles@|yes|g'                   \
+        -e 's|@mpath_avail@|no|g'                             \
+        -e 's|@short_time@|2|g'                               \
+        -e 's|@cacheDirs@|/home/username/gentoo/etc/lmod_cache/spider_cache|g'                         \
+        -e 's|@updateSystemFn@|/home/username/gentoo/etc/lmod_cache/system.txt|g'                     \
+        -e 's|@modulepath_root@|/home/username/gentoo/etc/modulefiles|g'                     \
+        -e 's|@lmod_root@|/home/username/gentoo/usr/share/Lmod/..|g'                                 \
+        -e 's|@lmod_allow_root_use@|yes|g'             \
+        -e 's|@PKGV@|/home/username/gentoo/usr/share/Lmod|g'                                           \
+        -e 's|@PKG@|/home/username/gentoo/usr/share/Lmod|g'         < $i > /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn;             \
+    [ "$ext" = "in.lua" -o "$ext" = "tcl" -o "$ext" = "in"             \
+       -o "$ext" = "sh.in" ] &&                                          \
+       chmod +x /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn;                                           \
+    if [ "$ext" = "version.lua" ]; then                                  \
+       mname=${bareN%%.*};                                               \
+       : echo "DIRLOC: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$mname";                                \
+       mv /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$mname.lua;                           \
+    fi;                                                                   \
+done
+make[1]: Leaving directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+/home/username/gentoo/usr/bin/make FILELIST="MF/lmod.version.lua MF/settarg.version.lua" DIRLOC=/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/modulefiles/Core __installMe
+for i in src/CTimer.lua src/Cache.lua src/Configuration.lua src/DirTree.lua src/Exec.lua src/FrameStk.lua src/Hook.lua src/HookArray.lua src/LocationT.lua src/MC_Access.lua src/MC_CheckSyntax.lua src/MC_ComputeHash.lua src/MC_DependencyCk.lua src/MC_Load.lua src/MC_MgrLoad.lua src/MC_Refresh.lua src/MC_Show.lua src/MC_Spider.lua src/MC_Unload.lua src/MN_Between.lua src/MN_Exact.lua src/MN_Latest.lua src/MN_Match.lua src/MName.lua src/MRC.lua src/MT.lua src/Master.lua src/MasterControl.lua src/ModuleA.lua src/Options.lua src/Pkg.lua src/PkgBase.lua src/PkgTACC.lua src/ReadLmodRC.lua src/RefCount.lua src/SitePackage.lua src/Spider.lua src/StandardPackage.lua src/Timer.lua src/Var.lua src/Version.lua src/cmdfuncs.lua src/collectionFileA.lua src/colorize.lua src/loadModuleFile.lua src/modfuncs.lua src/mrc_funcs.lua src/mrc_load.lua src/mrc_sandbox.lua src/myGlobals.lua src/pager.lua src/parseVersion.lua src/sandbox.lua src/utils.lua src/RC2lua.tcl src/tcl2lua.tcl; do                                                 \
+   bareN=${i##*/};                                                       \
+   fn=${bareN%%.in*};                                                    \
+   ext=${bareN#*.};                                                      \
+   : echo "DIRLOC/fn: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/libexec/$fn";                                    \
+   sed  -e 's|@PREFIX@|/home/username/gentoo/usr/share/Lmod|g'                                       \
+        -e 's|@path_to_lua@|/home/username/gentoo/usr/bin/lua5.1|g'                             \
+        -e 's|@hashsum@|/home/username/gentoo/usr/bin/sha1sum|g'                             \
+        -e 's|@pager@|/home/username/gentoo/usr/bin/less|g'                                 \
+        -e 's|@case_independent_sorting@|yes|g'   \
+        -e 's|@lmod_settarg_full_support@|no|g' \
+        -e 's|@use_dot_files@|yes|g'                         \
+        -e 's|@lang@|<empty>|g'                             \
+        -e 's|@site_msg_file@|<empty>|g'                         \
+        -e 's|@git@|(8.5.6)|g'                                     \
+        -e 's|--@ignore_dirs@--|[\".svn\"] = true, [\".git\"] = true, [\".hg\"] = true, [\".bzr\"] = true, |g'                         \
+        -e 's|@sys_lua_path@|/home/username/gentoo/usr/share/lua/5.1/?.lua;/home/username/gentoo/usr/share/lua/5.1/?/init.lua;/home/username/gentoo/usr/lib64/lua/5.1/?.lua;/home/username/gentoo/usr/lib64/lua/5.1/?/init.lua;/usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua|g'                           \
+        -e 's|@hidden_italic@|no|g'                    \
+        -e 's|@modulepath_init@|@PKG@/init/.modulespath|g'                     \
+        -e 's|@sys_lua_cpath@|/home/username/gentoo/usr/lib64/lua/5.1/?.so;/usr/lib64/lua/5.1/?.so;/home/username/gentoo/usr/lib64/lua/5.1/loadall.so|g'                         \
+        -e 's|@path_to_luac@|/home/username/gentoo/usr/bin/luac5.1|g'                           \
+        -e 's|@have_lua_term@|yes|g'                         \
+        -e 's|@silence_shell_debugging@|no|g'     \
+        -e 's|@fast_tcl_interp@|yes|g'                     \
+        -e 's|@settarg_cmd@|settarg_cmd|g'                             \
+        -e "s|@my_shell@|$fn|g"                                          \
+        -e 's|@tclsh@|/home/username/gentoo/usr/bin/tclsh|g'                                 \
+        -e 's|@ls@|/home/username/gentoo/bin/ls|g'                                       \
+        -e 's|@disable_name_autoswap@|no|g'         \
+        -e 's|@tmod_path_rule@|no|g'                       \
+        -e 's|@tmod_find_first@|no|g'                     \
+        -e 's|@redirect@|no|g'                                   \
+        -e 's|@basename@|/home/username/gentoo/usr/bin/basename|g'                                   \
+        -e 's|@support_ksh@|yes|g'                             \
+        -e 's|@cached_loads@|yes|g'                           \
+        -e 's|@avail_extensions@|@AVAIL_EXTENSION@|g'               \
+        -e 's|@ps@|/home/username/gentoo/bin/ps|g'                                               \
+        -e 's|@site_name@|Gentoo|g'                                 \
+        -e 's|@site_controlled_prefix@|yes|g'       \
+        -e 's|@syshost@|Gentoo|g'                                     \
+        -e 's|@expr@|/home/username/gentoo/usr/bin/expr|g'                                           \
+        -e 's|@extended_default@|yes|g'                   \
+        -e 's|@libexec@|/home/username/gentoo/usr/share/Lmod/libexec|g'                                     \
+        -e 's|@legacy_ordering@|@LEGACY_ORDERING@|g'                     \
+        -e 's|@pin_versions@|no|g'                           \
+        -e 's|@auto_swap@|yes|g'                                 \
+        -e 's|@sys_ld_lib_path@||g'                     \
+        -e 's|@sys_ld_preload@||g'                       \
+        -e 's|@export_module@|yes|g'                         \
+        -e 's|@lmod_version@|8.5.6|g'                                \
+        -e 's|@exact_match@|no|g'                             \
+        -e 's|@ancient@|86400|g'                                     \
+        -e 's|@prepend_block@|normal|g'                         \
+        -e 's|@colorize@|yes|g'                                   \
+        -e 's|@duplicate_paths@|no|g'                     \
+        -e 's|@allow_tcl_mfiles@|yes|g'                   \
+        -e 's|@mpath_avail@|no|g'                             \
+        -e 's|@short_time@|2|g'                               \
+        -e 's|@cacheDirs@|/home/username/gentoo/etc/lmod_cache/spider_cache|g'                         \
+        -e 's|@updateSystemFn@|/home/username/gentoo/etc/lmod_cache/system.txt|g'                     \
+        -e 's|@modulepath_root@|/home/username/gentoo/etc/modulefiles|g'                     \
+        -e 's|@lmod_root@|/home/username/gentoo/usr/share/Lmod/..|g'                                 \
+        -e 's|@lmod_allow_root_use@|yes|g'             \
+        -e 's|@PKGV@|/home/username/gentoo/usr/share/Lmod|g'                                           \
+        -e 's|@PKG@|/home/username/gentoo/usr/share/Lmod|g'         < $i > /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/libexec/$fn;             \
+    [ "$ext" = "in.lua" -o "$ext" = "tcl" -o "$ext" = "in"             \
+       -o "$ext" = "sh.in" ] &&                                          \
+       chmod +x /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/libexec/$fn;                                           \
+    if [ "$ext" = "version.lua" ]; then                                  \
+       mname=${bareN%%.*};                                               \
+       : echo "DIRLOC: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/libexec/$mname";                                \
+       mv /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/libexec/$fn /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/libexec/$mname.lua;                           \
+    fi;                                                                   \
+done
+make[1]: Entering directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+for i in shells/Bare.lua shells/BaseShell.lua shells/Bash.lua shells/CMake.lua shells/Csh.lua shells/Fish.lua shells/Lisp.lua shells/Perl.lua shells/Python.lua shells/R.lua shells/Ruby.lua; do                                                 \
+   bareN=${i##*/};                                                       \
+   fn=${bareN%%.in*};                                                    \
+   ext=${bareN#*.};                                                      \
+   : echo "DIRLOC/fn: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/shells/$fn";                                    \
+   sed  -e 's|@PREFIX@|/home/username/gentoo/usr/share/Lmod|g'                                       \
+        -e 's|@path_to_lua@|/home/username/gentoo/usr/bin/lua5.1|g'                             \
+        -e 's|@hashsum@|/home/username/gentoo/usr/bin/sha1sum|g'                             \
+        -e 's|@pager@|/home/username/gentoo/usr/bin/less|g'                                 \
+        -e 's|@case_independent_sorting@|yes|g'   \
+        -e 's|@lmod_settarg_full_support@|no|g' \
+        -e 's|@use_dot_files@|yes|g'                         \
+        -e 's|@lang@|<empty>|g'                             \
+        -e 's|@site_msg_file@|<empty>|g'                         \
+        -e 's|@git@|(8.5.6)|g'                                     \
+        -e 's|--@ignore_dirs@--|[\".svn\"] = true, [\".git\"] = true, [\".hg\"] = true, [\".bzr\"] = true, |g'                         \
+        -e 's|@sys_lua_path@|/home/username/gentoo/usr/share/lua/5.1/?.lua;/home/username/gentoo/usr/share/lua/5.1/?/init.lua;/home/username/gentoo/usr/lib64/lua/5.1/?.lua;/home/username/gentoo/usr/lib64/lua/5.1/?/init.lua;/usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua|g'                           \
+        -e 's|@hidden_italic@|no|g'                    \
+        -e 's|@modulepath_init@|@PKG@/init/.modulespath|g'                     \
+        -e 's|@sys_lua_cpath@|/home/username/gentoo/usr/lib64/lua/5.1/?.so;/usr/lib64/lua/5.1/?.so;/home/username/gentoo/usr/lib64/lua/5.1/loadall.so|g'                         \
+        -e 's|@path_to_luac@|/home/username/gentoo/usr/bin/luac5.1|g'                           \
+        -e 's|@have_lua_term@|yes|g'                         \
+        -e 's|@silence_shell_debugging@|no|g'     \
+        -e 's|@fast_tcl_interp@|yes|g'                     \
+        -e 's|@settarg_cmd@|settarg_cmd|g'                             \
+        -e "s|@my_shell@|$fn|g"                                          \
+        -e 's|@tclsh@|/home/username/gentoo/usr/bin/tclsh|g'                                 \
+        -e 's|@ls@|/home/username/gentoo/bin/ls|g'                                       \
+        -e 's|@disable_name_autoswap@|no|g'         \
+        -e 's|@tmod_path_rule@|no|g'                       \
+        -e 's|@tmod_find_first@|no|g'                     \
+        -e 's|@redirect@|no|g'                                   \
+        -e 's|@basename@|/home/username/gentoo/usr/bin/basename|g'                                   \
+        -e 's|@support_ksh@|yes|g'                             \
+        -e 's|@cached_loads@|yes|g'                           \
+        -e 's|@avail_extensions@|@AVAIL_EXTENSION@|g'               \
+        -e 's|@ps@|/home/username/gentoo/bin/ps|g'                                               \
+        -e 's|@site_name@|Gentoo|g'                                 \
+        -e 's|@site_controlled_prefix@|yes|g'       \
+        -e 's|@syshost@|Gentoo|g'                                     \
+        -e 's|@expr@|/home/username/gentoo/usr/bin/expr|g'                                           \
+        -e 's|@extended_default@|yes|g'                   \
+        -e 's|@libexec@|/home/username/gentoo/usr/share/Lmod/libexec|g'                                     \
+        -e 's|@legacy_ordering@|@LEGACY_ORDERING@|g'                     \
+        -e 's|@pin_versions@|no|g'                           \
+        -e 's|@auto_swap@|yes|g'                                 \
+        -e 's|@sys_ld_lib_path@||g'                     \
+        -e 's|@sys_ld_preload@||g'                       \
+        -e 's|@export_module@|yes|g'                         \
+        -e 's|@lmod_version@|8.5.6|g'                                \
+        -e 's|@exact_match@|no|g'                             \
+        -e 's|@ancient@|86400|g'                                     \
+        -e 's|@prepend_block@|normal|g'                         \
+        -e 's|@colorize@|yes|g'                                   \
+        -e 's|@duplicate_paths@|no|g'                     \
+        -e 's|@allow_tcl_mfiles@|yes|g'                   \
+        -e 's|@mpath_avail@|no|g'                             \
+        -e 's|@short_time@|2|g'                               \
+        -e 's|@cacheDirs@|/home/username/gentoo/etc/lmod_cache/spider_cache|g'                         \
+        -e 's|@updateSystemFn@|/home/username/gentoo/etc/lmod_cache/system.txt|g'                     \
+        -e 's|@modulepath_root@|/home/username/gentoo/etc/modulefiles|g'                     \
+        -e 's|@lmod_root@|/home/username/gentoo/usr/share/Lmod/..|g'                                 \
+        -e 's|@lmod_allow_root_use@|yes|g'             \
+        -e 's|@PKGV@|/home/username/gentoo/usr/share/Lmod|g'                                           \
+        -e 's|@PKG@|/home/username/gentoo/usr/share/Lmod|g'         < $i > /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/shells/$fn;             \
+    [ "$ext" = "in.lua" -o "$ext" = "tcl" -o "$ext" = "in"             \
+       -o "$ext" = "sh.in" ] &&                                          \
+       chmod +x /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/shells/$fn;                                           \
+    if [ "$ext" = "version.lua" ]; then                                  \
+       mname=${bareN%%.*};                                               \
+       : echo "DIRLOC: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/shells/$mname";                                \
+       mv /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/shells/$fn /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/shells/$mname.lua;                           \
+    fi;                                                                   \
+done
+for i in tools/Banner.lua tools/BeautifulTbl.lua tools/ColumnTable.lua tools/Cosmic.lua tools/Dbg.lua tools/MF_Base.lua tools/MF_Lua.lua tools/MF_TCL.lua tools/Optiks.lua tools/Optiks_Option.lua tools/TermWidth.lua tools/base64.lua tools/capture.lua tools/declare.lua tools/deepcopy.lua tools/fileOps.lua tools/haveTermSupport.lua tools/inherits.lua tools/json.lua tools/lmod_system_execute.lua tools/pairsByKeys.lua tools/replaceStr.lua tools/serializeTbl.lua tools/strict.lua tools/string_utils.lua; do                                                 \
+   bareN=${i##*/};                                                       \
+   fn=${bareN%%.in*};                                                    \
+   ext=${bareN#*.};                                                      \
+   : echo "DIRLOC/fn: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/tools/$fn";                                    \
+   sed  -e 's|@PREFIX@|/home/username/gentoo/usr/share/Lmod|g'                                       \
+        -e 's|@path_to_lua@|/home/username/gentoo/usr/bin/lua5.1|g'                             \
+        -e 's|@hashsum@|/home/username/gentoo/usr/bin/sha1sum|g'                             \
+        -e 's|@pager@|/home/username/gentoo/usr/bin/less|g'                                 \
+        -e 's|@case_independent_sorting@|yes|g'   \
+        -e 's|@lmod_settarg_full_support@|no|g' \
+        -e 's|@use_dot_files@|yes|g'                         \
+        -e 's|@lang@|<empty>|g'                             \
+        -e 's|@site_msg_file@|<empty>|g'                         \
+        -e 's|@git@|(8.5.6)|g'                                     \
+        -e 's|--@ignore_dirs@--|[\".svn\"] = true, [\".git\"] = true, [\".hg\"] = true, [\".bzr\"] = true, |g'                         \
+        -e 's|@sys_lua_path@|/home/username/gentoo/usr/share/lua/5.1/?.lua;/home/username/gentoo/usr/share/lua/5.1/?/init.lua;/home/username/gentoo/usr/lib64/lua/5.1/?.lua;/home/username/gentoo/usr/lib64/lua/5.1/?/init.lua;/usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua|g'                           \
+        -e 's|@hidden_italic@|no|g'                    \
+        -e 's|@modulepath_init@|@PKG@/init/.modulespath|g'                     \
+        -e 's|@sys_lua_cpath@|/home/username/gentoo/usr/lib64/lua/5.1/?.so;/usr/lib64/lua/5.1/?.so;/home/username/gentoo/usr/lib64/lua/5.1/loadall.so|g'                         \
+        -e 's|@path_to_luac@|/home/username/gentoo/usr/bin/luac5.1|g'                           \
+        -e 's|@have_lua_term@|yes|g'                         \
+        -e 's|@silence_shell_debugging@|no|g'     \
+        -e 's|@fast_tcl_interp@|yes|g'                     \
+        -e 's|@settarg_cmd@|settarg_cmd|g'                             \
+        -e "s|@my_shell@|$fn|g"                                          \
+        -e 's|@tclsh@|/home/username/gentoo/usr/bin/tclsh|g'                                 \
+        -e 's|@ls@|/home/username/gentoo/bin/ls|g'                                       \
+        -e 's|@disable_name_autoswap@|no|g'         \
+        -e 's|@tmod_path_rule@|no|g'                       \
+        -e 's|@tmod_find_first@|no|g'                     \
+        -e 's|@redirect@|no|g'                                   \
+        -e 's|@basename@|/home/username/gentoo/usr/bin/basename|g'                                   \
+        -e 's|@support_ksh@|yes|g'                             \
+        -e 's|@cached_loads@|yes|g'                           \
+        -e 's|@avail_extensions@|@AVAIL_EXTENSION@|g'               \
+        -e 's|@ps@|/home/username/gentoo/bin/ps|g'                                               \
+        -e 's|@site_name@|Gentoo|g'                                 \
+        -e 's|@site_controlled_prefix@|yes|g'       \
+        -e 's|@syshost@|Gentoo|g'                                     \
+        -e 's|@expr@|/home/username/gentoo/usr/bin/expr|g'                                           \
+        -e 's|@extended_default@|yes|g'                   \
+        -e 's|@libexec@|/home/username/gentoo/usr/share/Lmod/libexec|g'                                     \
+        -e 's|@legacy_ordering@|@LEGACY_ORDERING@|g'                     \
+        -e 's|@pin_versions@|no|g'                           \
+        -e 's|@auto_swap@|yes|g'                                 \
+        -e 's|@sys_ld_lib_path@||g'                     \
+        -e 's|@sys_ld_preload@||g'                       \
+        -e 's|@export_module@|yes|g'                         \
+        -e 's|@lmod_version@|8.5.6|g'                                \
+        -e 's|@exact_match@|no|g'                             \
+        -e 's|@ancient@|86400|g'                                     \
+        -e 's|@prepend_block@|normal|g'                         \
+        -e 's|@colorize@|yes|g'                                   \
+        -e 's|@duplicate_paths@|no|g'                     \
+        -e 's|@allow_tcl_mfiles@|yes|g'                   \
+        -e 's|@mpath_avail@|no|g'                             \
+        -e 's|@short_time@|2|g'                               \
+        -e 's|@cacheDirs@|/home/username/gentoo/etc/lmod_cache/spider_cache|g'                         \
+        -e 's|@updateSystemFn@|/home/username/gentoo/etc/lmod_cache/system.txt|g'                     \
+        -e 's|@modulepath_root@|/home/username/gentoo/etc/modulefiles|g'                     \
+        -e 's|@lmod_root@|/home/username/gentoo/usr/share/Lmod/..|g'                                 \
+        -e 's|@lmod_allow_root_use@|yes|g'             \
+        -e 's|@PKGV@|/home/username/gentoo/usr/share/Lmod|g'                                           \
+        -e 's|@PKG@|/home/username/gentoo/usr/share/Lmod|g'         < $i > /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/tools/$fn;             \
+    [ "$ext" = "in.lua" -o "$ext" = "tcl" -o "$ext" = "in"             \
+       -o "$ext" = "sh.in" ] &&                                          \
+       chmod +x /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/tools/$fn;                                           \
+    if [ "$ext" = "version.lua" ]; then                                  \
+       mname=${bareN%%.*};                                               \
+       : echo "DIRLOC: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/tools/$mname";                                \
+       mv /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/tools/$fn /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/tools/$mname.lua;                           \
+    fi;                                                                   \
+done
+for i in settarg/Bare.lua settarg/BaseShell.lua settarg/Bash.lua settarg/BuildTarget.lua settarg/CmdLineOptions.lua settarg/Csh.lua settarg/ModifyPath.lua settarg/Output.lua settarg/ProcessModuleTable.lua settarg/STT.lua settarg/TargValue.lua settarg/Version.lua settarg/getUname.lua settarg/settarg_cmd.in.lua settarg/settarg_rc.lua settarg/utils.lua settarg/targ.in; do                                                 \
+   bareN=${i##*/};                                                       \
+   fn=${bareN%%.in*};                                                    \
+   ext=${bareN#*.};                                                      \
+   : echo "DIRLOC/fn: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/settarg/$fn";                                    \
+   sed  -e 's|@PREFIX@|/home/username/gentoo/usr/share/Lmod|g'                                       \
+        -e 's|@path_to_lua@|/home/username/gentoo/usr/bin/lua5.1|g'                             \
+        -e 's|@hashsum@|/home/username/gentoo/usr/bin/sha1sum|g'                             \
+        -e 's|@pager@|/home/username/gentoo/usr/bin/less|g'                                 \
+        -e 's|@case_independent_sorting@|yes|g'   \
+        -e 's|@lmod_settarg_full_support@|no|g' \
+        -e 's|@use_dot_files@|yes|g'                         \
+        -e 's|@lang@|<empty>|g'                             \
+        -e 's|@site_msg_file@|<empty>|g'                         \
+        -e 's|@git@|(8.5.6)|g'                                     \
+        -e 's|--@ignore_dirs@--|[\".svn\"] = true, [\".git\"] = true, [\".hg\"] = true, [\".bzr\"] = true, |g'                         \
+        -e 's|@sys_lua_path@|/home/username/gentoo/usr/share/lua/5.1/?.lua;/home/username/gentoo/usr/share/lua/5.1/?/init.lua;/home/username/gentoo/usr/lib64/lua/5.1/?.lua;/home/username/gentoo/usr/lib64/lua/5.1/?/init.lua;/usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua|g'                           \
+        -e 's|@hidden_italic@|no|g'                    \
+        -e 's|@modulepath_init@|@PKG@/init/.modulespath|g'                     \
+        -e 's|@sys_lua_cpath@|/home/username/gentoo/usr/lib64/lua/5.1/?.so;/usr/lib64/lua/5.1/?.so;/home/username/gentoo/usr/lib64/lua/5.1/loadall.so|g'                         \
+        -e 's|@path_to_luac@|/home/username/gentoo/usr/bin/luac5.1|g'                           \
+        -e 's|@have_lua_term@|yes|g'                         \
+        -e 's|@silence_shell_debugging@|no|g'     \
+        -e 's|@fast_tcl_interp@|yes|g'                     \
+        -e 's|@settarg_cmd@|settarg_cmd|g'                             \
+        -e "s|@my_shell@|$fn|g"                                          \
+        -e 's|@tclsh@|/home/username/gentoo/usr/bin/tclsh|g'                                 \
+        -e 's|@ls@|/home/username/gentoo/bin/ls|g'                                       \
+        -e 's|@disable_name_autoswap@|no|g'         \
+        -e 's|@tmod_path_rule@|no|g'                       \
+        -e 's|@tmod_find_first@|no|g'                     \
+        -e 's|@redirect@|no|g'                                   \
+        -e 's|@basename@|/home/username/gentoo/usr/bin/basename|g'                                   \
+        -e 's|@support_ksh@|yes|g'                             \
+        -e 's|@cached_loads@|yes|g'                           \
+        -e 's|@avail_extensions@|@AVAIL_EXTENSION@|g'               \
+        -e 's|@ps@|/home/username/gentoo/bin/ps|g'                                               \
+        -e 's|@site_name@|Gentoo|g'                                 \
+        -e 's|@site_controlled_prefix@|yes|g'       \
+        -e 's|@syshost@|Gentoo|g'                                     \
+        -e 's|@expr@|/home/username/gentoo/usr/bin/expr|g'                                           \
+        -e 's|@extended_default@|yes|g'                   \
+        -e 's|@libexec@|/home/username/gentoo/usr/share/Lmod/libexec|g'                                     \
+        -e 's|@legacy_ordering@|@LEGACY_ORDERING@|g'                     \
+        -e 's|@pin_versions@|no|g'                           \
+        -e 's|@auto_swap@|yes|g'                                 \
+        -e 's|@sys_ld_lib_path@||g'                     \
+        -e 's|@sys_ld_preload@||g'                       \
+        -e 's|@export_module@|yes|g'                         \
+        -e 's|@lmod_version@|8.5.6|g'                                \
+        -e 's|@exact_match@|no|g'                             \
+        -e 's|@ancient@|86400|g'                                     \
+        -e 's|@prepend_block@|normal|g'                         \
+        -e 's|@colorize@|yes|g'                                   \
+        -e 's|@duplicate_paths@|no|g'                     \
+        -e 's|@allow_tcl_mfiles@|yes|g'                   \
+        -e 's|@mpath_avail@|no|g'                             \
+        -e 's|@short_time@|2|g'                               \
+        -e 's|@cacheDirs@|/home/username/gentoo/etc/lmod_cache/spider_cache|g'                         \
+        -e 's|@updateSystemFn@|/home/username/gentoo/etc/lmod_cache/system.txt|g'                     \
+        -e 's|@modulepath_root@|/home/username/gentoo/etc/modulefiles|g'                     \
+        -e 's|@lmod_root@|/home/username/gentoo/usr/share/Lmod/..|g'                                 \
+        -e 's|@lmod_allow_root_use@|yes|g'             \
+        -e 's|@PKGV@|/home/username/gentoo/usr/share/Lmod|g'                                           \
+        -e 's|@PKG@|/home/username/gentoo/usr/share/Lmod|g'         < $i > /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/settarg/$fn;             \
+    [ "$ext" = "in.lua" -o "$ext" = "tcl" -o "$ext" = "in"             \
+       -o "$ext" = "sh.in" ] &&                                          \
+       chmod +x /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/settarg/$fn;                                           \
+    if [ "$ext" = "version.lua" ]; then                                  \
+       mname=${bareN%%.*};                                               \
+       : echo "DIRLOC: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/settarg/$mname";                                \
+       mv /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/settarg/$fn /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/settarg/$mname.lua;                           \
+    fi;                                                                   \
+done
+make[1]: Leaving directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+/home/username/gentoo/usr/bin/make FILELIST="src/computeHashSum.in.lua src/lmod.in.lua src/addto.in.lua src/spider.in.lua src/clearLMOD_cmd.in.lua src/ml_cmd.in.lua src/spiderCacheSupport.in.lua src/sh_to_modulefile.in.lua src/update_lmod_system_cache_files.in src/check_module_tree_syntax.in.lua sh_src/print_os.sh.in" DIRLOC=/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/libexec __installMe
+make[1]: Entering directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+make[1]: Leaving directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+/home/username/gentoo/usr/bin/lua5.1 ./src/lmod.in.lua bash --help >/dev/null 2> /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/share/man/cat1/module.1
+for i in MF/lmod.version.lua MF/settarg.version.lua; do                                                 \
+   bareN=${i##*/};                                                       \
+   fn=${bareN%%.in*};                                                    \
+   ext=${bareN#*.};                                                      \
+   : echo "DIRLOC/fn: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/modulefiles/Core/$fn";                                    \
+   sed  -e 's|@PREFIX@|/home/username/gentoo/usr/share/Lmod|g'                                       \
+        -e 's|@path_to_lua@|/home/username/gentoo/usr/bin/lua5.1|g'                             \
+        -e 's|@hashsum@|/home/username/gentoo/usr/bin/sha1sum|g'                             \
+        -e 's|@pager@|/home/username/gentoo/usr/bin/less|g'                                 \
+        -e 's|@case_independent_sorting@|yes|g'   \
+        -e 's|@lmod_settarg_full_support@|no|g' \
+        -e 's|@use_dot_files@|yes|g'                         \
+        -e 's|@lang@|<empty>|g'                             \
+        -e 's|@site_msg_file@|<empty>|g'                         \
+        -e 's|@git@|(8.5.6)|g'                                     \
+        -e 's|--@ignore_dirs@--|[\".svn\"] = true, [\".git\"] = true, [\".hg\"] = true, [\".bzr\"] = true, |g'                         \
+        -e 's|@sys_lua_path@|/home/username/gentoo/usr/share/lua/5.1/?.lua;/home/username/gentoo/usr/share/lua/5.1/?/init.lua;/home/username/gentoo/usr/lib64/lua/5.1/?.lua;/home/username/gentoo/usr/lib64/lua/5.1/?/init.lua;/usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua|g'                           \
+        -e 's|@hidden_italic@|no|g'                    \
+        -e 's|@modulepath_init@|@PKG@/init/.modulespath|g'                     \
+        -e 's|@sys_lua_cpath@|/home/username/gentoo/usr/lib64/lua/5.1/?.so;/usr/lib64/lua/5.1/?.so;/home/username/gentoo/usr/lib64/lua/5.1/loadall.so|g'                         \
+        -e 's|@path_to_luac@|/home/username/gentoo/usr/bin/luac5.1|g'                           \
+        -e 's|@have_lua_term@|yes|g'                         \
+        -e 's|@silence_shell_debugging@|no|g'     \
+        -e 's|@fast_tcl_interp@|yes|g'                     \
+        -e 's|@settarg_cmd@|settarg_cmd|g'                             \
+        -e "s|@my_shell@|$fn|g"                                          \
+        -e 's|@tclsh@|/home/username/gentoo/usr/bin/tclsh|g'                                 \
+        -e 's|@ls@|/home/username/gentoo/bin/ls|g'                                       \
+        -e 's|@disable_name_autoswap@|no|g'         \
+        -e 's|@tmod_path_rule@|no|g'                       \
+        -e 's|@tmod_find_first@|no|g'                     \
+        -e 's|@redirect@|no|g'                                   \
+        -e 's|@basename@|/home/username/gentoo/usr/bin/basename|g'                                   \
+        -e 's|@support_ksh@|yes|g'                             \
+        -e 's|@cached_loads@|yes|g'                           \
+        -e 's|@avail_extensions@|@AVAIL_EXTENSION@|g'               \
+        -e 's|@ps@|/home/username/gentoo/bin/ps|g'                                               \
+        -e 's|@site_name@|Gentoo|g'                                 \
+        -e 's|@site_controlled_prefix@|yes|g'       \
+        -e 's|@syshost@|Gentoo|g'                                     \
+        -e 's|@expr@|/home/username/gentoo/usr/bin/expr|g'                                           \
+        -e 's|@extended_default@|yes|g'                   \
+        -e 's|@libexec@|/home/username/gentoo/usr/share/Lmod/libexec|g'                                     \
+        -e 's|@legacy_ordering@|@LEGACY_ORDERING@|g'                     \
+        -e 's|@pin_versions@|no|g'                           \
+        -e 's|@auto_swap@|yes|g'                                 \
+        -e 's|@sys_ld_lib_path@||g'                     \
+        -e 's|@sys_ld_preload@||g'                       \
+        -e 's|@export_module@|yes|g'                         \
+        -e 's|@lmod_version@|8.5.6|g'                                \
+        -e 's|@exact_match@|no|g'                             \
+        -e 's|@ancient@|86400|g'                                     \
+        -e 's|@prepend_block@|normal|g'                         \
+        -e 's|@colorize@|yes|g'                                   \
+        -e 's|@duplicate_paths@|no|g'                     \
+        -e 's|@allow_tcl_mfiles@|yes|g'                   \
+        -e 's|@mpath_avail@|no|g'                             \
+        -e 's|@short_time@|2|g'                               \
+        -e 's|@cacheDirs@|/home/username/gentoo/etc/lmod_cache/spider_cache|g'                         \
+        -e 's|@updateSystemFn@|/home/username/gentoo/etc/lmod_cache/system.txt|g'                     \
+        -e 's|@modulepath_root@|/home/username/gentoo/etc/modulefiles|g'                     \
+        -e 's|@lmod_root@|/home/username/gentoo/usr/share/Lmod/..|g'                                 \
+        -e 's|@lmod_allow_root_use@|yes|g'             \
+        -e 's|@PKGV@|/home/username/gentoo/usr/share/Lmod|g'                                           \
+        -e 's|@PKG@|/home/username/gentoo/usr/share/Lmod|g'         < $i > /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/modulefiles/Core/$fn;             \
+    [ "$ext" = "in.lua" -o "$ext" = "tcl" -o "$ext" = "in"             \
+       -o "$ext" = "sh.in" ] &&                                          \
+       chmod +x /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/modulefiles/Core/$fn;                                           \
+    if [ "$ext" = "version.lua" ]; then                                  \
+       mname=${bareN%%.*};                                               \
+       : echo "DIRLOC: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/modulefiles/Core/$mname";                                \
+       mv /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/modulefiles/Core/$fn /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/modulefiles/Core/$mname.lua;                           \
+    fi;                                                                   \
+done
+make[1]: Leaving directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+/home/username/gentoo/usr/bin/make FILELIST="messageDir/de.lua messageDir/en.lua messageDir/es.lua messageDir/fr.lua messageDir/template.lua messageDir/zh.lua" DIRLOC=/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/messageDir __installMe
+make[1]: Leaving directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+/home/username/gentoo/usr/bin/make FILELIST="tools/i18n/init.lua tools/i18n/interpolate.lua tools/i18n/plural.lua tools/i18n/variants.lua tools/i18n/version.lua" DIRLOC=/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/tools/i18n __installMe
+riscv64-unknown-linux-gnu-gcc -O2 -pipe -march=rv64gc -mabi=lp64d -O2 -pipe -DLUA_COMPAT_MODULE -fPIC -I/home/username/gentoo/usr/include/lua5.1 -I/usr/include/tcl8.6 -shared -Wl,-soname,tcl2lua.so.1  -o tcl2lua.so.1.0.1  tcl2lua.o -Wl,-O1 -Wl,--as-needed -lc -ltcl
+for i in src/computeHashSum.in.lua src/lmod.in.lua src/addto.in.lua src/spider.in.lua src/clearLMOD_cmd.in.lua src/ml_cmd.in.lua src/spiderCacheSupport.in.lua src/sh_to_modulefile.in.lua src/update_lmod_system_cache_files.in src/check_module_tree_syntax.in.lua sh_src/print_os.sh.in; do                                                 \
+   bareN=${i##*/};                                                       \
+   fn=${bareN%%.in*};                                                    \
+   ext=${bareN#*.};                                                      \
+   : echo "DIRLOC/fn: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/libexec/$fn";                                    \
+   sed  -e 's|@PREFIX@|/home/username/gentoo/usr/share/Lmod|g'                                       \
+        -e 's|@path_to_lua@|/home/username/gentoo/usr/bin/lua5.1|g'                             \
+        -e 's|@hashsum@|/home/username/gentoo/usr/bin/sha1sum|g'                             \
+        -e 's|@pager@|/home/username/gentoo/usr/bin/less|g'                                 \
+        -e 's|@case_independent_sorting@|yes|g'   \
+        -e 's|@lmod_settarg_full_support@|no|g' \
+        -e 's|@use_dot_files@|yes|g'                         \
+        -e 's|@lang@|<empty>|g'                             \
+        -e 's|@site_msg_file@|<empty>|g'                         \
+        -e 's|@git@|(8.5.6)|g'                                     \
+        -e 's|--@ignore_dirs@--|[\".svn\"] = true, [\".git\"] = true, [\".hg\"] = true, [\".bzr\"] = true, |g'                         \
+        -e 's|@sys_lua_path@|/home/username/gentoo/usr/share/lua/5.1/?.lua;/home/username/gentoo/usr/share/lua/5.1/?/init.lua;/home/username/gentoo/usr/lib64/lua/5.1/?.lua;/home/username/gentoo/usr/lib64/lua/5.1/?/init.lua;/usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua|g'                           \
+        -e 's|@hidden_italic@|no|g'                    \
+        -e 's|@modulepath_init@|@PKG@/init/.modulespath|g'                     \
+        -e 's|@sys_lua_cpath@|/home/username/gentoo/usr/lib64/lua/5.1/?.so;/usr/lib64/lua/5.1/?.so;/home/username/gentoo/usr/lib64/lua/5.1/loadall.so|g'                         \
+        -e 's|@path_to_luac@|/home/username/gentoo/usr/bin/luac5.1|g'                           \
+        -e 's|@have_lua_term@|yes|g'                         \
+        -e 's|@silence_shell_debugging@|no|g'     \
+        -e 's|@fast_tcl_interp@|yes|g'                     \
+        -e 's|@settarg_cmd@|settarg_cmd|g'                             \
+        -e "s|@my_shell@|$fn|g"                                          \
+        -e 's|@tclsh@|/home/username/gentoo/usr/bin/tclsh|g'                                 \
+        -e 's|@ls@|/home/username/gentoo/bin/ls|g'                                       \
+        -e 's|@disable_name_autoswap@|no|g'         \
+        -e 's|@tmod_path_rule@|no|g'                       \
+        -e 's|@tmod_find_first@|no|g'                     \
+        -e 's|@redirect@|no|g'                                   \
+        -e 's|@basename@|/home/username/gentoo/usr/bin/basename|g'                                   \
+        -e 's|@support_ksh@|yes|g'                             \
+        -e 's|@cached_loads@|yes|g'                           \
+        -e 's|@avail_extensions@|@AVAIL_EXTENSION@|g'               \
+        -e 's|@ps@|/home/username/gentoo/bin/ps|g'                                               \
+        -e 's|@site_name@|Gentoo|g'                                 \
+        -e 's|@site_controlled_prefix@|yes|g'       \
+        -e 's|@syshost@|Gentoo|g'                                     \
+        -e 's|@expr@|/home/username/gentoo/usr/bin/expr|g'                                           \
+        -e 's|@extended_default@|yes|g'                   \
+        -e 's|@libexec@|/home/username/gentoo/usr/share/Lmod/libexec|g'                                     \
+        -e 's|@legacy_ordering@|@LEGACY_ORDERING@|g'                     \
+        -e 's|@pin_versions@|no|g'                           \
+        -e 's|@auto_swap@|yes|g'                                 \
+        -e 's|@sys_ld_lib_path@||g'                     \
+        -e 's|@sys_ld_preload@||g'                       \
+        -e 's|@export_module@|yes|g'                         \
+        -e 's|@lmod_version@|8.5.6|g'                                \
+        -e 's|@exact_match@|no|g'                             \
+        -e 's|@ancient@|86400|g'                                     \
+        -e 's|@prepend_block@|normal|g'                         \
+        -e 's|@colorize@|yes|g'                                   \
+        -e 's|@duplicate_paths@|no|g'                     \
+        -e 's|@allow_tcl_mfiles@|yes|g'                   \
+        -e 's|@mpath_avail@|no|g'                             \
+        -e 's|@short_time@|2|g'                               \
+        -e 's|@cacheDirs@|/home/username/gentoo/etc/lmod_cache/spider_cache|g'                         \
+        -e 's|@updateSystemFn@|/home/username/gentoo/etc/lmod_cache/system.txt|g'                     \
+        -e 's|@modulepath_root@|/home/username/gentoo/etc/modulefiles|g'                     \
+        -e 's|@lmod_root@|/home/username/gentoo/usr/share/Lmod/..|g'                                 \
+        -e 's|@lmod_allow_root_use@|yes|g'             \
+        -e 's|@PKGV@|/home/username/gentoo/usr/share/Lmod|g'                                           \
+        -e 's|@PKG@|/home/username/gentoo/usr/share/Lmod|g'         < $i > /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/libexec/$fn;             \
+    [ "$ext" = "in.lua" -o "$ext" = "tcl" -o "$ext" = "in"             \
+       -o "$ext" = "sh.in" ] &&                                          \
+       chmod +x /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/libexec/$fn;                                           \
+    if [ "$ext" = "version.lua" ]; then                                  \
+       mname=${bareN%%.*};                                               \
+       : echo "DIRLOC: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/libexec/$mname";                                \
+       mv /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/libexec/$fn /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/libexec/$mname.lua;                           \
+    fi;                                                                   \
+done
+make[1]: Entering directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+make[1]: Entering directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+make[1]: Leaving directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+/home/username/gentoo/usr/bin/make FILELIST="init/ksh_funcs/clearLmod.in init/ksh_funcs/clearMT.in init/ksh_funcs/ml.in init/ksh_funcs/module.in init/ksh_funcs/settarg.in" DIRLOC=/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/ksh_funcs __installMe
+if [ -n "" ]; then                       \
+  for zdir in `echo "" | tr ':' ' '`; do  \
+    for i in init/zsh/_ml init/zsh/_module init/ksh_funcs/clearLmod.in init/ksh_funcs/clearMT.in init/ksh_funcs/ml.in init/ksh_funcs/module.in init/ksh_funcs/settarg.in; do                                                 \
+      bareN=${i##*/};                                              \
+      fn=${bareN%%.in*};                                           \
+      ext=${bareN#*.};                                             \
+      cp $i /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image$zdir/$fn  2> /dev/null;                   \
+      [ "$ext" = "in" ] && chmod +x /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image$zdir/$fn;         \
+    done;                                                           \
+  done;                                                             \
+  true;                                                             \
+fi
+make[1]: Entering directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+cp init/fish/module.fish /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/fish_tab_completion 2>/dev/null
+cp -a *.so* /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/lib
+make[1]: Leaving directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6/pkgs/tcl2lua'
+make[1]: Leaving directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+for i in messageDir/de.lua messageDir/en.lua messageDir/es.lua messageDir/fr.lua messageDir/template.lua messageDir/zh.lua; do                                                 \
+   bareN=${i##*/};                                                       \
+   fn=${bareN%%.in*};                                                    \
+   ext=${bareN#*.};                                                      \
+   : echo "DIRLOC/fn: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/messageDir/$fn";                                    \
+   sed  -e 's|@PREFIX@|/home/username/gentoo/usr/share/Lmod|g'                                       \
+        -e 's|@path_to_lua@|/home/username/gentoo/usr/bin/lua5.1|g'                             \
+        -e 's|@hashsum@|/home/username/gentoo/usr/bin/sha1sum|g'                             \
+        -e 's|@pager@|/home/username/gentoo/usr/bin/less|g'                                 \
+        -e 's|@case_independent_sorting@|yes|g'   \
+        -e 's|@lmod_settarg_full_support@|no|g' \
+        -e 's|@use_dot_files@|yes|g'                         \
+        -e 's|@lang@|<empty>|g'                             \
+        -e 's|@site_msg_file@|<empty>|g'                         \
+        -e 's|@git@|(8.5.6)|g'                                     \
+        -e 's|--@ignore_dirs@--|[\".svn\"] = true, [\".git\"] = true, [\".hg\"] = true, [\".bzr\"] = true, |g'                         \
+        -e 's|@sys_lua_path@|/home/username/gentoo/usr/share/lua/5.1/?.lua;/home/username/gentoo/usr/share/lua/5.1/?/init.lua;/home/username/gentoo/usr/lib64/lua/5.1/?.lua;/home/username/gentoo/usr/lib64/lua/5.1/?/init.lua;/usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua|g'                           \
+        -e 's|@hidden_italic@|no|g'                    \
+        -e 's|@modulepath_init@|@PKG@/init/.modulespath|g'                     \
+        -e 's|@sys_lua_cpath@|/home/username/gentoo/usr/lib64/lua/5.1/?.so;/usr/lib64/lua/5.1/?.so;/home/username/gentoo/usr/lib64/lua/5.1/loadall.so|g'                         \
+        -e 's|@path_to_luac@|/home/username/gentoo/usr/bin/luac5.1|g'                           \
+        -e 's|@have_lua_term@|yes|g'                         \
+        -e 's|@silence_shell_debugging@|no|g'     \
+        -e 's|@fast_tcl_interp@|yes|g'                     \
+        -e 's|@settarg_cmd@|settarg_cmd|g'                             \
+        -e "s|@my_shell@|$fn|g"                                          \
+        -e 's|@tclsh@|/home/username/gentoo/usr/bin/tclsh|g'                                 \
+        -e 's|@ls@|/home/username/gentoo/bin/ls|g'                                       \
+        -e 's|@disable_name_autoswap@|no|g'         \
+        -e 's|@tmod_path_rule@|no|g'                       \
+        -e 's|@tmod_find_first@|no|g'                     \
+        -e 's|@redirect@|no|g'                                   \
+        -e 's|@basename@|/home/username/gentoo/usr/bin/basename|g'                                   \
+        -e 's|@support_ksh@|yes|g'                             \
+        -e 's|@cached_loads@|yes|g'                           \
+        -e 's|@avail_extensions@|@AVAIL_EXTENSION@|g'               \
+        -e 's|@ps@|/home/username/gentoo/bin/ps|g'                                               \
+        -e 's|@site_name@|Gentoo|g'                                 \
+        -e 's|@site_controlled_prefix@|yes|g'       \
+        -e 's|@syshost@|Gentoo|g'                                     \
+        -e 's|@expr@|/home/username/gentoo/usr/bin/expr|g'                                           \
+        -e 's|@extended_default@|yes|g'                   \
+        -e 's|@libexec@|/home/username/gentoo/usr/share/Lmod/libexec|g'                                     \
+        -e 's|@legacy_ordering@|@LEGACY_ORDERING@|g'                     \
+        -e 's|@pin_versions@|no|g'                           \
+        -e 's|@auto_swap@|yes|g'                                 \
+        -e 's|@sys_ld_lib_path@||g'                     \
+        -e 's|@sys_ld_preload@||g'                       \
+        -e 's|@export_module@|yes|g'                         \
+        -e 's|@lmod_version@|8.5.6|g'                                \
+        -e 's|@exact_match@|no|g'                             \
+        -e 's|@ancient@|86400|g'                                     \
+        -e 's|@prepend_block@|normal|g'                         \
+        -e 's|@colorize@|yes|g'                                   \
+        -e 's|@duplicate_paths@|no|g'                     \
+        -e 's|@allow_tcl_mfiles@|yes|g'                   \
+        -e 's|@mpath_avail@|no|g'                             \
+        -e 's|@short_time@|2|g'                               \
+        -e 's|@cacheDirs@|/home/username/gentoo/etc/lmod_cache/spider_cache|g'                         \
+        -e 's|@updateSystemFn@|/home/username/gentoo/etc/lmod_cache/system.txt|g'                     \
+        -e 's|@modulepath_root@|/home/username/gentoo/etc/modulefiles|g'                     \
+        -e 's|@lmod_root@|/home/username/gentoo/usr/share/Lmod/..|g'                                 \
+        -e 's|@lmod_allow_root_use@|yes|g'             \
+        -e 's|@PKGV@|/home/username/gentoo/usr/share/Lmod|g'                                           \
+        -e 's|@PKG@|/home/username/gentoo/usr/share/Lmod|g'         < $i > /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/messageDir/$fn;             \
+    [ "$ext" = "in.lua" -o "$ext" = "tcl" -o "$ext" = "in"             \
+       -o "$ext" = "sh.in" ] &&                                          \
+       chmod +x /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/messageDir/$fn;                                           \
+    if [ "$ext" = "version.lua" ]; then                                  \
+       mname=${bareN%%.*};                                               \
+       : echo "DIRLOC: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/messageDir/$mname";                                \
+       mv /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/messageDir/$fn /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/messageDir/$mname.lua;                           \
+    fi;                                                                   \
+done
+for i in tools/i18n/init.lua tools/i18n/interpolate.lua tools/i18n/plural.lua tools/i18n/variants.lua tools/i18n/version.lua; do                                                 \
+   bareN=${i##*/};                                                       \
+   fn=${bareN%%.in*};                                                    \
+   ext=${bareN#*.};                                                      \
+   : echo "DIRLOC/fn: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/tools/i18n/$fn";                                    \
+   sed  -e 's|@PREFIX@|/home/username/gentoo/usr/share/Lmod|g'                                       \
+        -e 's|@path_to_lua@|/home/username/gentoo/usr/bin/lua5.1|g'                             \
+        -e 's|@hashsum@|/home/username/gentoo/usr/bin/sha1sum|g'                             \
+        -e 's|@pager@|/home/username/gentoo/usr/bin/less|g'                                 \
+        -e 's|@case_independent_sorting@|yes|g'   \
+        -e 's|@lmod_settarg_full_support@|no|g' \
+        -e 's|@use_dot_files@|yes|g'                         \
+        -e 's|@lang@|<empty>|g'                             \
+        -e 's|@site_msg_file@|<empty>|g'                         \
+        -e 's|@git@|(8.5.6)|g'                                     \
+        -e 's|--@ignore_dirs@--|[\".svn\"] = true, [\".git\"] = true, [\".hg\"] = true, [\".bzr\"] = true, |g'                         \
+        -e 's|@sys_lua_path@|/home/username/gentoo/usr/share/lua/5.1/?.lua;/home/username/gentoo/usr/share/lua/5.1/?/init.lua;/home/username/gentoo/usr/lib64/lua/5.1/?.lua;/home/username/gentoo/usr/lib64/lua/5.1/?/init.lua;/usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua|g'                           \
+        -e 's|@hidden_italic@|no|g'                    \
+        -e 's|@modulepath_init@|@PKG@/init/.modulespath|g'                     \
+        -e 's|@sys_lua_cpath@|/home/username/gentoo/usr/lib64/lua/5.1/?.so;/usr/lib64/lua/5.1/?.so;/home/username/gentoo/usr/lib64/lua/5.1/loadall.so|g'                         \
+        -e 's|@path_to_luac@|/home/username/gentoo/usr/bin/luac5.1|g'                           \
+        -e 's|@have_lua_term@|yes|g'                         \
+        -e 's|@silence_shell_debugging@|no|g'     \
+        -e 's|@fast_tcl_interp@|yes|g'                     \
+        -e 's|@settarg_cmd@|settarg_cmd|g'                             \
+        -e "s|@my_shell@|$fn|g"                                          \
+        -e 's|@tclsh@|/home/username/gentoo/usr/bin/tclsh|g'                                 \
+        -e 's|@ls@|/home/username/gentoo/bin/ls|g'                                       \
+        -e 's|@disable_name_autoswap@|no|g'         \
+        -e 's|@tmod_path_rule@|no|g'                       \
+        -e 's|@tmod_find_first@|no|g'                     \
+        -e 's|@redirect@|no|g'                                   \
+        -e 's|@basename@|/home/username/gentoo/usr/bin/basename|g'                                   \
+        -e 's|@support_ksh@|yes|g'                             \
+        -e 's|@cached_loads@|yes|g'                           \
+        -e 's|@avail_extensions@|@AVAIL_EXTENSION@|g'               \
+        -e 's|@ps@|/home/username/gentoo/bin/ps|g'                                               \
+        -e 's|@site_name@|Gentoo|g'                                 \
+        -e 's|@site_controlled_prefix@|yes|g'       \
+        -e 's|@syshost@|Gentoo|g'                                     \
+        -e 's|@expr@|/home/username/gentoo/usr/bin/expr|g'                                           \
+        -e 's|@extended_default@|yes|g'                   \
+        -e 's|@libexec@|/home/username/gentoo/usr/share/Lmod/libexec|g'                                     \
+        -e 's|@legacy_ordering@|@LEGACY_ORDERING@|g'                     \
+        -e 's|@pin_versions@|no|g'                           \
+        -e 's|@auto_swap@|yes|g'                                 \
+        -e 's|@sys_ld_lib_path@||g'                     \
+        -e 's|@sys_ld_preload@||g'                       \
+        -e 's|@export_module@|yes|g'                         \
+        -e 's|@lmod_version@|8.5.6|g'                                \
+        -e 's|@exact_match@|no|g'                             \
+        -e 's|@ancient@|86400|g'                                     \
+        -e 's|@prepend_block@|normal|g'                         \
+        -e 's|@colorize@|yes|g'                                   \
+        -e 's|@duplicate_paths@|no|g'                     \
+        -e 's|@allow_tcl_mfiles@|yes|g'                   \
+        -e 's|@mpath_avail@|no|g'                             \
+        -e 's|@short_time@|2|g'                               \
+        -e 's|@cacheDirs@|/home/username/gentoo/etc/lmod_cache/spider_cache|g'                         \
+        -e 's|@updateSystemFn@|/home/username/gentoo/etc/lmod_cache/system.txt|g'                     \
+        -e 's|@modulepath_root@|/home/username/gentoo/etc/modulefiles|g'                     \
+        -e 's|@lmod_root@|/home/username/gentoo/usr/share/Lmod/..|g'                                 \
+        -e 's|@lmod_allow_root_use@|yes|g'             \
+        -e 's|@PKGV@|/home/username/gentoo/usr/share/Lmod|g'                                           \
+        -e 's|@PKG@|/home/username/gentoo/usr/share/Lmod|g'         < $i > /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/tools/i18n/$fn;             \
+    [ "$ext" = "in.lua" -o "$ext" = "tcl" -o "$ext" = "in"             \
+       -o "$ext" = "sh.in" ] &&                                          \
+       chmod +x /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/tools/i18n/$fn;                                           \
+    if [ "$ext" = "version.lua" ]; then                                  \
+       mname=${bareN%%.*};                                               \
+       : echo "DIRLOC: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/tools/i18n/$mname";                                \
+       mv /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/tools/i18n/$fn /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/tools/i18n/$mname.lua;                           \
+    fi;                                                                   \
+done
+for i in init/ksh_funcs/clearLmod.in init/ksh_funcs/clearMT.in init/ksh_funcs/ml.in init/ksh_funcs/module.in init/ksh_funcs/settarg.in; do                                                 \
+   bareN=${i##*/};                                                       \
+   fn=${bareN%%.in*};                                                    \
+   ext=${bareN#*.};                                                      \
+   : echo "DIRLOC/fn: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/ksh_funcs/$fn";                                    \
+   sed  -e 's|@PREFIX@|/home/username/gentoo/usr/share/Lmod|g'                                       \
+        -e 's|@path_to_lua@|/home/username/gentoo/usr/bin/lua5.1|g'                             \
+        -e 's|@hashsum@|/home/username/gentoo/usr/bin/sha1sum|g'                             \
+        -e 's|@pager@|/home/username/gentoo/usr/bin/less|g'                                 \
+        -e 's|@case_independent_sorting@|yes|g'   \
+        -e 's|@lmod_settarg_full_support@|no|g' \
+        -e 's|@use_dot_files@|yes|g'                         \
+        -e 's|@lang@|<empty>|g'                             \
+        -e 's|@site_msg_file@|<empty>|g'                         \
+        -e 's|@git@|(8.5.6)|g'                                     \
+        -e 's|--@ignore_dirs@--|[\".svn\"] = true, [\".git\"] = true, [\".hg\"] = true, [\".bzr\"] = true, |g'                         \
+        -e 's|@sys_lua_path@|/home/username/gentoo/usr/share/lua/5.1/?.lua;/home/username/gentoo/usr/share/lua/5.1/?/init.lua;/home/username/gentoo/usr/lib64/lua/5.1/?.lua;/home/username/gentoo/usr/lib64/lua/5.1/?/init.lua;/usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua|g'                           \
+        -e 's|@hidden_italic@|no|g'                    \
+        -e 's|@modulepath_init@|@PKG@/init/.modulespath|g'                     \
+        -e 's|@sys_lua_cpath@|/home/username/gentoo/usr/lib64/lua/5.1/?.so;/usr/lib64/lua/5.1/?.so;/home/username/gentoo/usr/lib64/lua/5.1/loadall.so|g'                         \
+        -e 's|@path_to_luac@|/home/username/gentoo/usr/bin/luac5.1|g'                           \
+        -e 's|@have_lua_term@|yes|g'                         \
+        -e 's|@silence_shell_debugging@|no|g'     \
+        -e 's|@fast_tcl_interp@|yes|g'                     \
+        -e 's|@settarg_cmd@|settarg_cmd|g'                             \
+        -e "s|@my_shell@|$fn|g"                                          \
+        -e 's|@tclsh@|/home/username/gentoo/usr/bin/tclsh|g'                                 \
+        -e 's|@ls@|/home/username/gentoo/bin/ls|g'                                       \
+        -e 's|@disable_name_autoswap@|no|g'         \
+        -e 's|@tmod_path_rule@|no|g'                       \
+        -e 's|@tmod_find_first@|no|g'                     \
+        -e 's|@redirect@|no|g'                                   \
+        -e 's|@basename@|/home/username/gentoo/usr/bin/basename|g'                                   \
+        -e 's|@support_ksh@|yes|g'                             \
+        -e 's|@cached_loads@|yes|g'                           \
+        -e 's|@avail_extensions@|@AVAIL_EXTENSION@|g'               \
+        -e 's|@ps@|/home/username/gentoo/bin/ps|g'                                               \
+        -e 's|@site_name@|Gentoo|g'                                 \
+        -e 's|@site_controlled_prefix@|yes|g'       \
+        -e 's|@syshost@|Gentoo|g'                                     \
+        -e 's|@expr@|/home/username/gentoo/usr/bin/expr|g'                                           \
+        -e 's|@extended_default@|yes|g'                   \
+        -e 's|@libexec@|/home/username/gentoo/usr/share/Lmod/libexec|g'                                     \
+        -e 's|@legacy_ordering@|@LEGACY_ORDERING@|g'                     \
+        -e 's|@pin_versions@|no|g'                           \
+        -e 's|@auto_swap@|yes|g'                                 \
+        -e 's|@sys_ld_lib_path@||g'                     \
+        -e 's|@sys_ld_preload@||g'                       \
+        -e 's|@export_module@|yes|g'                         \
+        -e 's|@lmod_version@|8.5.6|g'                                \
+        -e 's|@exact_match@|no|g'                             \
+        -e 's|@ancient@|86400|g'                                     \
+        -e 's|@prepend_block@|normal|g'                         \
+        -e 's|@colorize@|yes|g'                                   \
+        -e 's|@duplicate_paths@|no|g'                     \
+        -e 's|@allow_tcl_mfiles@|yes|g'                   \
+        -e 's|@mpath_avail@|no|g'                             \
+        -e 's|@short_time@|2|g'                               \
+        -e 's|@cacheDirs@|/home/username/gentoo/etc/lmod_cache/spider_cache|g'                         \
+        -e 's|@updateSystemFn@|/home/username/gentoo/etc/lmod_cache/system.txt|g'                     \
+        -e 's|@modulepath_root@|/home/username/gentoo/etc/modulefiles|g'                     \
+        -e 's|@lmod_root@|/home/username/gentoo/usr/share/Lmod/..|g'                                 \
+        -e 's|@lmod_allow_root_use@|yes|g'             \
+        -e 's|@PKGV@|/home/username/gentoo/usr/share/Lmod|g'                                           \
+        -e 's|@PKG@|/home/username/gentoo/usr/share/Lmod|g'         < $i > /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/ksh_funcs/$fn;             \
+    [ "$ext" = "in.lua" -o "$ext" = "tcl" -o "$ext" = "in"             \
+       -o "$ext" = "sh.in" ] &&                                          \
+       chmod +x /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/ksh_funcs/$fn;                                           \
+    if [ "$ext" = "version.lua" ]; then                                  \
+       mname=${bareN%%.*};                                               \
+       : echo "DIRLOC: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/ksh_funcs/$mname";                                \
+       mv /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/ksh_funcs/$fn /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/ksh_funcs/$mname.lua;                           \
+    fi;                                                                   \
+done
+make[1]: Leaving directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+make[1]: Leaving directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+make[1]: Leaving directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+make[1]: Leaving directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+make[1]: Leaving directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+/home/username/gentoo/usr/bin/lua5.1 /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/libexec/spiderCacheSupport --cacheDirs "/home/username/gentoo/etc/lmod_cache/spider_cache"          \
+                         --updateFn  "/home/username/gentoo/etc/lmod_cache/system.txt"           \
+                                 --descriptFn ""  \
+                                 >> /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/lmodrc.lua;
+/home/username/gentoo/usr/bin/make PKGV=/home/username/gentoo/usr/share/Lmod shell_init startup
+make[1]: Entering directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+/home/username/gentoo/usr/bin/make FILELIST="init/bash.in init/cmake.in init/csh.in init/ksh.in init/tcsh.in init/zsh.in init/sh.in init/perl.in init/R.in init/env_modules_python.py.in init/lmod_bash_completions init/fish.in init/lisp.in init/env_modules_ruby.rb.in" DIRLOC=/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init    __installMe
+/home/username/gentoo/usr/bin/make FILELIST="init/profile.in init/profile.fish.in init/cshrc.in" DIRLOC=/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init    __installMe
+make[2]: Entering directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+make[2]: Entering directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+for i in init/bash.in init/cmake.in init/csh.in init/ksh.in init/tcsh.in init/zsh.in init/sh.in init/perl.in init/R.in init/env_modules_python.py.in init/lmod_bash_completions init/fish.in init/lisp.in init/env_modules_ruby.rb.in; do                                                 \
+   bareN=${i##*/};                                                       \
+   fn=${bareN%%.in*};                                                    \
+   ext=${bareN#*.};                                                      \
+   : echo "DIRLOC/fn: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn";                                    \
+   sed  -e 's|@PREFIX@|/home/username/gentoo/usr/share/Lmod|g'                                       \
+        -e 's|@path_to_lua@|/home/username/gentoo/usr/bin/lua5.1|g'                             \
+        -e 's|@hashsum@|/home/username/gentoo/usr/bin/sha1sum|g'                             \
+        -e 's|@pager@|/home/username/gentoo/usr/bin/less|g'                                 \
+        -e 's|@case_independent_sorting@|yes|g'   \
+        -e 's|@lmod_settarg_full_support@|no|g' \
+        -e 's|@use_dot_files@|yes|g'                         \
+        -e 's|@lang@|<empty>|g'                             \
+        -e 's|@site_msg_file@|<empty>|g'                         \
+        -e 's|@git@|(8.5.6)|g'                                     \
+        -e 's|--@ignore_dirs@--|[\".svn\"] = true, [\".git\"] = true, [\".hg\"] = true, [\".bzr\"] = true, |g'                         \
+        -e 's|@sys_lua_path@|/home/username/gentoo/usr/share/lua/5.1/?.lua;/home/username/gentoo/usr/share/lua/5.1/?/init.lua;/home/username/gentoo/usr/lib64/lua/5.1/?.lua;/home/username/gentoo/usr/lib64/lua/5.1/?/init.lua;/usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua|g'                           \
+        -e 's|@hidden_italic@|no|g'                    \
+        -e 's|@modulepath_init@|@PKG@/init/.modulespath|g'                     \
+        -e 's|@sys_lua_cpath@|/home/username/gentoo/usr/lib64/lua/5.1/?.so;/usr/lib64/lua/5.1/?.so;/home/username/gentoo/usr/lib64/lua/5.1/loadall.so|g'                         \
+        -e 's|@path_to_luac@|/home/username/gentoo/usr/bin/luac5.1|g'                           \
+        -e 's|@have_lua_term@|yes|g'                         \
+        -e 's|@silence_shell_debugging@|no|g'     \
+        -e 's|@fast_tcl_interp@|yes|g'                     \
+        -e 's|@settarg_cmd@|settarg_cmd|g'                             \
+        -e "s|@my_shell@|$fn|g"                                          \
+        -e 's|@tclsh@|/home/username/gentoo/usr/bin/tclsh|g'                                 \
+        -e 's|@ls@|/home/username/gentoo/bin/ls|g'                                       \
+        -e 's|@disable_name_autoswap@|no|g'         \
+        -e 's|@tmod_path_rule@|no|g'                       \
+        -e 's|@tmod_find_first@|no|g'                     \
+        -e 's|@redirect@|no|g'                                   \
+        -e 's|@basename@|/home/username/gentoo/usr/bin/basename|g'                                   \
+        -e 's|@support_ksh@|yes|g'                             \
+        -e 's|@cached_loads@|yes|g'                           \
+        -e 's|@avail_extensions@|@AVAIL_EXTENSION@|g'               \
+        -e 's|@ps@|/home/username/gentoo/bin/ps|g'                                               \
+        -e 's|@site_name@|Gentoo|g'                                 \
+        -e 's|@site_controlled_prefix@|yes|g'       \
+        -e 's|@syshost@|Gentoo|g'                                     \
+        -e 's|@expr@|/home/username/gentoo/usr/bin/expr|g'                                           \
+        -e 's|@extended_default@|yes|g'                   \
+        -e 's|@libexec@|/home/username/gentoo/usr/share/Lmod/libexec|g'                                     \
+        -e 's|@legacy_ordering@|@LEGACY_ORDERING@|g'                     \
+        -e 's|@pin_versions@|no|g'                           \
+        -e 's|@auto_swap@|yes|g'                                 \
+        -e 's|@sys_ld_lib_path@||g'                     \
+        -e 's|@sys_ld_preload@||g'                       \
+        -e 's|@export_module@|yes|g'                         \
+        -e 's|@lmod_version@|8.5.6|g'                                \
+        -e 's|@exact_match@|no|g'                             \
+        -e 's|@ancient@|86400|g'                                     \
+        -e 's|@prepend_block@|normal|g'                         \
+        -e 's|@colorize@|yes|g'                                   \
+        -e 's|@duplicate_paths@|no|g'                     \
+        -e 's|@allow_tcl_mfiles@|yes|g'                   \
+        -e 's|@mpath_avail@|no|g'                             \
+        -e 's|@short_time@|2|g'                               \
+        -e 's|@cacheDirs@|/home/username/gentoo/etc/lmod_cache/spider_cache|g'                         \
+        -e 's|@updateSystemFn@|/home/username/gentoo/etc/lmod_cache/system.txt|g'                     \
+        -e 's|@modulepath_root@|/home/username/gentoo/etc/modulefiles|g'                     \
+        -e 's|@lmod_root@|/home/username/gentoo/usr/share/Lmod/..|g'                                 \
+        -e 's|@lmod_allow_root_use@|yes|g'             \
+        -e 's|@PKGV@|/home/username/gentoo/usr/share/Lmod|g'                                           \
+        -e 's|@PKG@|/home/username/gentoo/usr/share/Lmod|g'         < $i > /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn;             \
+    [ "$ext" = "in.lua" -o "$ext" = "tcl" -o "$ext" = "in"             \
+       -o "$ext" = "sh.in" ] &&                                          \
+       chmod +x /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn;                                           \
+    if [ "$ext" = "version.lua" ]; then                                  \
+       mname=${bareN%%.*};                                               \
+       : echo "DIRLOC: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$mname";                                \
+       mv /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$mname.lua;                           \
+    fi;                                                                   \
+done
+for i in init/profile.in init/profile.fish.in init/cshrc.in; do                                                 \
+   bareN=${i##*/};                                                       \
+   fn=${bareN%%.in*};                                                    \
+   ext=${bareN#*.};                                                      \
+   : echo "DIRLOC/fn: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn";                                    \
+   sed  -e 's|@PREFIX@|/home/username/gentoo/usr/share/Lmod|g'                                       \
+        -e 's|@path_to_lua@|/home/username/gentoo/usr/bin/lua5.1|g'                             \
+        -e 's|@hashsum@|/home/username/gentoo/usr/bin/sha1sum|g'                             \
+        -e 's|@pager@|/home/username/gentoo/usr/bin/less|g'                                 \
+        -e 's|@case_independent_sorting@|yes|g'   \
+        -e 's|@lmod_settarg_full_support@|no|g' \
+        -e 's|@use_dot_files@|yes|g'                         \
+        -e 's|@lang@|<empty>|g'                             \
+        -e 's|@site_msg_file@|<empty>|g'                         \
+        -e 's|@git@|(8.5.6)|g'                                     \
+        -e 's|--@ignore_dirs@--|[\".svn\"] = true, [\".git\"] = true, [\".hg\"] = true, [\".bzr\"] = true, |g'                         \
+        -e 's|@sys_lua_path@|/home/username/gentoo/usr/share/lua/5.1/?.lua;/home/username/gentoo/usr/share/lua/5.1/?/init.lua;/home/username/gentoo/usr/lib64/lua/5.1/?.lua;/home/username/gentoo/usr/lib64/lua/5.1/?/init.lua;/usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua|g'                           \
+        -e 's|@hidden_italic@|no|g'                    \
+        -e 's|@modulepath_init@|@PKG@/init/.modulespath|g'                     \
+        -e 's|@sys_lua_cpath@|/home/username/gentoo/usr/lib64/lua/5.1/?.so;/usr/lib64/lua/5.1/?.so;/home/username/gentoo/usr/lib64/lua/5.1/loadall.so|g'                         \
+        -e 's|@path_to_luac@|/home/username/gentoo/usr/bin/luac5.1|g'                           \
+        -e 's|@have_lua_term@|yes|g'                         \
+        -e 's|@silence_shell_debugging@|no|g'     \
+        -e 's|@fast_tcl_interp@|yes|g'                     \
+        -e 's|@settarg_cmd@|settarg_cmd|g'                             \
+        -e "s|@my_shell@|$fn|g"                                          \
+        -e 's|@tclsh@|/home/username/gentoo/usr/bin/tclsh|g'                                 \
+        -e 's|@ls@|/home/username/gentoo/bin/ls|g'                                       \
+        -e 's|@disable_name_autoswap@|no|g'         \
+        -e 's|@tmod_path_rule@|no|g'                       \
+        -e 's|@tmod_find_first@|no|g'                     \
+        -e 's|@redirect@|no|g'                                   \
+        -e 's|@basename@|/home/username/gentoo/usr/bin/basename|g'                                   \
+        -e 's|@support_ksh@|yes|g'                             \
+        -e 's|@cached_loads@|yes|g'                           \
+        -e 's|@avail_extensions@|@AVAIL_EXTENSION@|g'               \
+        -e 's|@ps@|/home/username/gentoo/bin/ps|g'                                               \
+        -e 's|@site_name@|Gentoo|g'                                 \
+        -e 's|@site_controlled_prefix@|yes|g'       \
+        -e 's|@syshost@|Gentoo|g'                                     \
+        -e 's|@expr@|/home/username/gentoo/usr/bin/expr|g'                                           \
+        -e 's|@extended_default@|yes|g'                   \
+        -e 's|@libexec@|/home/username/gentoo/usr/share/Lmod/libexec|g'                                     \
+        -e 's|@legacy_ordering@|@LEGACY_ORDERING@|g'                     \
+        -e 's|@pin_versions@|no|g'                           \
+        -e 's|@auto_swap@|yes|g'                                 \
+        -e 's|@sys_ld_lib_path@||g'                     \
+        -e 's|@sys_ld_preload@||g'                       \
+        -e 's|@export_module@|yes|g'                         \
+        -e 's|@lmod_version@|8.5.6|g'                                \
+        -e 's|@exact_match@|no|g'                             \
+        -e 's|@ancient@|86400|g'                                     \
+        -e 's|@prepend_block@|normal|g'                         \
+        -e 's|@colorize@|yes|g'                                   \
+        -e 's|@duplicate_paths@|no|g'                     \
+        -e 's|@allow_tcl_mfiles@|yes|g'                   \
+        -e 's|@mpath_avail@|no|g'                             \
+        -e 's|@short_time@|2|g'                               \
+        -e 's|@cacheDirs@|/home/username/gentoo/etc/lmod_cache/spider_cache|g'                         \
+        -e 's|@updateSystemFn@|/home/username/gentoo/etc/lmod_cache/system.txt|g'                     \
+        -e 's|@modulepath_root@|/home/username/gentoo/etc/modulefiles|g'                     \
+        -e 's|@lmod_root@|/home/username/gentoo/usr/share/Lmod/..|g'                                 \
+        -e 's|@lmod_allow_root_use@|yes|g'             \
+        -e 's|@PKGV@|/home/username/gentoo/usr/share/Lmod|g'                                           \
+        -e 's|@PKG@|/home/username/gentoo/usr/share/Lmod|g'         < $i > /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn;             \
+    [ "$ext" = "in.lua" -o "$ext" = "tcl" -o "$ext" = "in"             \
+       -o "$ext" = "sh.in" ] &&                                          \
+       chmod +x /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn;                                           \
+    if [ "$ext" = "version.lua" ]; then                                  \
+       mname=${bareN%%.*};                                               \
+       : echo "DIRLOC: /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$mname";                                \
+       mv /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$fn /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image/home/username/gentoo/usr/share/Lmod/init/$mname.lua;                           \
+    fi;                                                                   \
+done
+make[2]: Leaving directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+make[2]: Leaving directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+make[1]: Leaving directory '/home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/work/Lmod-8.5.6'
+**************************************************************
+
+Warning: remember to update the Lmod scripts in /etc/profile.d
+
+**************************************************************
+>>> Completed installing sys-cluster/lmod-8.5.6 into /home/username/gentoo/var/tmp/portage/sys-cluster/lmod-8.5.6/image
+
+ * Final size of build directory: 58952 KiB (57.5 MiB)
+ * Final size of installed tree:   1720 KiB ( 1.6 MiB)
+
+scanelf: enabling seccomp failed
+scanelf: enabling seccomp failed
+scanelf: enabling seccomp failed
+scanelf: enabling seccomp failed
+scanelf: enabling seccomp failed
+scanelf: enabling seccomp failed
+scanelf: enabling seccomp failed
+scanelf: enabling seccomp failed
+strip: riscv64-unknown-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/share/Lmod/lib/tcl2lua.so.1.0.1
+
+>>> Installing (1 of 1) sys-cluster/lmod-8.5.6::gentoo
+ * checking 169 files for package collisions
+>>> Merging sys-cluster/lmod-8.5.6 to /
+--- /home/username/gentoo/usr/
+--- /home/username/gentoo/usr/share/
+--- /home/username/gentoo/usr/share/Lmod/
+--- /home/username/gentoo/usr/share/Lmod/settarg/
+>>> /home/username/gentoo/usr/share/Lmod/settarg/TargValue.lua
+>>> /home/username/gentoo/usr/share/Lmod/settarg/Bare.lua
+>>> /home/username/gentoo/usr/share/Lmod/settarg/Version.lua
+>>> /home/username/gentoo/usr/share/Lmod/settarg/BuildTarget.lua
+>>> /home/username/gentoo/usr/share/Lmod/settarg/BaseShell.lua
+>>> /home/username/gentoo/usr/share/Lmod/settarg/Output.lua
+>>> /home/username/gentoo/usr/share/Lmod/settarg/ProcessModuleTable.lua
+>>> /home/username/gentoo/usr/share/Lmod/settarg/CmdLineOptions.lua
+>>> /home/username/gentoo/usr/share/Lmod/settarg/getUname.lua
+>>> /home/username/gentoo/usr/share/Lmod/settarg/Bash.lua
+>>> /home/username/gentoo/usr/share/Lmod/settarg/ModifyPath.lua
+>>> /home/username/gentoo/usr/share/Lmod/settarg/STT.lua
+>>> /home/username/gentoo/usr/share/Lmod/settarg/Csh.lua
+>>> /home/username/gentoo/usr/share/Lmod/settarg/settarg_cmd
+>>> /home/username/gentoo/usr/share/Lmod/settarg/settarg_rc.lua
+>>> /home/username/gentoo/usr/share/Lmod/settarg/utils.lua
+>>> /home/username/gentoo/usr/share/Lmod/settarg/targ
+--- /home/username/gentoo/usr/share/Lmod/tools/
+>>> /home/username/gentoo/usr/share/Lmod/tools/MF_TCL.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/capture.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/Dbg.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/fileOps.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/TermWidth.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/Banner.lua
+--- /home/username/gentoo/usr/share/Lmod/tools/i18n/
+>>> /home/username/gentoo/usr/share/Lmod/tools/i18n/variants.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/i18n/version.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/i18n/init.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/i18n/plural.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/i18n/interpolate.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/Cosmic.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/MF_Lua.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/deepcopy.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/base64.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/MF_Base.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/serializeTbl.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/strict.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/haveTermSupport.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/string_utils.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/Optiks.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/lmod_system_execute.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/pairsByKeys.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/json.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/replaceStr.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/ColumnTable.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/inherits.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/Optiks_Option.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/declare.lua
+>>> /home/username/gentoo/usr/share/Lmod/tools/BeautifulTbl.lua
+--- /home/username/gentoo/usr/share/Lmod/share/
+--- /home/username/gentoo/usr/share/Lmod/lib/
+>>> /home/username/gentoo/usr/share/Lmod/lib/tcl2lua.so.1 -> tcl2lua.so.1.0.1
+>>> /home/username/gentoo/usr/share/Lmod/lib/tcl2lua.so -> tcl2lua.so.1
+>>> /home/username/gentoo/usr/share/Lmod/lib/tcl2lua.so.1.0.1
+--- /home/username/gentoo/usr/share/Lmod/messageDir/
+>>> /home/username/gentoo/usr/share/Lmod/messageDir/fr.lua
+>>> /home/username/gentoo/usr/share/Lmod/messageDir/template.lua
+>>> /home/username/gentoo/usr/share/Lmod/messageDir/es.lua
+>>> /home/username/gentoo/usr/share/Lmod/messageDir/en.lua
+>>> /home/username/gentoo/usr/share/Lmod/messageDir/zh.lua
+>>> /home/username/gentoo/usr/share/Lmod/messageDir/de.lua
+--- /home/username/gentoo/usr/share/Lmod/modulefiles/
+--- /home/username/gentoo/usr/share/Lmod/modulefiles/Core/
+>>> /home/username/gentoo/usr/share/Lmod/modulefiles/Core/settarg.lua
+>>> /home/username/gentoo/usr/share/Lmod/modulefiles/Core/lmod.lua
+--- /home/username/gentoo/usr/share/Lmod/init/
+>>> /home/username/gentoo/usr/share/Lmod/init/env_modules_ruby.rb
+>>> /home/username/gentoo/usr/share/Lmod/init/ksh
+>>> /home/username/gentoo/usr/share/Lmod/init/profile.fish
+>>> /home/username/gentoo/usr/share/Lmod/init/bash
+--- /home/username/gentoo/usr/share/Lmod/init/fish_tab_completion/
+>>> /home/username/gentoo/usr/share/Lmod/init/fish_tab_completion/module.fish
+>>> /home/username/gentoo/usr/share/Lmod/init/tcsh
+>>> /home/username/gentoo/usr/share/Lmod/init/perl
+>>> /home/username/gentoo/usr/share/Lmod/init/fish
+>>> /home/username/gentoo/usr/share/Lmod/init/zsh
+>>> /home/username/gentoo/usr/share/Lmod/init/lmodrc.lua
+>>> /home/username/gentoo/usr/share/Lmod/init/lmod_bash_completions
+>>> /home/username/gentoo/usr/share/Lmod/init/csh
+>>> /home/username/gentoo/usr/share/Lmod/init/R
+>>> /home/username/gentoo/usr/share/Lmod/init/profile
+>>> /home/username/gentoo/usr/share/Lmod/init/cshrc
+>>> /home/username/gentoo/usr/share/Lmod/init/cmake
+>>> /home/username/gentoo/usr/share/Lmod/init/lisp
+--- /home/username/gentoo/usr/share/Lmod/init/ksh_funcs/
+>>> /home/username/gentoo/usr/share/Lmod/init/ksh_funcs/ml
+>>> /home/username/gentoo/usr/share/Lmod/init/ksh_funcs/settarg
+>>> /home/username/gentoo/usr/share/Lmod/init/ksh_funcs/clearLmod
+>>> /home/username/gentoo/usr/share/Lmod/init/ksh_funcs/module
+>>> /home/username/gentoo/usr/share/Lmod/init/ksh_funcs/clearMT
+>>> /home/username/gentoo/usr/share/Lmod/init/env_modules_python.py
+>>> /home/username/gentoo/usr/share/Lmod/init/sh
+--- /home/username/gentoo/usr/share/Lmod/shells/
+>>> /home/username/gentoo/usr/share/Lmod/shells/CMake.lua
+>>> /home/username/gentoo/usr/share/Lmod/shells/Bare.lua
+>>> /home/username/gentoo/usr/share/Lmod/shells/Fish.lua
+>>> /home/username/gentoo/usr/share/Lmod/shells/R.lua
+>>> /home/username/gentoo/usr/share/Lmod/shells/BaseShell.lua
+>>> /home/username/gentoo/usr/share/Lmod/shells/Python.lua
+>>> /home/username/gentoo/usr/share/Lmod/shells/Perl.lua
+>>> /home/username/gentoo/usr/share/Lmod/shells/Ruby.lua
+>>> /home/username/gentoo/usr/share/Lmod/shells/Bash.lua
+>>> /home/username/gentoo/usr/share/Lmod/shells/Lisp.lua
+>>> /home/username/gentoo/usr/share/Lmod/shells/Csh.lua
+--- /home/username/gentoo/usr/share/Lmod/libexec/
+>>> /home/username/gentoo/usr/share/Lmod/libexec/collectionFileA.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/MC_Load.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/tcl2lua.tcl
+>>> /home/username/gentoo/usr/share/Lmod/libexec/MN_Between.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/mrc_sandbox.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/lmod
+>>> /home/username/gentoo/usr/share/Lmod/libexec/Version.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/MC_Access.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/MN_Match.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/sh_to_modulefile
+>>> /home/username/gentoo/usr/share/Lmod/libexec/update_lmod_system_cache_files
+>>> /home/username/gentoo/usr/share/Lmod/libexec/MC_ComputeHash.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/mrc_funcs.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/spider
+>>> /home/username/gentoo/usr/share/Lmod/libexec/CTimer.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/Var.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/RC2lua.tcl
+>>> /home/username/gentoo/usr/share/Lmod/libexec/StandardPackage.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/Pkg.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/MC_Show.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/spiderCacheSupport
+>>> /home/username/gentoo/usr/share/Lmod/libexec/MC_DependencyCk.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/Options.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/loadModuleFile.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/colorize.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/MRC.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/MasterControl.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/MC_Spider.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/Configuration.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/LocationT.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/cmdfuncs.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/Spider.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/print_os.sh
+>>> /home/username/gentoo/usr/share/Lmod/libexec/Exec.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/DirTree.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/Cache.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/computeHashSum
+>>> /home/username/gentoo/usr/share/Lmod/libexec/ReadLmodRC.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/clearLMOD_cmd
+>>> /home/username/gentoo/usr/share/Lmod/libexec/MC_Unload.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/modfuncs.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/MC_Refresh.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/MT.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/Master.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/Hook.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/PkgBase.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/SitePackage.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/FrameStk.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/ModuleA.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/HookArray.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/Timer.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/addto
+>>> /home/username/gentoo/usr/share/Lmod/libexec/RefCount.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/myGlobals.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/MC_CheckSyntax.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/pager.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/MN_Latest.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/parseVersion.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/mrc_load.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/utils.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/sandbox.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/MC_MgrLoad.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/MName.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/check_module_tree_syntax
+>>> /home/username/gentoo/usr/share/Lmod/libexec/PkgTACC.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/MN_Exact.lua
+>>> /home/username/gentoo/usr/share/Lmod/libexec/ml_cmd
+--- /home/username/gentoo/usr/share/man/
+--- /home/username/gentoo/usr/share/man/man1/
+>>> /home/username/gentoo/usr/share/man/man1/module.1.bz2
+--- /home/username/gentoo/usr/share/doc/
+--- /home/username/gentoo/usr/share/doc/lmod-8.5.6/
+>>> /home/username/gentoo/usr/share/doc/lmod-8.5.6/README.old.bz2
+>>> /home/username/gentoo/usr/share/doc/lmod-8.5.6/README_lua_modulefiles.txt.bz2
+>>> /home/username/gentoo/usr/share/doc/lmod-8.5.6/README.design.md.bz2
+>>> /home/username/gentoo/usr/share/doc/lmod-8.5.6/README.new.bz2
+>>> /home/username/gentoo/usr/share/doc/lmod-8.5.6/README.md.bz2
+--- /home/username/gentoo/etc/
+--- /home/username/gentoo/etc/env.d/
+>>> /home/username/gentoo/etc/env.d/99lmod
+--- /home/username/gentoo/etc/modulefiles/
+>>> /home/username/gentoo/etc/modulefiles/.keep_sys-cluster_lmod-0
+--- /home/username/gentoo/etc/lmod_cache/
+>>> /home/username/gentoo/etc/lmod_cache/.keep_sys-cluster_lmod-0
+>>> Safely unmerging already-installed instance...
+No package files given... Grabbing a set.
+--- replaced obj /home/username/gentoo/usr/share/man/man1/module.1.bz2
+--- replaced dir /home/username/gentoo/usr/share/man/man1
+--- replaced dir /home/username/gentoo/usr/share/man
+--- replaced obj /home/username/gentoo/usr/share/doc/lmod-8.5.6/README_lua_modulefiles.txt.bz2
+--- replaced obj /home/username/gentoo/usr/share/doc/lmod-8.5.6/README.old.bz2
+--- replaced obj /home/username/gentoo/usr/share/doc/lmod-8.5.6/README.new.bz2
+--- replaced obj /home/username/gentoo/usr/share/doc/lmod-8.5.6/README.md.bz2
+--- replaced obj /home/username/gentoo/usr/share/doc/lmod-8.5.6/README.design.md.bz2
+--- replaced dir /home/username/gentoo/usr/share/doc/lmod-8.5.6
+--- replaced dir /home/username/gentoo/usr/share/doc
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/string_utils.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/strict.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/serializeTbl.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/replaceStr.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/pairsByKeys.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/lmod_system_execute.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/json.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/inherits.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/i18n/version.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/i18n/variants.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/i18n/plural.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/i18n/interpolate.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/i18n/init.lua
+--- replaced dir /home/username/gentoo/usr/share/Lmod/tools/i18n
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/haveTermSupport.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/fileOps.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/deepcopy.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/declare.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/capture.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/base64.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/TermWidth.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/Optiks_Option.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/Optiks.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/MF_TCL.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/MF_Lua.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/MF_Base.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/Dbg.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/Cosmic.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/ColumnTable.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/BeautifulTbl.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/tools/Banner.lua
+--- replaced dir /home/username/gentoo/usr/share/Lmod/tools
+--- replaced obj /home/username/gentoo/usr/share/Lmod/shells/Ruby.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/shells/R.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/shells/Python.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/shells/Perl.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/shells/Lisp.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/shells/Fish.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/shells/Csh.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/shells/CMake.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/shells/Bash.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/shells/BaseShell.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/shells/Bare.lua
+--- replaced dir /home/username/gentoo/usr/share/Lmod/shells
+--- replaced dir /home/username/gentoo/usr/share/Lmod/share
+--- replaced obj /home/username/gentoo/usr/share/Lmod/settarg/utils.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/settarg/targ
+--- replaced obj /home/username/gentoo/usr/share/Lmod/settarg/settarg_rc.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/settarg/settarg_cmd
+--- replaced obj /home/username/gentoo/usr/share/Lmod/settarg/getUname.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/settarg/Version.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/settarg/TargValue.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/settarg/STT.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/settarg/ProcessModuleTable.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/settarg/Output.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/settarg/ModifyPath.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/settarg/Csh.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/settarg/CmdLineOptions.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/settarg/BuildTarget.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/settarg/Bash.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/settarg/BaseShell.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/settarg/Bare.lua
+--- replaced dir /home/username/gentoo/usr/share/Lmod/settarg
+--- replaced obj /home/username/gentoo/usr/share/Lmod/modulefiles/Core/settarg.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/modulefiles/Core/lmod.lua
+--- replaced dir /home/username/gentoo/usr/share/Lmod/modulefiles/Core
+--- replaced dir /home/username/gentoo/usr/share/Lmod/modulefiles
+--- replaced obj /home/username/gentoo/usr/share/Lmod/messageDir/zh.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/messageDir/template.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/messageDir/fr.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/messageDir/es.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/messageDir/en.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/messageDir/de.lua
+--- replaced dir /home/username/gentoo/usr/share/Lmod/messageDir
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/utils.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/update_lmod_system_cache_files
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/tcl2lua.tcl
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/spiderCacheSupport
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/spider
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/sh_to_modulefile
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/sandbox.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/print_os.sh
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/parseVersion.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/pager.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/myGlobals.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/mrc_sandbox.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/mrc_load.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/mrc_funcs.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/modfuncs.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/ml_cmd
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/loadModuleFile.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/lmod
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/computeHashSum
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/colorize.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/collectionFileA.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/cmdfuncs.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/clearLMOD_cmd
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/check_module_tree_syntax
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/addto
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/Version.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/Var.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/Timer.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/StandardPackage.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/Spider.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/SitePackage.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/RefCount.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/ReadLmodRC.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/RC2lua.tcl
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/PkgTACC.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/PkgBase.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/Pkg.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/Options.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/ModuleA.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/MasterControl.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/Master.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/MT.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/MRC.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/MName.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/MN_Match.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/MN_Latest.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/MN_Exact.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/MN_Between.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/MC_Unload.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/MC_Spider.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/MC_Show.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/MC_Refresh.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/MC_MgrLoad.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/MC_Load.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/MC_DependencyCk.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/MC_ComputeHash.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/MC_CheckSyntax.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/MC_Access.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/LocationT.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/HookArray.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/Hook.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/FrameStk.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/Exec.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/DirTree.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/Configuration.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/Cache.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/libexec/CTimer.lua
+--- replaced dir /home/username/gentoo/usr/share/Lmod/libexec
+--- replaced obj /home/username/gentoo/usr/share/Lmod/lib/tcl2lua.so.1.0.1
+--- replaced sym /home/username/gentoo/usr/share/Lmod/lib/tcl2lua.so.1
+--- replaced sym /home/username/gentoo/usr/share/Lmod/lib/tcl2lua.so
+--- replaced dir /home/username/gentoo/usr/share/Lmod/lib
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/zsh
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/tcsh
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/sh
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/profile.fish
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/profile
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/perl
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/lmodrc.lua
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/lmod_bash_completions
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/lisp
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/ksh_funcs/settarg
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/ksh_funcs/module
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/ksh_funcs/ml
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/ksh_funcs/clearMT
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/ksh_funcs/clearLmod
+--- replaced dir /home/username/gentoo/usr/share/Lmod/init/ksh_funcs
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/ksh
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/fish_tab_completion/module.fish
+--- replaced dir /home/username/gentoo/usr/share/Lmod/init/fish_tab_completion
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/fish
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/env_modules_ruby.rb
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/env_modules_python.py
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/cshrc
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/csh
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/cmake
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/bash
+--- replaced obj /home/username/gentoo/usr/share/Lmod/init/R
+--- replaced dir /home/username/gentoo/usr/share/Lmod/init
+--- replaced dir /home/username/gentoo/usr/share/Lmod
+--- replaced dir /home/username/gentoo/usr/share
+--- replaced dir /home/username/gentoo/usr
+--- replaced obj /home/username/gentoo/etc/modulefiles/.keep_sys-cluster_lmod-0
+--- replaced dir /home/username/gentoo/etc/modulefiles
+--- replaced obj /home/username/gentoo/etc/lmod_cache/.keep_sys-cluster_lmod-0
+--- replaced dir /home/username/gentoo/etc/lmod_cache
+--- replaced obj /home/username/gentoo/etc/env.d/99lmod
+--- replaced dir /home/username/gentoo/etc/env.d
+--- replaced dir /home/username/gentoo/etc
+>>> Original instance of package unmerged safely.
+ * Lmod spider cache has been enabled.
+ * Remember to update the spider cache with
+ * /usr/share/Lmod/libexec/update_lmod_system_cache_files \
+ * 	 $MODULEPATH
+>>> sys-cluster/lmod-8.5.6 merged.
+
+ * Messages for package sys-cluster/lmod-8.5.6:
+
+ * You can control the siteName and syshost settings by
+ * using the variables LMOD_SITENAME and LMOD_SYSHOST, during
+ * build time, which are both set to 'Gentoo' by default.
+ * There are a lot of options for this package, especially
+ * for run time behaviour. Remember to use the EXTRA_ECONF variable.
+ * To see full list of options visit:
+ * 	 https://lmod.readthedocs.io/en/latest/090_configuring_lmod.html
+
+ * Messages for package sys-cluster/lmod-8.5.6:
+
+ * Lmod spider cache has been enabled.
+ * Remember to update the spider cache with
+ * /usr/share/Lmod/libexec/update_lmod_system_cache_files \
+ * 	 $MODULEPATH
+
+ * GNU info directory index is up-to-date.
+
+ * IMPORTANT: 90 news items need reading for repository 'gentoo'.
+ * Use eselect news read to view new items.

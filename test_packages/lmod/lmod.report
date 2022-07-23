@@ -1,0 +1,16 @@
+USE tests started on Sat Jul 23 02:00:15 UTC 2022
+
+FEATURES=' test' USE='' succeeded for =sys-cluster/lmod-8.5.6
+USE='-auto-swap -cache -duplicate-paths lua_single_target_lua5-1 -lua_single_target_lua5-3' succeeded for =sys-cluster/lmod-8.5.6
+USE='auto-swap -cache -duplicate-paths lua_single_target_lua5-1 -lua_single_target_lua5-3' succeeded for =sys-cluster/lmod-8.5.6
+USE='-auto-swap -cache duplicate-paths lua_single_target_lua5-1 -lua_single_target_lua5-3' succeeded for =sys-cluster/lmod-8.5.6
+USE='auto-swap -cache duplicate-paths lua_single_target_lua5-1 -lua_single_target_lua5-3' succeeded for =sys-cluster/lmod-8.5.6
+USE='-auto-swap cache duplicate-paths lua_single_target_lua5-1 -lua_single_target_lua5-3' succeeded for =sys-cluster/lmod-8.5.6
+USE='auto-swap cache duplicate-paths lua_single_target_lua5-1 -lua_single_target_lua5-3' succeeded for =sys-cluster/lmod-8.5.6
+USE='-auto-swap -cache -duplicate-paths -lua_single_target_lua5-1 lua_single_target_lua5-3' succeeded for =sys-cluster/lmod-8.5.6
+USE='-auto-swap cache -duplicate-paths -lua_single_target_lua5-1 lua_single_target_lua5-3' succeeded for =sys-cluster/lmod-8.5.6
+USE='auto-swap cache -duplicate-paths -lua_single_target_lua5-1 lua_single_target_lua5-3' succeeded for =sys-cluster/lmod-8.5.6
+USE='-auto-swap -cache duplicate-paths -lua_single_target_lua5-1 lua_single_target_lua5-3' succeeded for =sys-cluster/lmod-8.5.6
+USE='auto-swap -cache duplicate-paths -lua_single_target_lua5-1 lua_single_target_lua5-3' succeeded for =sys-cluster/lmod-8.5.6
+USE='auto-swap cache duplicate-paths -lua_single_target_lua5-1 lua_single_target_lua5-3' succeeded for =sys-cluster/lmod-8.5.6
+

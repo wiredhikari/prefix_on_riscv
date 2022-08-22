@@ -1,5 +1,6 @@
 # Porting Prefix
 - Introduction
+Gentoo Prefix allows to use the power of Gentoo and it's tools on other distributions or operating systems.
 
 ## Setting up the host system
 Firstly, we should ensure that all the necessary packages are available on the host system so we can compile stage 1 and stage 2 by using the packages in host.
@@ -9,7 +10,7 @@ Firstly, we should ensure that all the necessary packages are available on the h
 ## Getting through the stages
 
 After ensuring that you have all the necessary packages installed on the host you can start the bootstrap script. 
-Incase `bash` is missing from the host, you need to bootstrap it first with the bootstrap-bash.sh script 
+Incase `bash` is missing from the host, you need to bootstrap it first with the bootstrap-bash.sh script. 
 ```
 
 ```

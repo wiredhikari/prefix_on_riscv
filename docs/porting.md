@@ -29,11 +29,10 @@ So to use
 - profiles/prefix - Add initial profile here
 - profiles/arch.list - Add prefix keyword here
 - profiles/profiles.desc - Declare the profile status in profiles.desc as exp
-- 
-- 
--
 
-### Adding symlink in bootstrap-prefix.sh
+### Add Symlink
+After creating a profile, add the symlink to the new profile in bootstrap-prefix.sh script.
+
 
 ### Start commiting KEYWORDS
 
@@ -41,3 +40,4 @@ Now that you have a working prefix, start to test and keyword packages. You can 
 
 ## Guide to testing packages on prefix
 
+### Relevent Links

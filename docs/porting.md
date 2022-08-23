@@ -26,9 +26,13 @@ The script does all the work we just need to debug issues while installing packa
 ## Pushing work into the Portage tree
 So to use 
 ### Create the profiles
-- profiles/prefix - Add initial profile here
-- profiles/arch.list - Add prefix keyword here
-- profiles/profiles.desc - Declare the profile status in profiles.desc as exp
+The first profile was just a 'make it work' solution. Now a much more complete one must be created:
+- profiles/prefix - Add initial profile in this directory
+
+After the profile is committed, update the following files in the profiles/ subdir: 
+- arch.list - Add prefix keyword here
+- profiles.desc - Declare the profile status in profiles.desc as exp
+Declare the profile in profiles.desc as exp for now.
 
 ### Add Symlink
 After creating a profile, add the symlink to the new profile in bootstrap-prefix.sh script.
@@ -40,4 +44,7 @@ Now that you have a working prefix, start to test and keyword packages. You can 
 
 ## Guide to testing packages on prefix
 
-### Relevent Links
+### Resources
+- https://wiki.gentoo.org/wiki/Porting
+- https://wiki.gentoo.org/wiki/Project:Prefix
+- 

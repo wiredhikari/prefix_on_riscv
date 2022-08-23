@@ -12,9 +12,17 @@ Firstly, we should ensure that all the necessary packages are available on the h
 After ensuring that you have all the necessary packages installed on the host you can start the bootstrap script. 
 Incase `bash` is missing from the host, you need to bootstrap it first with the bootstrap-bash.sh script. 
 ```
-
+user $wget https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-bash.sh
+user $chmod +x bootstrap-bash.sh
+user $./bootstrap-bash.sh /var/tmp/bash
+user $export PATH="/var/tmp/bash/usr/bin:${PATH}" 
 ```
-The script does all the work we just need to debug issues while installing packages.
+The script does all the work we just need to debug issues while installing packages. Now download the [bootstrap-prefix.sh](https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-prefix.sh). 
+```
+user $wget https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-prefix.sh
+user $chmod +x bootstrap-prefix.sh
+user $./bootstrap-prefix.sh 
+```
 
 
 ### Starting the script

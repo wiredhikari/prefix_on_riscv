@@ -31,7 +31,7 @@ user $./bootstrap-prefix.sh
 
 ## Pushing work into the Portage tree
 
-## Create the profiles
+## Create the Profiles
 The first profile was just a 'make it work' solution. Now a much more complete one must be created:
 - profiles/prefix - Add initial profile in this directory
 
@@ -43,7 +43,7 @@ Declare the profile in profiles.desc as exp for now.
 ## Add Symlink
 After creating a profile, add the symlink to the new profile in `bootstrap-prefix.sh` script. 
 
-
+## 
 ## Start commiting KEYWORDS
 
 Now that you have a working prefix, start to test and keyword packages. You can start by keywording packages

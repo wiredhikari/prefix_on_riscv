@@ -1,5 +1,4 @@
 # Porting Prefix
-- Introduction
 Gentoo Prefix allows to use the power of Gentoo and it's tools on other distributions or operating systems, it allows to install packages into an offset without root privileges. 
 
 ## Setting up the host system
@@ -44,9 +43,8 @@ After the profile is committed, update the following files in the profiles/ subd
 Declare the profile in profiles.desc as exp for now.
 
 ## Add Symlink
-After creating a profile, add the symlink to the new profile in `bootstrap-prefix.sh` script. 
+After creating a profile, add the symlink to the new profile in `bootstrap-prefix.sh` script. You can refer to [riscv](https://github.com/gentoo/prefix/blob/master/scripts/bootstrap-prefix.sh#L426) symlink in the script.
 
-## 
 ## Start commiting KEYWORDS
 
 Now that you have a working prefix, start to test and keyword packages. You can start by keywording packages

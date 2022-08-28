@@ -1,16 +1,19 @@
 # Porting Prefix
 - Introduction
-Gentoo Prefix allows to use the power of Gentoo and it's tools on other distributions or operating systems.
+Gentoo Prefix allows to use the power of Gentoo and it's tools on other distributions or operating systems, it allows to install packages into an offset without root privileges. 
 
 ## Setting up the host system
 Firstly, we should ensure that all the necessary packages are available on the host system so we can compile stage 1 and stage 2 by using the packages in host.
 
-- list of packages on host needed for stage 1 and 2
-
 ## Getting through the stages
 ### Stage-1
+After having a new profile, we will ensure Stage-1 installs coretools required for Portage to function. Then the latest python and portage will be installed in ${EPREFIX}/tmp. 
+
 ### Stage-2
+After getting a working Stage-1 and making a new profile, Stage-2 will start with emerging build utilities. Portage will use the system’s compiler to install GCC into ${EPREFIX}/tmp; then coretools from the base profile. Portage will use the dependency system to emerge system. Eventually, this will lead to using Portage to emerge as a base system.
+
 ### Stage-3
+After getting Stage-2 to work, we will use GCC installed by Portage to install a Gentoo base system in ${EPREFIX}. Continue emerging some of the core toolchain packages that make sure we compile and link everything taking the Prefix into account. Post this `emerge -uDNv system` will be executed.
 
 
 ## Starting the script
@@ -53,4 +56,4 @@ Now that you have a working prefix, start to test and keyword packages. You can 
 ## Resources
 - https://wiki.gentoo.org/wiki/Porting
 - https://wiki.gentoo.org/wiki/Project:Prefix
-- 
+- https://wiki.gentoo.org/wiki/Project:Prefix/Technical_Documentation

@@ -37,7 +37,7 @@ user $./bootstrap-prefix.sh
 The first profile was just a 'make it work' solution. Now a much more complete one must be created:
 - `profiles/prefix` - Add initial profile in this directory
 
-After the profile is committed, update the following files in the `profiles/` subdir: 
+After the profile is committed, update the following files in the `profiles` subdir: 
 - `arch.list` - Add prefix keyword here
 - `profiles.desc` - Declare the profile status in profiles.desc as exp
 Declare the profile in profiles.desc as exp for now.
@@ -56,4 +56,6 @@ Now that you have a working prefix, start to test and keyword packages. You can 
 ## Resources
 - https://wiki.gentoo.org/wiki/Porting
 - https://wiki.gentoo.org/wiki/Project:Prefix
-- https://wiki.gentoo.org/wiki/Project:Prefix/Technical_Documentation
+- https://wiki.gentoo.org/wiki/Project:Prefix/Technical_Documentation\
+- https://wiki.gentoo.org/wiki/Profile_(Portage)
+- https://bugs.gentoo.org/755551

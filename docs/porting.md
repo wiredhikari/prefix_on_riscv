@@ -31,7 +31,7 @@ user $chmod +x bootstrap-prefix.sh
 user $./bootstrap-prefix.sh 
 ```
 
-## Pushing work into the Portage tree
+<!-- ## Pushing work into the Portage tree -->
 
 ## Create the Profiles
 The first profile was just a 'make it work' solution. Now a much more complete one must be created:
@@ -49,7 +49,7 @@ After creating a profile, add the symlink to the new profile in `bootstrap-prefi
 
 Now that you have a working prefix, start to test and keyword packages. You can start by keywording packages
 
-## Guide to testing packages on prefix
+<!-- ## Guide to testing packages on prefix -->
 
 ## Resources
 - https://wiki.gentoo.org/wiki/Porting

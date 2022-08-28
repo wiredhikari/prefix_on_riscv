@@ -45,6 +45,8 @@ Declare the profile in profiles.desc as exp for now.
 ## Add Symlink
 After creating a profile, add the symlink to the new profile in `bootstrap-prefix.sh` script. You can refer to [riscv](https://github.com/gentoo/prefix/blob/master/scripts/bootstrap-prefix.sh#L426) symlink in the script.
 
+## Get ready to fix bugs
+Now that we have the new profile and symlink setup, run the bootstrap script. We might get bugs during the three stages, you can post the bug on bugzilla or ask on #gentoo-prefix. 
 ## Start commiting KEYWORDS
 
 Now that you have a working prefix, start to test and keyword packages. You can start by keywording packages

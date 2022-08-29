@@ -1,5 +1,5 @@
 # Porting Prefix
-Gentoo Prefix allows to use the power of Gentoo and it's tools on other distributions or operating systems, it allows to install packages into `${EPREFIX}` without root privileges. 
+Gentoo Prefix allows to use the power of Gentoo and its tools on other distributions or operating systems, it allows to install packages into `${EPREFIX}` without root privileges. 
 
 ## Setting up the host system
 Firstly, we should ensure that all the necessary packages are available on the host system so we can compile stage 1 and stage 2 by using the packages in host.

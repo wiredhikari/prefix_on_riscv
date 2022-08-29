@@ -45,11 +45,16 @@ After getting Stage-2 to work, we will use GCC installed by Portage to install a
 
 ## Get ready to fix bugs
 Now that we have the new profile and symlink setup, run the bootstrap script. We might get bugs during the three stages, you can post the bug on bugzilla or ask on `#gentoo-prefix`. 
-## Start commiting KEYWORDS
 
+## Requesting KEYWORDS
+Post a Bug on bugzilla using bugz like this: `bugz post --version unspecified  --component "Keywording" --platform "riscv" --op-sys Linux --product "Gentoo Linux" -t "dev-util/patdiff: ~riscv keyword request" -d ${message}`
+Or you can file it on [bugzilla](https://bugs.gentoo.org/enter_bug.cgi?product=Gentoo%20Linux) website. 
+
+## Committing KEYWORDS
 Now that you have a working prefix, start to test and keyword packages. You can start by [keywording](https://devmanual.gentoo.org/keywording/index.html) packages. Make sure you use `~arch` instead of `arch` if you are unsure about the package being stable on the new profile.
 
-<!-- ## Guide to testing packages on prefix -->
+## Guide to testing packages
+To test a package on the new profile add the package in `package.accept_keywords` in this format:`=app-portage/portpeek-x.x.x **` now you can emerge the package with `FEATURES="test"` enabled. And also test it with all the `USE` flags enabled and disabled. You can also read [Package Testing](https://wiki.gentoo.org/wiki/Package_testing) documentation.
 
 ## Resources
 - https://wiki.gentoo.org/wiki/Porting

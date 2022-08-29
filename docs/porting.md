@@ -47,7 +47,7 @@ After getting Stage-2 to work, we will use GCC installed by Portage to install a
 Now that we have the new profile and symlink setup, run the bootstrap script. We might get bugs during the three stages, you can post the bug on bugzilla or ask on `#gentoo-prefix`. 
 ## Start commiting KEYWORDS
 
-Now that you have a working prefix, start to test and keyword packages. You can start by [keywording](https://devmanual.gentoo.org/keywording/index.html) packages. Make sure you use `~arch` instead of `arch` if you are unsure about the package being stable.
+Now that you have a working prefix, start to test and keyword packages. You can start by [keywording](https://devmanual.gentoo.org/keywording/index.html) packages. Make sure you use `~arch` instead of `arch` if you are unsure about the package being stable on the new profile.
 
 <!-- ## Guide to testing packages on prefix -->
 

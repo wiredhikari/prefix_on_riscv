@@ -1,34 +1,22 @@
 # Porting Prefix
-Gentoo Prefix allows to use the power of Gentoo and it's tools on other distributions or operating systems, it allows to install packages into an offset without root privileges. 
+Gentoo Prefix allows to use the power of Gentoo and it's tools on other distributions or operating systems, it allows to install packages into `${EPREFIX}` without root privileges. 
 
 ## Setting up the host system
 Firstly, we should ensure that all the necessary packages are available on the host system so we can compile stage 1 and stage 2 by using the packages in host.
-
-## Getting through the stages
-### Stage-1
-After having a new profile, we will ensure Stage-1 installs coretools required for Portage to function. Then the latest python and portage will be installed in `${EPREFIX}/tmp`. 
-
-### Stage-2
-After getting a working Stage-1 and making a new profile, Stage-2 will start with emerging build utilities. Portage will use the system’s compiler to install GCC into `${EPREFIX}/tmp`; then coretools from the base profile. Portage will use the dependency system to emerge system. Eventually, this will lead to using Portage to emerge as a base system.
-
-### Stage-3
-After getting Stage-2 to work, we will use GCC installed by Portage to install a Gentoo base system in `${EPREFIX}`. Continue emerging some of the core toolchain packages that make sure we compile and link everything taking the Prefix into account. Post this `emerge -uDNv system` will be executed.
-
-
 ## Starting the script
 After ensuring that you have all the necessary packages installed on the host you can start the bootstrap script. 
-Incase `bash` is missing from the host, you need to bootstrap it first with the `bootstrap-bash.sh` script. 
+In case `bash` is missing from the host, you need to bootstrap it first with the `bootstrap-bash.sh` script. 
 ```
-user $wget https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-bash.sh
-user $chmod +x bootstrap-bash.sh
-user $./bootstrap-bash.sh /var/tmp/bash
-user $export PATH="/var/tmp/bash/usr/bin:${PATH}" 
+wget https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-bash.sh
+chmod +x bootstrap-bash.sh
+./bootstrap-bash.sh /var/tmp/bash
+export PATH="/var/tmp/bash/usr/bin:${PATH}" 
 ```
 The script does all the work we just need to debug issues while installing packages. Now download the [bootstrap-prefix.sh](https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-prefix.sh). 
 ```
-user $wget https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-prefix.sh
-user $chmod +x bootstrap-prefix.sh
-user $./bootstrap-prefix.sh 
+wget https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-prefix.sh
+chmod +x bootstrap-prefix.sh
+bootstrap-prefix.sh 
 ```
 
 <!-- ## Pushing work into the Portage tree -->
@@ -44,6 +32,16 @@ Declare the profile in profiles.desc as exp for now.
 
 ## Add Symlink
 After creating a profile, add the symlink to the new profile in `bootstrap-prefix.sh` script. You can refer to [riscv](https://github.com/gentoo/prefix/blob/master/scripts/bootstrap-prefix.sh#L426) symlink in the script.
+
+## Getting through the stages
+### Stage-1
+After having a new profile, we will ensure Stage-1 installs coretools required for Portage to function. Then the latest python and portage will be installed in `${EPREFIX}/tmp`. 
+
+### Stage-2
+After getting a working Stage-1 and making a new profile, Stage-2 will start with emerging build utilities. Portage will use the system’s compiler to install GCC into `${EPREFIX}/tmp`; then coretools from the base profile. Portage will use the dependency system to emerge system. Eventually, this will lead to using Portage to emerge as a base system.
+
+### Stage-3
+After getting Stage-2 to work, we will use GCC installed by Portage to install a Gentoo base system in `${EPREFIX}`. Continue emerging some of the core toolchain packages that make sure we compile and link everything taking the Prefix into account. Post this `emerge -uDNv system` will be executed.
 
 ## Get ready to fix bugs
 Now that we have the new profile and symlink setup, run the bootstrap script. We might get bugs during the three stages, you can post the bug on bugzilla or ask on `#gentoo-prefix`. 

@@ -59,6 +59,6 @@ To test a package on the new profile add the package in `package.accept_keywords
 ## Resources
 - https://wiki.gentoo.org/wiki/Porting
 - https://wiki.gentoo.org/wiki/Project:Prefix
-- https://wiki.gentoo.org/wiki/Project:Prefix/Technical_Documentation\
+- https://wiki.gentoo.org/wiki/Project:Prefix/Technical_Documentation
 - https://wiki.gentoo.org/wiki/Profile_(Portage)
 - https://bugs.gentoo.org/755551

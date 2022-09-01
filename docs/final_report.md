@@ -78,6 +78,7 @@
 |------------------------------------------------------|---------------------------------------------------------------------------|
 | [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |
 | [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |
+
 | PR links                                             |                                                                           |
 |------------------------------------------------------|---------------------------------------------------------------------------|
 | [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |

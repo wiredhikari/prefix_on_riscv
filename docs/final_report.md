@@ -67,13 +67,22 @@
 |------------------------------------------------------|---------------------------------------------------------------------------|
 | [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |
 | [#24904](https://github.com/gentoo/gentoo/pull/24904)| riscv: keyword app-crypt/asekey, app-accessibility/yasr, sys-apps/watchdog|
-|||
-|||
-|||
-|||
+| [#26850](https://github.com/gentoo/gentoo/pull/25850)| sys-libs/pam: Add prefix support                                          |
+| [#26855](https://github.com/gentoo/gentoo/pull/25855)| app-misc/pax-utils: Add prefix support                                    |
+| #||
+| #||
 
 
 ### EESSI Overlay
+| Issues                                               | Description                                                               |
+|------------------------------------------------------|---------------------------------------------------------------------------|
+| [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |
+| [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |
+| PR links                                             |                                                                           |
+|------------------------------------------------------|---------------------------------------------------------------------------|
+| [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |
+| [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |
+
 
 
 ## Conclusion

@@ -12,7 +12,7 @@
 
 **Mentors:** [Guilherme Amadio](https://github.com/amadio), [Kenneth Hoste](https://github.com/boegel)
 
-**Project repository:** [Prefix](https://github.com/gentoo/prefix)
+**Project repository:** [Gentoo](https://github.com/gentoo/gentoo), [Prefix](https://github.com/gentoo/prefix), [EESSI](https://github.com/EESSI)
 
 **Project proposal:** [Proposal link](https://docs.google.com/document/d/1vKRaRKEWt-485oVdCfxLecXKbMwgajlv-6ZOGflwW6g/edit#heading=h.7uif4cjti9op)
 
@@ -24,17 +24,39 @@
   - [Project Deliverables](#project-deliverables)
   - [Project Results](#project-results)
     - [Contributions](#contributions)
-      - [Pull requests](#pull-requests)
-      - [Issues opened](#issues-opened)
+    - [Delieverables](#delieverables)
   - [Conclusion](#conclusion)
   - [Acknowledgement](#acknowledgement)
 
 
 ## Project overview
+
+
+
+
 ## Project Deliverables
+
+
+
 ## Project Results 
+
+
+
 ### Contributions
-#### Pull requests
-#### Issues opened
+
+
+
+### Delieverables
+
+
+
 ## Conclusion
+
+
+
 ## Acknowledgement
+
+
+
+
+

@@ -48,14 +48,14 @@
 
 ### Profile
 
-| PR link                                              | Description                                                                                     |
+| Pull Requests                                        | Description                                                                                     |
 |------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | [#25667](https://github.com/gentoo/gentoo/pull/25667)| profiles: initial commits for riscv profile for prefix                                          |
 | [#26211](https://github.com/gentoo/gentoo/pull/26211)| profiles/default/linux/riscv/20.0/rv64gc/lp64d/prefix: new riscv prefix profile                 |
 
 ### Prefix
 
-| PR link                                              | Description                                                               |
+| Pull Requests                                        | Description                                                               |
 |------------------------------------------------------|---------------------------------------------------------------------------|
 | [#6](https://github.com/gentoo/prefix/pull/6)        | bootstrap-prefix.sh: adding riscv profile                                 |
 | [#13](https://github.com/gentoo/prefix/pull/13)      | bootstrap-prefix.sh: using lp64d for riscv profile                        |
@@ -63,7 +63,7 @@
 
 ### Test and Keyword
 
-| PR link                                              | Description                                                               |
+| Pull Requests                                        | Description                                                               |
 |------------------------------------------------------|---------------------------------------------------------------------------|
 | [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |
 | [#24904](https://github.com/gentoo/gentoo/pull/24904)| riscv: keyword app-crypt/asekey, app-accessibility/yasr, sys-apps/watchdog|
@@ -79,7 +79,7 @@
 | [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |
 | [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |
 
-| PR links                                             |                                                                           |
+| Pull Requests                                        | Description                                                               |
 |------------------------------------------------------|---------------------------------------------------------------------------|
 | [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |
 | [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |

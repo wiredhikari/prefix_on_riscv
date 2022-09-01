@@ -24,6 +24,9 @@
   - [Project Deliverables](#project-deliverables)
   - [Project Results](#project-results)
     - [Contributions](#contributions)
+      - [Prefix](#prefix)
+      - [Testing](#testing)
+      - [EESSI Overlay](#eessi-overlay)
     - [Delieverables](#delieverables)
   - [Conclusion](#conclusion)
   - [Acknowledgement](#acknowledgement)
@@ -43,11 +46,19 @@
 
 
 ### Contributions
-
+#### Prefix
+#### Testing
+#### EESSI Overlay
 
 
 ### Delieverables
 
+Following are the completed delieverables for the project:
+- a
+- b
+- c
+- d
+- e
 
 
 ## Conclusion
@@ -56,7 +67,9 @@
 
 ## Acknowledgement
 
+I am extremely grateful to get mentored by [Guilherme Amadio](https://github.com/amadio) and [Kenneth Hoste](https://github.com/boegel), for their constant support, guidance and help.
 
+Thanks to Google and Gentoo Linux for providing me the opportunity to work on this amazing project, it has been a great learning experience and 
 
 
 

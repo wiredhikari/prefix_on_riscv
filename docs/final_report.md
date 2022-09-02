@@ -21,6 +21,11 @@
   - [Table of Contents](#table-of-contents)
   - [Project overview](#project-overview)
   - [Project Deliverables](#project-deliverables)
+    - [A working Profile for RISC-V architecture.](#a-working-profile-for-risc-v-architecture)
+    - [Bootstrap and use a Gentoo Prefix system on RISC-V architecture.](#bootstrap-and-use-a-gentoo-prefix-system-on-risc-v-architecture)
+    - [Test and keyword necessary packages in Gentoo for RISC-V.](#test-and-keyword-necessary-packages-in-gentoo-for-risc-v)
+    - [Documentation on “Porting Prefix to new Architectures”.](#documentation-on-porting-prefix-to-new-architectures)
+    - [Thorough documentation of all work done via blogs and Gentoo Wiki.](#thorough-documentation-of-all-work-done-via-blogs-and-gentoo-wiki)
   - [Project Results](#project-results)
     - [Contributions](#contributions)
     - [Profile](#profile)
@@ -33,10 +38,21 @@
 
 ## Project overview
 
+RISC-V is an emerging open CPU architecture that is starting to be adopted well beyond the embedded domain; the European Processor Initiative (EPI) project is a clear example of this.
 
+Gentoo Prefix is a key component in the European Environment for Scientific Software (EESSI) project, which is a collaboration between various partners in the High-Performance Computing (HPC) community to build a common stack of scientific software installations for HPC systems and beyond, including laptops, personal workstations, and cloud infrastructure.
 
+RISC-V is one of the target CPU architectures in the EESSI project, and good support for RISC-V in Gentoo Prefix is a crucial first step towards supporting RISC-V in EESSI. 
+
+The project majorly involved creating of the new profile in Gentoo Prefix of RISC-V, fixing the bugs faced during bootstrap of Stage-1, Stage-2 and Stage-3. 
 
 ## Project Deliverables
+
+### A working Profile for RISC-V architecture.
+### Bootstrap and use a Gentoo Prefix system on RISC-V architecture.
+### Test and keyword necessary packages in Gentoo for RISC-V.
+### Documentation on “Porting Prefix to new Architectures”.
+### Thorough documentation of all work done via blogs and Gentoo Wiki.
 
 
 

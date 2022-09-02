@@ -74,17 +74,12 @@
 
 
 ### EESSI Overlay
-| Issues                                               | Description                                                               |
-|------------------------------------------------------|---------------------------------------------------------------------------|
-| [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |
-| [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |
 
-| Pull Requests                                        | Description                                                               |
-|------------------------------------------------------|---------------------------------------------------------------------------|
-| [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |
-| [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |
-
-
+| Issues and Pull Requests                                        | Description                                                               |
+|-----------------------------------------------------------------|---------------------------------------------------------------------------|
+| [#80](https://github.com/EESSI/gentoo-overlay/pull/80)          | sys-cluster/reframe: Keyword ~riscv                                       |
+| [#79](https://github.com/EESSI/gentoo-overlay/issues/79)        | Remove sys-libs/pam from our overlay                                      |
+| [#78](https://github.com/EESSI/gentoo-overlay/pull/78)          | sys-apps/archspec: Keyword ~riscv and dev-python/click version bump       |
 
 ## Conclusion
 

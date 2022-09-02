@@ -5,6 +5,8 @@
 
 # RISC-V support for Gentoo Prefix
 
+
+
 **Student:** [Atharva Amritkar](https://github.com/wiredhikari)
 
 **Organisation:** [Gentoo](https://www.gentoo.org/)
@@ -42,16 +44,25 @@ RISC-V is an emerging open CPU architecture that is starting to be adopted well 
 
 Gentoo Prefix is a key component in the European Environment for Scientific Software (EESSI) project, which is a collaboration between various partners in the High-Performance Computing (HPC) community to build a common stack of scientific software installations for HPC systems and beyond, including laptops, personal workstations, and cloud infrastructure.
 
-RISC-V is one of the target CPU architectures in the EESSI project, and good support for RISC-V in Gentoo Prefix is a crucial first step towards supporting RISC-V in EESSI. 
-
-The project majorly involved creating of the new profile in Gentoo Prefix of RISC-V, fixing the bugs faced during bootstrap of Stage-1, Stage-2 and Stage-3. 
+RISC-V is one of the target CPU architectures in the EESSI project, and good support for RISC-V in Gentoo Prefix is a crucial first step towards supporting RISC-V in EESSI.The project majorly involved creating of the new profile in Gentoo Prefix of RISC-V, fixing the bugs faced during bootstrap of Stage-1, Stage-2 and Stage-3. 
 
 ## Project Deliverables
 
 ### A working Profile for RISC-V architecture.
+
+
 ### Bootstrap and use a Gentoo Prefix system on RISC-V architecture.
+
+
+
 ### Test and keyword necessary packages in Gentoo for RISC-V.
+
+
+
 ### Documentation on “Porting Prefix to new Architectures”.
+
+
+
 ### Thorough documentation of all work done via blogs and Gentoo Wiki.
 
 
@@ -73,8 +84,8 @@ The project majorly involved creating of the new profile in Gentoo Prefix of RIS
 
 | Pull Requests                                        | Description                                                               |
 |------------------------------------------------------|---------------------------------------------------------------------------|
-| [#6](https://github.com/gentoo/prefix/pull/6)        | bootstrap-prefix.sh: adding riscv profile                                 |
-| [#13](https://github.com/gentoo/prefix/pull/13)      | bootstrap-prefix.sh: using lp64d for riscv profile                        |
+| [#6](https://github.com/gentoo/prefix/pull/6)        | bootstrap-prefix.</span>sh: adding riscv profile                                 |
+| [#13](https://github.com/gentoo/prefix/pull/13)      | bootstrap-prefix.</span>sh: using lp64d for riscv profile                        |
 
 
 ### Test and Keyword
@@ -93,17 +104,18 @@ The project majorly involved creating of the new profile in Gentoo Prefix of RIS
 
 | Issues and Pull Requests                                        | Description                                                               |
 |-----------------------------------------------------------------|---------------------------------------------------------------------------|
-| [#80](https://github.com/EESSI/gentoo-overlay/pull/80)          | sys-cluster/reframe: Keyword ~riscv                                       |
-| [#79](https://github.com/EESSI/gentoo-overlay/issues/79)        | Remove sys-libs/pam from our overlay                                      |
 | [#78](https://github.com/EESSI/gentoo-overlay/pull/78)          | sys-apps/archspec: Keyword ~riscv and dev-python/click version bump       |
+| [#79](https://github.com/EESSI/gentoo-overlay/issues/79)        | Remove sys-libs/pam from our overlay                                      |
+| [#80](https://github.com/EESSI/gentoo-overlay/pull/80)          | sys-cluster/reframe: Keyword ~riscv                                       |
+
 
 ## Conclusion
 
-I was able to complete all of the goals that were decided for the project and it got completed before the timeline which gave us more time for testing Prefix and packages.
+I was able to complete all of the goals that were decided for the project and it got completed before the timeline which gave us more time for testing Prefix and keywording packages with RISC-V.
 
 
 ## Acknowledgement
 
-I am extremely grateful to get mentored by [Guilherme Amadio](https://github.com/amadio) and [Kenneth Hoste](https://github.com/boegel), for their constant support, guidance and help.
+I am extremely grateful to get mentored by [Guilherme Amadio](https://github.com/amadio) and [Kenneth Hoste](https://github.com/boegel), for their constant support, guidance and help. Also the Gentoo Community has been immensely helpful and developers guided me throughout the project.
 
 Thanks to Google and Gentoo Linux for providing me the opportunity to work on this amazing project. It has been a great learning experience and contributing to Gentoo has been an amazing experience. I would certainly want to continue contributing and help the community.

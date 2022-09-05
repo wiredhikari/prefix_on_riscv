@@ -33,6 +33,7 @@
     - [Profile](#profile)
     - [Prefix](#prefix)
     - [EESSI Overlay](#eessi-overlay)
+    - [Prefix Support](#prefix-support)
     - [Test and Keyword](#test-and-keyword)
   - [Conclusion](#conclusion)
   - [Acknowledgement](#acknowledgement)
@@ -95,15 +96,20 @@ RISC-V is one of the target CPU architectures in the EESSI project, and good sup
 | [#79](https://github.com/EESSI/gentoo-overlay/issues/79)        | Remove sys-libs/pam from our overlay                                      |
 | [#80](https://github.com/EESSI/gentoo-overlay/pull/80)          | sys-cluster/reframe: Keyword ~riscv                                       |
 
+
+### Prefix Support
+
+| Pull Requests                                        | Description                                                               |
+|------------------------------------------------------|---------------------------------------------------------------------------|
+| [#26850](https://github.com/gentoo/gentoo/pull/25850)| sys-libs/pam: Add prefix support                                          |
+| [#26855](https://github.com/gentoo/gentoo/pull/25855)| app-misc/pax-utils: Add prefix support                                    |
+| [#26346](https://github.com/gentoo/gentoo/pull/26346)| app-portage/prefix-toolkit: riscv keywording                              |
 ### Test and Keyword
 
 | Pull Requests                                        | Description                                                               |
 |------------------------------------------------------|---------------------------------------------------------------------------|
 | [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |
 | [#24904](https://github.com/gentoo/gentoo/pull/24904)| riscv: keyword app-crypt/asekey, app-accessibility/yasr, sys-apps/watchdog|
-| [#26850](https://github.com/gentoo/gentoo/pull/25850)| sys-libs/pam: Add prefix support                                          |
-| [#26855](https://github.com/gentoo/gentoo/pull/25855)| app-misc/pax-utils: Add prefix support                                    |
-| [#26346](https://github.com/gentoo/gentoo/pull/26346)| app-portage/prefix-toolkit: riscv keywording                              |
 | [#26506](https://github.com/gentoo/gentoo/pull/26507)| dev-util/patchelf,dev-lua/{luajson,lua-bit32,luaposix}: keywording ~riscv |
 | [#26508](https://github.com/gentoo/gentoo/pull/26508)| dev-util/hermes,sys-cluster/lmod: keywording ~riscv                       |
 | [#26679](https://github.com/gentoo/gentoo/pull/26679)| keyword riscv for packages in app-portage                                 |

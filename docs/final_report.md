@@ -71,7 +71,6 @@ RISC-V is one of the target CPU architectures in the EESSI project, and good sup
 ## Project Results 
 
 
-
 ### Contributions
 - tell in brief how contributions are segregated
 ### Profile
@@ -99,11 +98,13 @@ RISC-V is one of the target CPU architectures in the EESSI project, and good sup
 
 ### Prefix Support
 
-| Pull Requests                                        | Description                                                               |
-|------------------------------------------------------|---------------------------------------------------------------------------|
-| [#26850](https://github.com/gentoo/gentoo/pull/25850)| sys-libs/pam: Add prefix support                                          |
-| [#26855](https://github.com/gentoo/gentoo/pull/25855)| app-misc/pax-utils: Add prefix support                                    |
-| [#26346](https://github.com/gentoo/gentoo/pull/26346)| app-portage/prefix-toolkit: riscv keywording                              |
+| Issues and Pull Requests                             | Description                                                                      |
+|------------------------------------------------------|----------------------------------------------------------------------------------|
+| [#26850](https://github.com/gentoo/gentoo/pull/25850)| sys-libs/pam: Add prefix support                                                 |
+| [#26855](https://github.com/gentoo/gentoo/pull/25855)| app-misc/pax-utils: Add prefix support                                           |
+| [#26346](https://github.com/gentoo/gentoo/pull/26346)| app-portage/prefix-toolkit: riscv keywording                                     |
+| [#835069](https://bugs.gentoo.org/835069)            | sys-devel/gcc-10.3.1_p20211126 failed to build while building prefix on gentoo   |
+
 ### Test and Keyword
 
 | Pull Requests                                        | Description                                                               |

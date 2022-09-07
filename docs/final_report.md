@@ -1,11 +1,10 @@
 ## GSoC 2022 Project Report
+
 <div align="center">
 <img src="./../assets/images/gentoo.svg" width="200"/> <img src="./../assets/images/arrow.svg" width="200"/> <img src="./../assets/images/gsoc.svg" width="200"/> 
 </div>
 
 # RISC-V support for Gentoo Prefix
-
-
 
 **Student:** [Atharva Amritkar](https://github.com/wiredhikari)
 
@@ -18,18 +17,16 @@
 **Project proposal:** [Proposal link](https://docs.google.com/document/d/1vKRaRKEWt-485oVdCfxLecXKbMwgajlv-6ZOGflwW6g/edit#heading=h.7uif4cjti9op)
 
 ## Table of Contents
-
 - [RISC-V support for Gentoo Prefix](#risc-v-support-for-gentoo-prefix)
   - [Table of Contents](#table-of-contents)
-  - [Project overview](#project-overview)
+  - [Project Overview](#project-overview)
   - [Project Deliverables](#project-deliverables)
+  - [Project Results](#project-results)
     - [A working Profile for RISC-V architecture.](#a-working-profile-for-risc-v-architecture)
     - [Bootstrap and use a Gentoo Prefix system on RISC-V architecture.](#bootstrap-and-use-a-gentoo-prefix-system-on-risc-v-architecture)
     - [Test and keyword necessary packages in Gentoo for RISC-V.](#test-and-keyword-necessary-packages-in-gentoo-for-risc-v)
     - [Documentation on “Porting Prefix to new Architectures”.](#documentation-on-porting-prefix-to-new-architectures)
-    - [Thorough documentation of all work done via blogs and Gentoo Wiki.](#thorough-documentation-of-all-work-done-via-blogs-and-gentoo-wiki)
-  - [Project Results](#project-results)
-    - [Contributions](#contributions)
+  - [Contributions](#contributions)
     - [Profile](#profile)
     - [Prefix](#prefix)
     - [EESSI Overlay](#eessi-overlay)
@@ -38,94 +35,100 @@
   - [Conclusion](#conclusion)
   - [Acknowledgement](#acknowledgement)
 
-
-## Project overview
+## Project Overview
 
 RISC-V is an emerging open CPU architecture that is starting to be adopted well beyond the embedded domain; the European Processor Initiative (EPI) project is a clear example of this.
 
 Gentoo Prefix is a key component in the European Environment for Scientific Software (EESSI) project, which is a collaboration between various partners in the High-Performance Computing (HPC) community to build a common stack of scientific software installations for HPC systems and beyond, including laptops, personal workstations, and cloud infrastructure.
 
-RISC-V is one of the target CPU architectures in the EESSI project, and good support for RISC-V in Gentoo Prefix is a crucial first step towards supporting RISC-V in EESSI.The project majorly involved creating of the new profile in Gentoo Prefix of RISC-V, fixing the bugs faced during bootstrap of Stage-1, Stage-2 and Stage-3. 
+RISC-V is one of the target CPU architectures in the EESSI project, and good support for RISC-V in Gentoo Prefix is a crucial first step towards supporting RISC-V in EESSI.The project majorly involved creating of the new profile in Gentoo Prefix of RISC-V, fixing the bugs faced during bootstrap of Stage-1, Stage-2 and Stage-3.
 
 ## Project Deliverables
 
-### A working Profile for RISC-V architecture.
+- A working Profile for RISC-V architecture.
 
+- Bootstrap and use a Gentoo Prefix system on RISC-V architecture.
+
+- Test and keyword necessary packages in Gentoo for RISC-V.
+
+- Documentation on “Porting Prefix to new Architectures”.
+
+
+## Project Results
+
+### A working Profile for RISC-V architecture.
+- code snips
 
 ### Bootstrap and use a Gentoo Prefix system on RISC-V architecture.
-
-
+- explain how all the 3 stages
+- stage 1 2 and 3 issues
+- 
 
 ### Test and keyword necessary packages in Gentoo for RISC-V.
-
-
+- process of testing
+- packages tested so far
 
 ### Documentation on “Porting Prefix to new Architectures”.
+- what all stuff have we added and what all is required
+- link to documentation
+- Thorough documentation of all work done via blogs and Gentoo Wiki.
 
 
+## Contributions
 
-### Thorough documentation of all work done via blogs and Gentoo Wiki.
-
-
-
-## Project Results 
-
-
-### Contributions
 - tell in brief how contributions are segregated
+- blogs are on gentoo website
+
 ### Profile
 
-| Pull Requests                                        | Description                                                                                     |
-|------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| [#25667](https://github.com/gentoo/gentoo/pull/25667)| profiles: initial commits for riscv profile for prefix                                          |
-| [#26211](https://github.com/gentoo/gentoo/pull/26211)| profiles/default/linux/riscv/20.0/rv64gc/lp64d/prefix: new riscv prefix profile                 |
+| Pull Requests                                         | Description                                                                     |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------- |
+| [#25667](https://github.com/gentoo/gentoo/pull/25667) | profiles: initial commits for riscv profile for prefix                          |
+| [#26211](https://github.com/gentoo/gentoo/pull/26211) | profiles/default/linux/riscv/20.0/rv64gc/lp64d/prefix: new riscv prefix profile |
 
 ### Prefix
 
-| Pull Requests                                        | Description                                                               |
-|------------------------------------------------------|---------------------------------------------------------------------------|
-| [#6](https://github.com/gentoo/prefix/pull/6)        | bootstrap-prefix.</span>sh: adding riscv profile                                 |
-| [#13](https://github.com/gentoo/prefix/pull/13)      | bootstrap-prefix.</span>sh: using lp64d for riscv profile                        |
+| Pull Requests                                   | Description                                               |
+| ----------------------------------------------- | --------------------------------------------------------- |
+| [#6](https://github.com/gentoo/prefix/pull/6)   | bootstrap-prefix.</span>sh: adding riscv profile          |
+| [#13](https://github.com/gentoo/prefix/pull/13) | bootstrap-prefix.</span>sh: using lp64d for riscv profile |
 
 ### EESSI Overlay
 
-| Issues and Pull Requests                                        | Description                                                               |
-|-----------------------------------------------------------------|---------------------------------------------------------------------------|
-| [#78](https://github.com/EESSI/gentoo-overlay/pull/78)          | sys-apps/archspec: Keyword ~riscv and dev-python/click version bump       |
-| [#79](https://github.com/EESSI/gentoo-overlay/issues/79)        | Remove sys-libs/pam from our overlay                                      |
-| [#80](https://github.com/EESSI/gentoo-overlay/pull/80)          | sys-cluster/reframe: Keyword ~riscv                                       |
-
+| Issues and Pull Requests                                 | Description                                                         |
+| -------------------------------------------------------- | ------------------------------------------------------------------- |
+| [#78](https://github.com/EESSI/gentoo-overlay/pull/78)   | sys-apps/archspec: Keyword ~riscv and dev-python/click version bump |
+| [#79](https://github.com/EESSI/gentoo-overlay/issues/79) | Remove sys-libs/pam from our overlay                                |
+| [#80](https://github.com/EESSI/gentoo-overlay/pull/80)   | sys-cluster/reframe: Keyword ~riscv                                 |
 
 ### Prefix Support
 
-| Issues and Pull Requests                             | Description                                                                      |
-|------------------------------------------------------|----------------------------------------------------------------------------------|
-| [#26850](https://github.com/gentoo/gentoo/pull/25850)| sys-libs/pam: Add prefix support                                                 |
-| [#26855](https://github.com/gentoo/gentoo/pull/25855)| app-misc/pax-utils: Add prefix support                                           |
-| [#26346](https://github.com/gentoo/gentoo/pull/26346)| app-portage/prefix-toolkit: riscv keywording                                     |
-| [#835069](https://bugs.gentoo.org/835069)            | sys-devel/gcc-10.3.1_p20211126 failed to build while building prefix on gentoo   |
+| Issues and Pull Requests                              | Description                                                                    |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------ |
+| [#26850](https://github.com/gentoo/gentoo/pull/25850) | sys-libs/pam: Add prefix support                                               |
+| [#26855](https://github.com/gentoo/gentoo/pull/25855) | app-misc/pax-utils: Add prefix support                                         |
+| [#26346](https://github.com/gentoo/gentoo/pull/26346) | app-portage/prefix-toolkit: riscv keywording                                   |
+| [#835069](https://bugs.gentoo.org/835069)             | sys-devel/gcc-10.3.1_p20211126 failed to build while building prefix on gentoo |
 
 ### Test and Keyword
 
-| Pull Requests                                        | Description                                                               |
-|------------------------------------------------------|---------------------------------------------------------------------------|
-| [#24630](https://github.com/gentoo/gentoo/pull/24630)| sys-apps/lsd: keyword ~riscv                                              |
-| [#24904](https://github.com/gentoo/gentoo/pull/24904)| riscv: keyword app-crypt/asekey, app-accessibility/yasr, sys-apps/watchdog|
-| [#26506](https://github.com/gentoo/gentoo/pull/26507)| dev-util/patchelf,dev-lua/{luajson,lua-bit32,luaposix}: keywording ~riscv |
-| [#26508](https://github.com/gentoo/gentoo/pull/26508)| dev-util/hermes,sys-cluster/lmod: keywording ~riscv                       |
-| [#26679](https://github.com/gentoo/gentoo/pull/26679)| keyword riscv for packages in app-portage                                 |
-| [#26725](https://github.com/gentoo/gentoo/pull/26725)| RISC-V keyword for app-arch/*                                             |
-| [#26803](https://github.com/gentoo/gentoo/pull/26803)| dev-python/semver: ~riscv keywording                                      |
-| [#26848](https://github.com/gentoo/gentoo/pull/26848)| sys-apps/cinit: adding prefix support                                     |
-| [#26853](https://github.com/gentoo/gentoo/pull/26853)| sys-apps/fxload:add prefix support and riscv keyword                      |
-| [#26869](https://github.com/gentoo/gentoo/pull/26869)| keyword ~riscv for sys-apps                                               |
-| [#26960](https://github.com/gentoo/gentoo/pull/26960)| app-arch/alien: ~riscv keyword                                            |
-
+| Pull Requests                                         | Description                                                                |
+| ----------------------------------------------------- | -------------------------------------------------------------------------- |
+| [#24630](https://github.com/gentoo/gentoo/pull/24630) | sys-apps/lsd: keyword ~riscv                                               |
+| [#24904](https://github.com/gentoo/gentoo/pull/24904) | riscv: keyword app-crypt/asekey, app-accessibility/yasr, sys-apps/watchdog |
+| [#26506](https://github.com/gentoo/gentoo/pull/26507) | dev-util/patchelf,dev-lua/{luajson,lua-bit32,luaposix}: keywording ~riscv  |
+| [#26508](https://github.com/gentoo/gentoo/pull/26508) | dev-util/hermes,sys-cluster/lmod: keywording ~riscv                        |
+| [#26679](https://github.com/gentoo/gentoo/pull/26679) | keyword riscv for packages in app-portage                                  |
+| [#26725](https://github.com/gentoo/gentoo/pull/26725) | RISC-V keyword for app-arch/\*                                             |
+| [#26803](https://github.com/gentoo/gentoo/pull/26803) | dev-python/semver: ~riscv keywording                                       |
+| [#26848](https://github.com/gentoo/gentoo/pull/26848) | sys-apps/cinit: adding prefix support                                      |
+| [#26853](https://github.com/gentoo/gentoo/pull/26853) | sys-apps/fxload:add prefix support and riscv keyword                       |
+| [#26869](https://github.com/gentoo/gentoo/pull/26869) | keyword ~riscv for sys-apps                                                |
+| [#26960](https://github.com/gentoo/gentoo/pull/26960) | app-arch/alien: ~riscv keyword                                             |
 
 ## Conclusion
 
 I was able to complete all of the goals that were decided for the project and it got completed before the timeline which gave us more time for testing Prefix and keywording packages with RISC-V.
-
 
 ## Acknowledgement
 

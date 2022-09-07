@@ -66,10 +66,6 @@ LIBDIR_lp64="lib"
 ```
 
 ```
-riscv-linux default/linux/riscv/20.0/rv64gc/lp64d/prefix/kernel-3.2+ exp
-```
-
-```
 ..
 ../../../../../../../../features/prefix/standalone
 ```

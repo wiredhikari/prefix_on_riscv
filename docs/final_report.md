@@ -46,11 +46,8 @@ RISC-V is one of the target CPU architectures in the EESSI project, and good sup
 ## Project Deliverables
 
 - A working Profile for RISC-V architecture.
-
 - Bootstrap and use a Gentoo Prefix system on RISC-V architecture.
-
 - Test and keyword necessary packages in Gentoo for RISC-V.
-
 - Documentation on “Porting Prefix to new Architectures”.
 
 
@@ -58,6 +55,25 @@ RISC-V is one of the target CPU architectures in the EESSI project, and good sup
 
 ### A working Profile for RISC-V architecture.
 - code snips
+
+```
+ARCH="riscv"
+CHOST="riscv64-pc-linux-gnu"
+ACCEPT_KEYWORDS="~riscv"
+SYMLINK_LIB=""
+LIBDIR_lp64d="lib"
+LIBDIR_lp64="lib"
+```
+
+```
+riscv-linux default/linux/riscv/20.0/rv64gc/lp64d/prefix/kernel-3.2+ exp
+```
+
+```
+..
+../../../../../../../../features/prefix/standalone
+```
+
 
 ### Bootstrap and use a Gentoo Prefix system on RISC-V architecture.
 - explain how all the 3 stages

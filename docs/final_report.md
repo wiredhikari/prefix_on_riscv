@@ -8,7 +8,7 @@
 
 **Student:** [Atharva Amritkar](https://github.com/wiredhikari)
 
-**Organisation:** [Gentoo](https://www.gentoo.org/)
+**Organisation:** [Gentoo Linux](https://www.gentoo.org/)
 
 **Mentors:** [Guilherme Amadio](https://github.com/amadio), [Kenneth Hoste](https://github.com/boegel)
 

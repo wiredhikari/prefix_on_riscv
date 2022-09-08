@@ -59,7 +59,7 @@ RISC-V is one of the target CPU architectures in the EESSI project, and good sup
 ### A working Profile for RISC-V architecture.
 Worked on making a riscv profile for prefix and added a symlink which allowed stage 1 to continue. We are using kernel-3.2+, as we don't have enough multilib support for RISC-V, we have decided to settle on one ABI (lp64d) and use no-multilib profile. 
 
-Current features of RISC-V profile:
+Current features of RISC-V Profile for Prefix:
 #### **`make.defaults`**
 ```
 ARCH="riscv"

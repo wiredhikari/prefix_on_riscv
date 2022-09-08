@@ -23,6 +23,9 @@
   - [Project Deliverables](#project-deliverables)
   - [Project Results](#project-results)
     - [A working Profile for RISC-V architecture.](#a-working-profile-for-risc-v-architecture)
+      - [**`make.defaults`**](#makedefaults)
+      - [**`profiles/prefix/linux/riscv/parent`**](#profilesprefixlinuxriscvparent)
+      - [**`bootstrap-prefix.sh`**](#bootstrap-prefixsh)
     - [Bootstrap and use a Gentoo Prefix system on RISC-V architecture.](#bootstrap-and-use-a-gentoo-prefix-system-on-risc-v-architecture)
     - [Test and keyword necessary packages in Gentoo for RISC-V.](#test-and-keyword-necessary-packages-in-gentoo-for-risc-v)
     - [Documentation on “Porting Prefix to new Architectures”.](#documentation-on-porting-prefix-to-new-architectures)
@@ -54,10 +57,10 @@ RISC-V is one of the target CPU architectures in the EESSI project, and good sup
 ## Project Results
 
 ### A working Profile for RISC-V architecture.
-Worked on making a riscv profile for prefix and added a symlink which allowed stage 1 to continue. As we don't
-have enough multilib support for RISC-V, we have decided to settle on one ABI (lp64d) and use no-multilib profile. 
+Worked on making a riscv profile for prefix and added a symlink which allowed stage 1 to continue. We are using kernel-3.2+, as we don't have enough multilib support for RISC-V, we have decided to settle on one ABI (lp64d) and use no-multilib profile. 
 
-
+Following is the glimpse of RISC-V profile:
+#### **`make.defaults`**
 ```
 ARCH="riscv"
 CHOST="riscv64-pc-linux-gnu"
@@ -66,20 +69,20 @@ SYMLINK_LIB=""
 LIBDIR_lp64d="lib"
 ```
 
-
+#### **`profiles/prefix/linux/riscv/parent`**
 ```
+../../../default/linux/riscv/20.0/rv64gc/lp64d
 ..
-../../../../../../../../features/prefix/standalone
 ```
 
-
+#### **`bootstrap-prefix.sh`**
 ```
 riscv64-pc-linux-gnu)
-    profile=${profile_linux/ARCH/riscv}
-    profile=${profile_linux/ARCH/riscv}
-    profile=${profile/17.0/20.0/rv64gc/lp64d}
-    ;;
-    ;;
+  profile=${profile_linux/ARCH/riscv}
+  profile=${profile_linux/ARCH/riscv}
+  profile=${profile/17.0/20.0/rv64gc/lp64d}
+  ;;
+  ;;
 ```      
 
 ### Bootstrap and use a Gentoo Prefix system on RISC-V architecture.

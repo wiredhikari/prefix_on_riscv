@@ -71,27 +71,29 @@ LIBDIR_lp64d="lib"
 ../../../default/linux/riscv/20.0/rv64gc/lp64d
 ..
 ```
-
+Symlink for RISC-V in bootstrap prefix script
 **`bootstrap-prefix.sh`**
 ```
 riscv64-pc-linux-gnu)
   profile=${profile_linux/ARCH/riscv}
-  profile=${profile_linux/ARCH/riscv}
   profile=${profile/17.0/20.0/rv64gc/lp64d}
-  ;;
   ;;
 ```      
 
 ### Bootstrap and use a Gentoo Prefix system on RISC-V architecture.
 
-Firstly, we created a RISC-V Profile for Gentoo Prefix, made necessary changes in bootstrap-prefix.sh script which allowed Stage-1 to continue. After having a new profile for RISC-V, the latest python and portage was installed in `${EPREFIX}/tmp` and then Stage-2 emerged build utilities and coretools from the base RISC-V profile. After getting Stage-2 to work, GCC installed by Portage to install a Gentoo base system in `${EPREFIX}`. Then portage rebuild all installed packages with custom optimizations and features. Worked on fixing all the bugs that I got during the three stages. There were several environments we tested Gentoo Prefix for RISC-V, and see if any specific environment caused issue.
+Firstly, we created a RISC-V Profile for Gentoo Prefix, made necessary changes in bootstrap-prefix.sh script which allowed Stage-1 to continue. After having a new profile for RISC-V, the latest python and portage was installed in `${EPREFIX}/tmp` and then Stage-2 emerged build utilities and coretools from the base RISC-V profile. After getting Stage-2 to work, GCC installed by Portage to install a Gentoo base system in `${EPREFIX}`. Then portage rebuild all installed packages with custom optimizations and features. 
+Worked on fixing all the bugs that I got during the three stages, this was the major task as we face a lot of issues during the compilation of the three stages. Some issues got fixed as bootstrap script got patches, some got updated with version bumps, some needed special attention and RISC-V support.
+
+There were several environments we tested the new Profile for Gentoo Prefix, and see if any specific environment caused issue. After rigerous testing, we got it working on available environments.
+
 
 ### Test and keyword necessary packages in Gentoo for RISC-V.
-Tested 150+ packages during the process for RISC-V and Prefix. We tested it with FEATURES="test" and all the USE flags enabled, for those packages which restrictes testing, tried testing them manually. The pull requests made are [here](#test-and-keyword).
+Tested 150+ packages during the process for RISC-V and Prefix. We tested it with FEATURES="test" and all the USE flags enabled, for those packages which restrictes testing, tried testing them manually. Some packages needed Prefix support and were mandatory for compilation of the three stages. The list of pull requests made are [here](#test-and-keyword). 
 
 ### Documentation on “Porting Prefix to new Architectures”.
 The thorough documentation of all work done has been uploaded has been uploaded in the form of weekly reports on [gentoo-soc](https://archives.gentoo.org/gentoo-soc/) mailing list. Compile contents in the weekly reports written and document “Porting Prefix to new Architectures”, which might help the developers to Port Prefix to new Architecture in future.
-The [documentation](https://github.com/wiredhikari/prefix_on_riscv/blob/main/docs/porting.md) gives a walkthrough on making a new profile and how stages in Gentoo Prefix work. Following that a walkthrough on Keywording Packages.
+The [documentation](https://github.com/wiredhikari/prefix_on_riscv/blob/main/docs/porting.md) gives a walkthrough on making a new profile and how stages in Gentoo Prefix work. Following that a walkthrough on Keywording Packages. We have structured it so that someone new with Prefix can follow it to get the new profile for Prefix working.
 
 
 ## Contributions

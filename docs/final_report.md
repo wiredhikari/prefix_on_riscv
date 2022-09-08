@@ -14,7 +14,7 @@
 
 **Project repository:** [Gentoo](https://github.com/gentoo/gentoo), [Prefix](https://github.com/gentoo/prefix), [EESSI](https://github.com/EESSI)
 
-**Project proposal:** [Proposal link](https://docs.google.com/document/d/1vKRaRKEWt-485oVdCfxLecXKbMwgajlv-6ZOGflwW6g/edit#heading=h.7uif4cjti9op)
+**Project proposal:** [Proposal](https://docs.google.com/document/d/1vKRaRKEWt-485oVdCfxLecXKbMwgajlv-6ZOGflwW6g/edit#heading=h.7uif4cjti9op)
 
 ## Table of Contents
 - [RISC-V support for Gentoo Prefix](#risc-v-support-for-gentoo-prefix)
@@ -41,7 +41,7 @@ RISC-V is an emerging open CPU architecture that is starting to be adopted well 
 
 Gentoo Prefix is a key component in the European Environment for Scientific Software (EESSI) project, which is a collaboration between various partners in the High-Performance Computing (HPC) community to build a common stack of scientific software installations for HPC systems and beyond, including laptops, personal workstations, and cloud infrastructure.
 
-RISC-V is one of the target CPU architectures in the EESSI project, and good support for RISC-V in Gentoo Prefix is a crucial first step towards supporting RISC-V in EESSI.The project majorly involved creating of the new profile in Gentoo Prefix of RISC-V, fixing the bugs faced during bootstrap of Stage-1, Stage-2 and Stage-3.
+RISC-V is one of the target CPU architectures in the EESSI project, and good support for RISC-V in Gentoo Prefix is a crucial first step towards supporting RISC-V in EESSI. The project majorly involved creating of the new profile in Gentoo Prefix of RISC-V, fixing the bugs faced during bootstrap of Stage-1, Stage-2 and Stage-3.
 
 ## Project Deliverables
 
@@ -55,7 +55,8 @@ RISC-V is one of the target CPU architectures in the EESSI project, and good sup
 
 ### A working Profile for RISC-V architecture.
 Worked on making a riscv profile for prefix and added a symlink which allowed stage 1 to continue. As we don't
-use multilib in prefix, we have decided to settle on one ABI (lp64d) and use no-multilib profile.
+have enough multilib support for RISC-V, we have decided to settle on one ABI (lp64d) and use no-multilib profile. 
+
 
 ```
 ARCH="riscv"
@@ -65,30 +66,33 @@ SYMLINK_LIB=""
 LIBDIR_lp64d="lib"
 ```
 
+
 ```
 ..
 ../../../../../../../../features/prefix/standalone
 ```
 
 
+```
+	riscv64-pc-linux-gnu)
+			profile=${profile_linux/ARCH/riscv}
+			profile=${profile_linux/ARCH/riscv}
+			profile=${profile/17.0/20.0/rv64gc/lp64d}
+			;;
+			;;
+```      
+
 ### Bootstrap and use a Gentoo Prefix system on RISC-V architecture.
 
-Firstly, we created a RISC-V Profile for Gentoo Prefix, made necessary changes in bootstrap-prefix.sh script which allowed Stage-1 to continue. After having a new profile for RISC-V, the latest python and portage was installed in ${EPREFIX}/tmp and then Stage-2 emerged build utilities and coretools from the base RISC-V profile. After getting Stage-2 to work, GCC installed by Portage to install a Gentoo base system in ${EPREFIX}. Then portage rebuild all installed packages with custom optimizations and features. Worked on fixing all the bugs that I got during the three stages. There were several environments we tested Gentoo Prefix for RISC-V.
+Firstly, we created a RISC-V Profile for Gentoo Prefix, made necessary changes in bootstrap-prefix.sh script which allowed Stage-1 to continue. After having a new profile for RISC-V, the latest python and portage was installed in \${EPREFIX}/tmp and then Stage-2 emerged build utilities and coretools from the base RISC-V profile. After getting Stage-2 to work, GCC installed by Portage to install a Gentoo base system in ${EPREFIX}. Then portage rebuild all installed packages with custom optimizations and features. Worked on fixing all the bugs that I got during the three stages. There were several environments we tested Gentoo Prefix for RISC-V, and see if any specific environment caused issue.
 
 ### Test and keyword necessary packages in Gentoo for RISC-V.
-- process of testing
-- packages tested so far
+Tested 150+ packages during the process for RISC-V and Prefix. We tested it with FEATURES="test" and all the USE flags enabled, for those packages which restrictes testing, tried testing them manually. The pull requests made are [here](#test-and-keyword).
 
 ### Documentation on “Porting Prefix to new Architectures”.
-- what all stuff have we added and what all is required
-- link to documentation
-- Thorough documentation of all work done via blogs and Gentoo Wiki.
-
+The thorough documentation of all work done has been uploaded has been uploaded in the form of weekly reports on [gentoo-soc](https://archives.gentoo.org/gentoo-soc/) mailing list. Compile contents in the weekly reports written and document “Porting Prefix to new Architectures”, which might help the developers to Port Prefix to new Architecture in future.
 
 ## Contributions
-
-- tell in brief how contributions are segregated
-- blogs are on gentoo website
 
 ### Profile
 

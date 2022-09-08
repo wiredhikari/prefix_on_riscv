@@ -74,17 +74,17 @@ LIBDIR_lp64d="lib"
 
 
 ```
-	riscv64-pc-linux-gnu)
-			profile=${profile_linux/ARCH/riscv}
-			profile=${profile_linux/ARCH/riscv}
-			profile=${profile/17.0/20.0/rv64gc/lp64d}
-			;;
-			;;
+riscv64-pc-linux-gnu)
+    profile=${profile_linux/ARCH/riscv}
+    profile=${profile_linux/ARCH/riscv}
+    profile=${profile/17.0/20.0/rv64gc/lp64d}
+    ;;
+    ;;
 ```      
 
 ### Bootstrap and use a Gentoo Prefix system on RISC-V architecture.
 
-Firstly, we created a RISC-V Profile for Gentoo Prefix, made necessary changes in bootstrap-prefix.sh script which allowed Stage-1 to continue. After having a new profile for RISC-V, the latest python and portage was installed in {EPREFIX}/tmp and then Stage-2 emerged build utilities and coretools from the base RISC-V profile. After getting Stage-2 to work, GCC installed by Portage to install a Gentoo base system in ${EPREFIX}. Then portage rebuild all installed packages with custom optimizations and features. Worked on fixing all the bugs that I got during the three stages. There were several environments we tested Gentoo Prefix for RISC-V, and see if any specific environment caused issue.
+Firstly, we created a RISC-V Profile for Gentoo Prefix, made necessary changes in bootstrap-prefix.sh script which allowed Stage-1 to continue. After having a new profile for RISC-V, the latest python and portage was installed in `${EPREFIX}/tmp` and then Stage-2 emerged build utilities and coretools from the base RISC-V profile. After getting Stage-2 to work, GCC installed by Portage to install a Gentoo base system in `${EPREFIX}`. Then portage rebuild all installed packages with custom optimizations and features. Worked on fixing all the bugs that I got during the three stages. There were several environments we tested Gentoo Prefix for RISC-V, and see if any specific environment caused issue.
 
 ### Test and keyword necessary packages in Gentoo for RISC-V.
 Tested 150+ packages during the process for RISC-V and Prefix. We tested it with FEATURES="test" and all the USE flags enabled, for those packages which restrictes testing, tried testing them manually. The pull requests made are [here](#test-and-keyword).

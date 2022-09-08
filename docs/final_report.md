@@ -17,15 +17,13 @@
 **Project proposal:** [Proposal](https://docs.google.com/document/d/1vKRaRKEWt-485oVdCfxLecXKbMwgajlv-6ZOGflwW6g/edit#heading=h.7uif4cjti9op)
 
 ## Table of Contents
+
 - [RISC-V support for Gentoo Prefix](#risc-v-support-for-gentoo-prefix)
   - [Table of Contents](#table-of-contents)
   - [Project Overview](#project-overview)
   - [Project Deliverables](#project-deliverables)
   - [Project Results](#project-results)
     - [A working Profile for RISC-V architecture.](#a-working-profile-for-risc-v-architecture)
-      - [**`make.defaults`**](#makedefaults)
-      - [**`profiles/prefix/linux/riscv/parent`**](#profilesprefixlinuxriscvparent)
-      - [**`bootstrap-prefix.sh`**](#bootstrap-prefixsh)
     - [Bootstrap and use a Gentoo Prefix system on RISC-V architecture.](#bootstrap-and-use-a-gentoo-prefix-system-on-risc-v-architecture)
     - [Test and keyword necessary packages in Gentoo for RISC-V.](#test-and-keyword-necessary-packages-in-gentoo-for-risc-v)
     - [Documentation on “Porting Prefix to new Architectures”.](#documentation-on-porting-prefix-to-new-architectures)
@@ -37,7 +35,6 @@
     - [Test and Keyword](#test-and-keyword)
   - [Conclusion](#conclusion)
   - [Acknowledgement](#acknowledgement)
-
 ## Project Overview
 
 RISC-V is an emerging open CPU architecture that is starting to be adopted well beyond the embedded domain; the European Processor Initiative (EPI) project is a clear example of this.
@@ -60,7 +57,7 @@ RISC-V is one of the target CPU architectures in the EESSI project, and good sup
 Worked on making a riscv profile for prefix and added a symlink which allowed stage 1 to continue. We are using kernel-3.2+, as we don't have enough multilib support for RISC-V, we have decided to settle on one ABI (lp64d) and use no-multilib profile. 
 
 Current features of RISC-V Profile for Prefix:
-#### **`make.defaults`**
+**`make.defaults`**
 ```
 ARCH="riscv"
 CHOST="riscv64-pc-linux-gnu"
@@ -69,13 +66,13 @@ SYMLINK_LIB=""
 LIBDIR_lp64d="lib"
 ```
 
-#### **`profiles/prefix/linux/riscv/parent`**
+**`profiles/prefix/linux/riscv/parent`**
 ```
 ../../../default/linux/riscv/20.0/rv64gc/lp64d
 ..
 ```
 
-#### **`bootstrap-prefix.sh`**
+**`bootstrap-prefix.sh`**
 ```
 riscv64-pc-linux-gnu)
   profile=${profile_linux/ARCH/riscv}

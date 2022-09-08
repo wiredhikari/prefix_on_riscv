@@ -54,7 +54,8 @@ RISC-V is one of the target CPU architectures in the EESSI project, and good sup
 ## Project Results
 
 ### A working Profile for RISC-V architecture.
-- code snips
+Worked on making a riscv profile for prefix and added a symlink which allowed stage 1 to continue. As we don't
+use multilib in prefix, we have decided to settle on one ABI (lp64d) and use no-multilib profile.
 
 ```
 ARCH="riscv"
@@ -62,7 +63,6 @@ CHOST="riscv64-pc-linux-gnu"
 ACCEPT_KEYWORDS="~riscv"
 SYMLINK_LIB=""
 LIBDIR_lp64d="lib"
-LIBDIR_lp64="lib"
 ```
 
 ```
@@ -72,9 +72,8 @@ LIBDIR_lp64="lib"
 
 
 ### Bootstrap and use a Gentoo Prefix system on RISC-V architecture.
-- explain how all the 3 stages
-- stage 1 2 and 3 issues
-- 
+
+Firstly, we created a RISC-V Profile for Gentoo Prefix, made necessary changes in bootstrap-prefix.sh script which allowed Stage-1 to continue. After having a new profile for RISC-V, the latest python and portage was installed in ${EPREFIX}/tmp and then Stage-2 emerged build utilities and coretools from the base RISC-V profile. After getting Stage-2 to work, GCC installed by Portage to install a Gentoo base system in ${EPREFIX}. Then portage rebuild all installed packages with custom optimizations and features. Worked on fixing all the bugs that I got during the three stages. There were several environments we tested Gentoo Prefix for RISC-V.
 
 ### Test and keyword necessary packages in Gentoo for RISC-V.
 - process of testing
@@ -140,7 +139,11 @@ LIBDIR_lp64="lib"
 
 ## Conclusion
 
-I was able to complete all of the goals that were decided for the project and it got completed before the timeline which gave us more time for testing Prefix and keywording packages with RISC-V.
+I was able to complete all of the goals that were decided for the project and it got completed before the timeline which gave us more time for testing Prefix and keywording packages with RISC-V. 
+
+
+
+ Also solved all the bugs that occured during the compilation of Stages 1,2 and 3. 
 
 ## Acknowledgement
 

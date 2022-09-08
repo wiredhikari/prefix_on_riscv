@@ -94,7 +94,7 @@ Tested 150+ packages during the process for RISC-V and Prefix. We tested it with
 
 ### Documentation on “Porting Prefix to new Architectures”.
 The thorough documentation of all work done has been uploaded has been uploaded in the form of weekly reports on [gentoo-soc](https://archives.gentoo.org/gentoo-soc/) mailing list. Compile contents in the weekly reports written and document “Porting Prefix to new Architectures”, which might help the developers to Port Prefix to new Architecture in future.
-##ellaborate docs
+The [documentation](https://github.com/wiredhikari/prefix_on_riscv/blob/main/docs/porting.md) gives a walkthrough on making a new profile and how stages in Gentoo Prefix work. Following that a walkthrough on Keywording Packages.
 
 
 ## Contributions
@@ -149,8 +149,6 @@ The thorough documentation of all work done has been uploaded has been uploaded 
 ## Conclusion
 
 I was able to complete all of the goals that were decided for the project and it got completed before the timeline which gave us more time for testing Prefix and keywording packages with RISC-V. 
-
-
 
  Also solved all the bugs that occured during the compilation of Stages 1,2 and 3. 
 

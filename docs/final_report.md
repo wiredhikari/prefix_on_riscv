@@ -155,7 +155,7 @@ The [documentation](https://github.com/wiredhikari/prefix_on_riscv/blob/main/doc
 
 I was able to complete all of the goals that were decided for the project and it got completed before the timeline which gave us more time for testing Prefix and keywording packages with RISC-V. I would thank my mentors for guiding me throughout the journey. I loved working on this project and I would continue working and contributing to the community. 
 
-For me, Open-Source was kind of a wild forest which pretty much confused me, but contributing to Gentoo Linux was one of the best experiences I have had and it gave me quite some clarity and confidence on contributing to large codebases and fixing issues. Thanks to Google Summer of Code I got this opportunity to learn and contribute for this amazing organization. It has been a fun experience. I am grateful that I got an opportunity to get mentored by such experienced developers, they helped and guided me whenever I was stuck and thanks to them for bearing the silly mistakes I did and helping me throughout the journey. 
+For me, Open-Source seemed like a wild forest which pretty much confused me, but contributing to Gentoo Linux is one of the best experiences I have had and it gave me quite some clarity and confidence on contributing to large codebases and fixing issues. Thanks to Google Summer of Code I got this opportunity to learn and contribute for this amazing organization. It has been a fun experience. I am grateful that I got an opportunity to get mentored by such experienced developers, they helped and guided me whenever I got stuck and thanks to them for bearing the silly mistakes I did and helping me throughout the journey. 
 
 ## Acknowledgement
 
